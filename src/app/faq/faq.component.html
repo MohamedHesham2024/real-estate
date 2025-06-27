@@ -1,0 +1,45 @@
+<section class="relative">
+  <div
+    class="h-[450px] bg-cover bg-center flex flex-col items-center justify-center text-center px-4"
+    style="background-image: url('/FAQ/hero.png');"
+  >
+    <h1 class="text-4xl md:text-5xl font-bold text-fontPrimary drop-shadow-lg font-exo">Frequently Asked Questions</h1>
+    <p class="mt-4 text-2xl text-white">You've asked, and we've answered!</p>
+  </div>
+</section>
+
+<section class="bg-thread py-16 px-4">
+  <div class="max-w-6xl mx-auto">
+    <p class="text-center text-fontSecondary text-lg max-w-3xl mx-auto mb-12">
+      At H&B Elite Properties, we understand that buying, selling, or investing in real estate can be a complex process.
+      To help you navigate it with ease, we’ve compiled answers to some of the most common questions we receive.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+      <ng-container *ngFor="let item of faqs">
+        <div class="border border-gray-300 rounded  transition-all duration-300">
+          <button
+            class="flex items-center w-full px-4 py-2 text-left"
+            (click)="toggle(item)"
+          >
+            <span
+              class="text-xl font-bold pr-5  transition-transform duration-200"
+            >
+              {{ item.open ? '-' : '+' }}
+            </span>
+            <span class="font-lg font-semibold">
+              {{ item.question }}
+            </span>
+          </button>
+          <div
+            *ngIf="item.open"
+            class="px-6 pb-4 text-fontSecondary  animate-fadeIn"
+          >
+            {{ item.answer }}
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>
+

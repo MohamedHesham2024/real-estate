@@ -14,6 +14,10 @@ module.exports = {
         white: "#FFFFFF",
         error: "#ef6b51",
      },
+     fontFamily: {
+        exo: ['"Exo"', 'sans-serif'],
+      },
+    
     },
   },
   plugins: [],

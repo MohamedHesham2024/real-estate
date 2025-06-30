@@ -1,0 +1,247 @@
+/* Add this to your global styles.css or component styles */
+
+/* Background zoom and scale animations */
+@keyframes backgroundZoomIn {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(0.8);
+  }
+  25% {
+    transform: scale(1.03) rotate(0.5deg);
+    filter: brightness(0.9);
+  }
+  50% {
+    transform: scale(1.06) rotate(-0.3deg);
+    filter: brightness(1);
+  }
+  75% {
+    transform: scale(1.04) rotate(0.2deg);
+    filter: brightness(0.95);
+  }
+  100% {
+    transform: scale(1.02) rotate(0deg);
+    filter: brightness(0.85);
+  }
+}
+
+@keyframes backgroundZoomOut {
+  0% {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Smooth fade transition */
+@keyframes backgroundFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Ken Burns effect - slow zoom and pan */
+@keyframes kenBurns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  25% {
+    transform: scale(1.05) translate(-1%, -1%);
+  }
+  50% {
+    transform: scale(1.08) translate(1%, -2%);
+  }
+  75% {
+    transform: scale(1.06) translate(-0.5%, 1%);
+  }
+  100% {
+    transform: scale(1.03) translate(0.5%, -0.5%);
+  }
+}
+
+/* Parallax-like movement */
+@keyframes parallaxMove {
+  0% {
+    transform: scale(1.1) translateY(0px);
+  }
+  33% {
+    transform: scale(1.12) translateY(-10px);
+  }
+  66% {
+    transform: scale(1.08) translateY(5px);
+  }
+  100% {
+    transform: scale(1.1) translateY(0px);
+  }
+}
+
+/* Apply animations to background elements */
+.hero-bg-animate {
+  animation: kenBurns 8s ease-in-out infinite;
+  transform-origin: center center;
+}
+
+.hero-bg-fade-in {
+  animation: backgroundFadeIn 1.5s ease-out forwards;
+}
+
+.hero-bg-fade-out {
+  animation: backgroundZoomOut 1.5s ease-in forwards;
+}
+
+/* Content animations */
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text animations */
+.animate-text-appear {
+  animation: floatUp 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-form-slide {
+  animation: slideInFromRight 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+.animate-content-slide {
+  animation: slideInFromLeft 1s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+/* Stagger delays for sequential animations */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Smooth transitions for background changes */
+.bg-transition-smooth {
+  transition: all 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Indicator dots animation */
+@keyframes indicatorPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.indicator-active {
+  animation: indicatorPulse 2s ease-in-out infinite;
+}
+  @keyframes zoom-in {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1.02);
+      }
+    }
+
+    /* Zoom out animation for inactive background */
+    @keyframes zoom-out {
+      0% {
+        transform: scale(1.02);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    /* Fade in up animation for text */
+    @keyframes fade-in-up {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Fade in left animation for form */
+    @keyframes fade-in-left {
+      0% {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate-zoom-in {
+      animation: zoom-in 6s ease-in-out infinite;
+    }
+
+    .animate-zoom-out {
+      animation: zoom-out 1s ease-out forwards;
+    }
+
+    .animate-fade-in-up {
+      animation: fade-in-up 1s ease-out forwards;
+    }
+
+    .animate-fade-in-left {
+      animation: fade-in-left 1s ease-out 0.5s forwards;
+      opacity: 0;
+    }
+
+    .delay-300 {
+      animation-delay: 0.3s;
+      opacity: 0;
+    }
+
+    /* Smooth background transitions */
+    .bg-transition {
+      transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }

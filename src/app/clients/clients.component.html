@@ -1,0 +1,38 @@
+ <section class="bg-thread dark:bg-dark-background py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-exo text-primary mb-6 ">
+            What Our Clients Say About us
+          </h2>
+          <p class="text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            At H&B Elite Properties, our commitment to delivering outstanding real estate services has earned us the trust and satisfaction of our clients. Don't just take our word for it—hear what some of our happy clients have to say about their experience with us.
+          </p>
+        </div>
+
+        <!-- Testimonials Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            *ngFor="let testimonial of testimonials"
+            class="bg-white rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow duration-300"
+          >
+            <!-- Quote -->
+            <div class="mb-6">
+              <p class="text-fontThread italic leading-relaxed text-sm">
+                "{{ testimonial.quote }}"
+              </p>
+            </div>
+
+            <!-- Client Info -->
+            <div class="text-center">
+              <h4 class="font-medium text-primary text-lg ">
+                {{ testimonial.name }}
+              </h4>
+              <p class="text-fontThread text-sm">
+                {{ testimonial.role }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

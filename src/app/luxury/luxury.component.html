@@ -1,0 +1,92 @@
+  <div class="bg-black min-h-screen py-16 px-4 ">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-light text-primary tracking-widest font-exo">
+          LUXURY APARTMENTS
+        </h1>
+      </div>
+
+      <!-- Apartments Grid -->
+      <div class="max-w-7xl mx-auto ">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Display apartments based on showAll state -->
+          <div
+            *ngFor="let apartment of getDisplayedApartments()"
+            class="group cursor-pointer transform transition-all duration-500 hover:scale-105 "
+          >
+            <!-- Apartment Card -->
+            <div class="bg-secondryBlack rounded-lg overflow-hidden shadow-2xl border border-secondary hover:border-primary transition-colors duration-300 ">
+              <!-- Image Slider Container -->
+              <div class="relative overflow-hidden h-64">
+                <!-- Slider Images -->
+                <div class="relative w-full h-full ">
+                  <img
+                    *ngFor="let image of apartment.images; let i = index"
+                    [src]="image"
+                    [alt]="apartment.title + ' - Image ' + (i + 1)"
+                    [class]="getImageClass(apartment.id, i)"
+                    class="absolute inset-0 w-full h-full object-cover transition-all duration-500 "
+                  >
+                </div>
+
+                <!-- Navigation Arrows -->
+                <button
+                  *ngIf="apartment.images.length > 1"
+                  (click)="previousImage(apartment.id)"
+                  class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                  </svg>
+                </button>
+
+                <button
+                  *ngIf="apartment.images.length > 1"
+                  (click)="nextImage(apartment.id)"
+                  class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 z-10"
+                >
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </button>
+
+                <!-- Slide Indicators -->
+                <div
+                  *ngIf="apartment.images.length > 1"
+                  class="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 "
+                >
+                  <span
+                    *ngFor="let image of apartment.images; let i = index"
+                    (click)="goToImage(apartment.id, i)"
+                    [class]="getIndicatorClass(apartment.id, i)"
+                    class="w-2 h-2 rounded-full cursor-pointer transition-all duration-300 bg-primary"
+                  ></span>
+                </div>
+
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none"></div>
+              </div>
+
+              <!-- Content -->
+              <div class="p-6">
+                <h3 class="text-xl font-light text-primary mb-4 tracking-wide">
+                  {{ apartment.title }}
+                </h3>
+                <p class="text-thread text-sm leading-relaxed">
+                  {{ apartment.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- See More/Less Button -->
+        <div class="text-center mt-12">
+          <button
+            (click)="toggleView()"
+            class="bg-primary hover:bg-gradient-to-r from-primary to-amber-800 group-hover:opacity-100  text-secondary font-medium py-3 px-8 rounded-md transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-black tracking-wider uppercase"
+          >
+            {{ showAll ? 'SEE LESS' : 'SEE MORE' }}
+          </button>
+        </div>
+      </div>
+    </div>

@@ -1,23 +1,30 @@
-<section class="relative">
-  <div
-    class="h-[450px] bg-cover bg-center flex flex-col items-center justify-center text-center px-4"
-    style="background-image: url('/contact/hero.webp');"
-  >
-    <h1 class="text-4xl md:text-5xl font-bold text-fontPrimary drop-shadow-lg font-exo">Get in Touch with H&B Elite Properties</h1>
-    <p class="mt-4 text-2xl text-white">Your Trusted Partner in Dubai Real Estate</p>
+
+<section
+  class="relative h-[450px] bg-cover bg-center px-4 flex items-center justify-center text-center"
+  style="background-image: url('/contact/hero.webp');"
+>
+  <!-- Overlay layer -->
+  <div class="absolute inset-0 bg-black opacity-70"></div>
+
+  <!-- Content -->
+  <div class="relative z-10">
+    <h1 class="text-4xl md:text-5xl font-bold text-fontPrimary drop-shadow-lg font-exo">
+Get in Touch with H&B Elite Properties
+    </h1>
+    <p class="mt-4 text-2xl text-white">Your Trusted Partner in Dubai Real Estate!</p>
   </div>
 </section>
-<div class="min-h-screen bg-thread py-12 px-1 sm:px-2 lg:px-4">
+<div class="min-h-screen bg-thread py-12 px-1 sm:px-2 lg:px-4 dark:bg-dark-background">
       <div class="max-w-6xl mx-auto">
         <div class="rounded-lg overflow-hidden">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            
+
             <!-- Left Side - Contact Form -->
             <div class="p-8 lg:p-12">
               <h2 class="text-3xl font-bold text-fontPrimary mb-8 tracking-wide font-exo">
                 Send us a message
               </h2>
-              
+
               <form (ngSubmit)="onSubmit()" class="space-y-6">
                 <!-- Name Input -->
                 <div>
@@ -55,7 +62,7 @@
                   />
                 </div>
 
-                
+
 
                 <!-- Submit Button -->
                 <div class="pt-4">
@@ -74,7 +81,7 @@
               <h2 class="text-3xl font-bold text-fontPrimary mb-8 tracking-wide font-exo">
                 Contact info
               </h2>
-              
+
               <div class="">
                 <!-- Location -->
                 <div class="flex items-center space-x-4">
@@ -109,20 +116,20 @@
                 <!-- Social Media -->
                 <div class="pt-8">
                   <div class="flex space-x-4">
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       class="w-8 h-8 bg-fontPrimary hover:bg-fontPrimary text-white rounded-full flex items-center justify-center transition duration-200 transform hover:scale-110"
                     >
                       <i class="fab fa-facebook-f text-lg"></i>
                     </a>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       class="w-8 h-8 bg-fontPrimary hover:bg-fontPrimary text-white rounded-full flex items-center justify-center transition duration-200 transform hover:scale-110"
                     >
                       <i class="fab fa-twitter text-lg"></i>
                     </a>
-                    <a 
-                      href="#" 
+                    <a
+                      href="#"
                       class="w-8 h-8 bg-fontPrimary hover:bg-fontPrimary text-white rounded-full flex items-center justify-center transition duration-200 transform hover:scale-110"
                     >
                       <i class="fab fa-youtube text-lg"></i>

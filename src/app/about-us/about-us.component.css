@@ -13,7 +13,6 @@ body {
 
 .section {
   position: relative;
-  background-color: #ffffff;
   padding: 0;
   padding-left:30px ;
   margin: 10px 0;
@@ -39,6 +38,9 @@ body {
   z-index: -1;
   transition: all 0.3s ease;
 }
+.test{
+z-index: -1;
+}
 
 
 .section:nth-child(1)::before {
@@ -53,9 +55,7 @@ body {
   clip-path: polygon(0% 0%, 50% 0%, 100% 85%, 15% 85%, 15% 100%, 0% 100%);
 }
 
-.section:nth-child(4)::before {
-  clip-path: polygon(0% 0%, 30% 15%, 60% 100%, 100% 100%, 100% 0%);
-}
+
 
 
 .section img {
@@ -75,7 +75,6 @@ body {
 .section-title {
   font-size: 30px;
   margin-bottom: 15px;
-  color: #000000;
   font-weight: bold;
 }
 

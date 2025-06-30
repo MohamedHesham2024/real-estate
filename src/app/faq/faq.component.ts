@@ -3,7 +3,7 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-faq',
-  imports: [NgClass, NgIf, NgFor],
+  imports: [ NgIf, NgFor],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.css',
 })

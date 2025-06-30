@@ -1,4 +1,4 @@
-<div class="dark:bg-dark-background">
+<div class="bg-thread dark:bg-dark-background">
 
     <section
       class="relative h-[450px] bg-cover bg-center px-4 flex items-center justify-center text-center"
@@ -117,12 +117,12 @@
           <div class="order-2 lg:order-1 space-y-6">
             <div>
               <h2
-                class="text-4xl lg:text-5xl font-bold  leading-tight mb-6"
+                class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
               >
                 Where You Belong
               </h2>
     
-              <div class="prose prose-lg text-thread leading-relaxed">
+              <div class="prose prose-lg text-fontSecondary leading-relaxed">
                 <p class="text-justify">
                   Developed by H&H and owned by Global Partners, Eden House The Park
                   reflects a shared vision of sophisticated living, where quality
@@ -154,7 +154,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-thread dark:bg-dark-backgroundpy-16 px-4 sm:px-6 lg:px-8">
+    <section class="  px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- Left Side - Image -->
@@ -177,12 +177,12 @@
           <div class="order-1 lg:order-2 space-y-6">
             <div>
               <h2
-                class="text-4xl lg:text-5xl font-bold  leading-tight mb-6"
+                class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
               >
                 Architectural Excellence Meets Canalfront Elegance
               </h2>
     
-              <div class="prose prose-lg  leading-relaxed">
+              <div class="prose prose-lg text-fontSecondary  leading-relaxed">
                 <p class="text-justify">
                   A masterful display of contemporary architecture, these seven
                   low-rise buildings echo the fluid lines of the canal with
@@ -210,12 +210,12 @@
           <div class="order-2 lg:order-1 space-y-6">
             <div>
               <h2
-                class="text-4xl lg:text-5xl font-bold  leading-tight mb-6"
+                class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
               >
                 Where You Belong
               </h2>
     
-              <div class="prose prose-lg text-thread leading-relaxed">
+              <div class="prose prose-lg text-fontSecondary leading-relaxed">
                 <p class="text-justify">
                   Developed by H&H and owned by Global Partners, Eden House The Park
                   reflects a shared vision of sophisticated living, where quality
@@ -247,7 +247,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-thread dark:bg-dark-background py-16 px-4 sm:px-6 lg:px-8">
+    <section class="  py-16 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <!-- Left Side - Image -->
@@ -270,12 +270,12 @@
           <div class="order-1 lg:order-2 space-y-6">
             <div>
               <h2
-                class="text-4xl lg:text-5xl font-bold  leading-tight mb-6"
+                class="text-4xl lg:text-5xl font-bold  leading-tight mb-6 text-fontPrimary"
               >
                 Architectural Excellence Meets Canalfront Elegance
               </h2>
     
-              <div class="prose prose-lg leading-relaxed">
+              <div class="prose prose-lg leading-relaxed text-fontSecondary">
                 <p class="text-justify">
                   A masterful display of contemporary architecture, these seven
                   low-rise buildings echo the fluid lines of the canal with
@@ -423,8 +423,8 @@
           <div class="w-full">
             <div class="bg-white p-8">
               <div class="text-center mb-8">
-                <h2 class="text-3xl font-bold text-gray-800 mb-2">Get in Touch</h2>
-                <p class="text-gray-600">
+                <h2 class="text-3xl font-bold  mb-2 text-fontPrimary">Get in Touch</h2>
+                <p class="text-fontSecondary">
                   Fill out the form below and we'll get back to you
                 </p>
               </div>
@@ -446,7 +446,7 @@
                     id="fullName"
                     type="text"
                     formControlName="fullName"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg  focus:border-transparent transition-all duration-200"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
                     [class.border-red-500]="
                       contactForm.get('fullName')?.invalid &&
                       contactForm.get('fullName')?.touched
@@ -481,7 +481,7 @@
                     id="phoneNumber"
                     type="tel"
                     formControlName="phoneNumber"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg  focus:border-transparent transition-all duration-200"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
                     [class.border-red-500]="
                       contactForm.get('phoneNumber')?.invalid &&
                       contactForm.get('phoneNumber')?.touched
@@ -518,7 +518,7 @@
                     id="email"
                     type="email"
                     formControlName="email"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg  focus:border-transparent transition-all duration-200"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
                     [class.border-red-500]="
                       contactForm.get('email')?.invalid &&
                       contactForm.get('email')?.touched
@@ -552,7 +552,7 @@
                   <select
                     id="country"
                     formControlName="country"
-                    class="w-full px-4 py-3 border border-gray-300 rounded-lg  focus:border-transparent transition-all duration-200"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
                     [class.border-red-500]="
                       contactForm.get('country')?.invalid &&
                       contactForm.get('country')?.touched

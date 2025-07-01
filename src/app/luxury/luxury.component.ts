@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
+import { ToastrModule } from 'ngx-toastr'
 interface Apartment {
   id: number;
   title: string;
@@ -8,9 +10,10 @@ interface Apartment {
 }
 @Component({
   selector: 'app-luxury',
-  imports: [CommonModule],
+  imports: [CommonModule,ToastrModule],
   templateUrl: './luxury.component.html',
-  styleUrl: './luxury.component.css'
+  styleUrl: './luxury.component.css',
+  standalone: true
 })
 export class LuxuryComponent {
  showAll = false;
@@ -79,12 +82,13 @@ export class LuxuryComponent {
     }
   ];
 
-  constructor() {
+  constructor( private toastr: ToastrService) {
     // Initialize current image index for each apartment
     this.apartments.forEach(apartment => {
       this.currentImageIndex[apartment.id] = 0;
     });
   }
+
 
   getDisplayedApartments(): Apartment[] {
     return this.showAll ? this.apartments : this.apartments.slice(0, 3);

@@ -9,11 +9,26 @@ import { LetterByLetterPipe } from '../Pipes/letter-by-letter.pipe';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
+    mockProperties: any[] = [
+    {
+      id: 1,
+      name: '1 Bedroom Apartment',
+    },
+    {
+      id: 2,
+      name: '2 Bedroom Apartment',
+
+    },
+    {
+      id: 3,
+      name: '3 Bedroom Apartment',
+    }
+  ];
     private intervalId: any;
 backgroundImages = [
     '/FAQ/pexels-chaitaastic-1797195-scaled.jpg',
         '/FAQ/pexels-jeshoots-com-147458-442579-scaled.jpg'
-   
+
   ];
 
   currentImageIndex = 0;

@@ -1,14 +1,39 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LetterByLetterPipe } from '../Pipes/letter-by-letter.pipe';
-
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-hero',
-  imports: [CommonModule,LetterByLetterPipe],
+  imports: [CommonModule,LetterByLetterPipe,ReactiveFormsModule,HttpClientModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
+    currentSlide: number = 0;
+  currentThumbPage: number = 0;
+  isMobile: boolean = false;
+  contactForm: FormGroup;
+  isLoading = false;
+  submitSuccess = false;
+  submitError = '';
+  slides = [0, 1, 2];
+  slideInterval: any;
+  currentSlide2: number = 0;
+   constructor(private fb: FormBuilder, private http: HttpClient) {
+    this.contactForm = this.fb.group({
+      fullName: ['', [Validators.required, Validators.minLength(2)]],
+      phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]],
+      email: ['', [Validators.required, Validators.email]],
+      country: ['', Validators.required],
+      property: ['', Validators.required], // New form control for property selection
+    });
+  }
     mockProperties: any[] = [
     {
       id: 1,
@@ -292,4 +317,45 @@ backgroundImages = [
   { name: "United Kingdom" },
   { name: "United States" },
 ];
+onSubmit() {
+    if (this.contactForm.valid) {
+      this.isLoading = true;
+      this.submitSuccess = false;
+      this.submitError = '';
+
+      const formData = this.contactForm.value;
+
+      // Replace with your actual backend endpoint
+      this.http
+        .post('https://your-api-endpoint.com/contact', formData)
+        .subscribe({
+          next: (response) => {
+            this.isLoading = false;
+            this.submitSuccess = true;
+            this.contactForm.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+              this.submitSuccess = false;
+            }, 5000);
+          },
+          error: (error) => {
+            this.isLoading = false;
+            this.submitError =
+              'There was an error submitting the form. Please try again.';
+            console.error('Form submission error:', error);
+
+            // Hide error message after 5 seconds
+            setTimeout(() => {
+              this.submitError = '';
+            }, 5000);
+          },
+        });
+    } else {
+      // Mark all fields as touched to show validation errors
+      Object.keys(this.contactForm.controls).forEach((key) => {
+        this.contactForm.get(key)?.markAsTouched();
+      });
+    }
+  }
 }

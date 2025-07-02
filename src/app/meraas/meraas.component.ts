@@ -1,17 +1,28 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { ButtonComponent } from '../sheard/button/button.component';
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-meraas',
-  imports: [ButtonComponent,NgIf,NgFor, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    ButtonComponent,
+    NgIf,
+    NgFor,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   templateUrl: './meraas.component.html',
-  styleUrl: './meraas.component.css'
+  styleUrl: './meraas.component.css',
 })
 export class MeraasComponent {
-currentSlide: number = 0;
+  currentSlide: number = 0;
   currentThumbPage: number = 0;
   isMobile: boolean = false;
   contactForm: FormGroup;
@@ -20,76 +31,72 @@ currentSlide: number = 0;
   submitError = '';
   slides = [0, 1, 2];
   slideInterval: any;
- currentSlide2: number = 0;
+  currentSlide2: number = 0;
 
   constructor(private fb: FormBuilder, private http: HttpClient) {
     this.contactForm = this.fb.group({
       fullName: ['', [Validators.required, Validators.minLength(2)]],
       phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]],
       email: ['', [Validators.required, Validators.email]],
-      country: ['', Validators.required]
+      country: ['', Validators.required],
+      property: ['', Validators.required], // New form control for property selection
     });
   }
   // Touch handling
   private touchStartX: number | null = null;
   private touchEndX: number | null = null;
   private minSwipeDistance: number = 50;
-
+  mockProperties: any[] = [
+    {
+      id: 1,
+      name: '1 Bedroom Apartment',
+    },
+    {
+      id: 2,
+      name: '2 Bedroom Apartment',
+    },
+    {
+      id: 3,
+      name: '3 Bedroom Apartment',
+    },
+  ];
   images: any[] = [
     {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      alt: 'Image 1'
+      full: '/Meraas/image1.jpg',
+      thumb: '/Meraas/image1.jpg',
+      alt: 'Image 1',
     },
     {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      alt: 'Image 2'
+      full: '/Meraas/image2.jpg',
+      thumb: '/Meraas/image2.jpg',
+      alt: 'Image 2',
     },
     {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      alt: 'Image 3'
+      full: '/Meraas/image3.jpg',
+      thumb: '/Meraas/image3.jpg',
+      alt: 'Image 3',
     },
     {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      alt: 'Image 4'
+      full: '/Meraas/image5.jpg',
+      thumb: '/Meraas/image5.jpg',
+      alt: 'Image 4',
     },
     {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      alt: 'Image 5'
+      full: '/Meraas/image6.jpg',
+      thumb: '/Meraas/image6.jpg',
+      alt: 'Image 5',
     },
-    {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      alt: 'Image 6'
-    },
-    {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      alt: 'Image 7'
-    },
-    {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      alt: 'Image 8'
-    }
-    
   ];
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.checkMobile();
-
   }
 
   ngOnInit() {
     this.checkMobile();
     this.startSlider();
     this.startAutoAdvance();
-
   }
 
   private checkMobile() {
@@ -120,7 +127,8 @@ currentSlide: number = 0;
   }
 
   prevSlide() {
-    this.currentSlide = (this.currentSlide - 1 + this.images.length) % this.images.length;
+    this.currentSlide =
+      (this.currentSlide - 1 + this.images.length) % this.images.length;
     this.updateThumbPage();
   }
 
@@ -134,7 +142,8 @@ currentSlide: number = 0;
   }
 
   prevThumbPage() {
-    this.currentThumbPage = (this.currentThumbPage - 1 + this.totalThumbPages) % this.totalThumbPages;
+    this.currentThumbPage =
+      (this.currentThumbPage - 1 + this.totalThumbPages) % this.totalThumbPages;
   }
 
   private updateThumbPage() {
@@ -164,7 +173,7 @@ currentSlide: number = 0;
 
   onTouchEnd() {
     if (!this.touchStartX || !this.touchEndX) return;
-    
+
     const distance = this.touchStartX - this.touchEndX;
     const isLeftSwipe = distance > this.minSwipeDistance;
     const isRightSwipe = distance < -this.minSwipeDistance;
@@ -188,7 +197,6 @@ currentSlide: number = 0;
   getThumbTransform(): string {
     return `translateX(-${this.currentThumbPage * 100}%)`;
   }
-  
 
   startSlider() {
     this.slideInterval = setInterval(() => {
@@ -209,13 +217,14 @@ currentSlide: number = 0;
       const formData = this.contactForm.value;
 
       // Replace with your actual backend endpoint
-      this.http.post('https://your-api-endpoint.com/contact', formData)
+      this.http
+        .post('https://your-api-endpoint.com/contact', formData)
         .subscribe({
           next: (response) => {
             this.isLoading = false;
             this.submitSuccess = true;
             this.contactForm.reset();
-            
+
             // Hide success message after 5 seconds
             setTimeout(() => {
               this.submitSuccess = false;
@@ -223,33 +232,34 @@ currentSlide: number = 0;
           },
           error: (error) => {
             this.isLoading = false;
-            this.submitError = 'There was an error submitting the form. Please try again.';
+            this.submitError =
+              'There was an error submitting the form. Please try again.';
             console.error('Form submission error:', error);
-            
+
             // Hide error message after 5 seconds
             setTimeout(() => {
               this.submitError = '';
             }, 5000);
-          }
+          },
         });
     } else {
       // Mark all fields as touched to show validation errors
-      Object.keys(this.contactForm.controls).forEach(key => {
+      Object.keys(this.contactForm.controls).forEach((key) => {
         this.contactForm.get(key)?.markAsTouched();
       });
     }
   }
-   currentImageIndex = 0;
+  currentImageIndex = 0;
   private intervalId: any;
 
   // Add your villa images here
   images2 = [
-    'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
-    'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+    '/Meraas/image1.jpg',
+    '/Meraas/image2.jpg',
+    '/Meraas/image3.jpg',
+    '/Meraas/image5.jpg',
+    '/Meraas/image6.jpg',
   ];
-
-  
 
   ngOnDestroy() {
     if (this.intervalId) {
@@ -263,8 +273,10 @@ currentSlide: number = 0;
   }
 
   previousImage() {
-    this.currentImageIndex = this.currentImageIndex === 0 ?
-      this.images2.length - 1 : this.currentImageIndex - 1;
+    this.currentImageIndex =
+      this.currentImageIndex === 0
+        ? this.images2.length - 1
+        : this.currentImageIndex - 1;
     this.resetAutoAdvance();
   }
 
@@ -276,7 +288,8 @@ currentSlide: number = 0;
 
   private startAutoAdvance() {
     this.intervalId = setInterval(() => {
-      this.currentImageIndex = (this.currentImageIndex + 1) % this.images2.length;
+      this.currentImageIndex =
+        (this.currentImageIndex + 1) % this.images2.length;
     }, 5000);
   }
 
@@ -286,7 +299,7 @@ currentSlide: number = 0;
     }
     this.startAutoAdvance();
   }
-  
+
   // countries = [
   //   { name: "Afghanistan", code: "AF", dial_code: "+93", flag: "https://flagcdn.com/w40/af.png" },
   //   { name: "Albania", code: "AL", dial_code: "+355", flag: "https://flagcdn.com/w40/al.png" },
@@ -483,11 +496,11 @@ currentSlide: number = 0;
   //   { name: "Zimbabwe", code: "ZW", dial_code: "+263", flag: "https://flagcdn.com/w40/zw.png" }
   // ];
   countries = [
-  { name: "Egypt" },
-  { name: "Saudi Arabia" },
-  { name: "United Arab Emirates" },
-  { name: "Qatar" },
-  { name: "United Kingdom" },
-  { name: "United States" },
-];
+    { name: 'Egypt' },
+    { name: 'Saudi Arabia' },
+    { name: 'United Arab Emirates' },
+    { name: 'Qatar' },
+    { name: 'United Kingdom' },
+    { name: 'United States' },
+  ];
 }

@@ -39,78 +39,209 @@
             Find Your Property
           </h2>
 
-          <form class="space-y-4">
-            <!-- Name input -->
-            <div>
-              <input
-                type="text"
-                placeholder="Your Name"
-                class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
-              >
-            </div>
+         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-4">
+  <!-- Name input -->
+  <div>
+    <input
+      id="fullName"
+      type="text"
+      placeholder="Your Name"
+      formControlName="fullName"
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+      [class.border-red-500]="
+        contactForm.get('fullName')?.invalid &&
+        contactForm.get('fullName')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        contactForm.get('fullName')?.invalid &&
+        contactForm.get('fullName')?.touched
+      "
+      class="mt-1 text-sm text-error"
+    >
+      <span *ngIf="contactForm.get('fullName')?.errors?.['required']">
+        Full name is required
+      </span>
+      <span *ngIf="contactForm.get('fullName')?.errors?.['minlength']">
+        Full name must be at least 2 characters
+      </span>
+    </div>
+  </div>
 
-            <!-- Phone input -->
-            <div>
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
-              >
-            </div>
+  <!-- Phone input -->
+  <div>
+    <input
+      id="phoneNumber"
+      type="tel"
+      placeholder="Phone Number"
+      formControlName="phoneNumber"
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+      [class.border-red-500]="
+        contactForm.get('phoneNumber')?.invalid &&
+        contactForm.get('phoneNumber')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        contactForm.get('phoneNumber')?.invalid &&
+        contactForm.get('phoneNumber')?.touched
+      "
+      class="mt-1 text-sm text-error"
+    >
+      <span *ngIf="contactForm.get('phoneNumber')?.errors?.['required']">
+        Phone number is required
+      </span>
+      <span *ngIf="contactForm.get('phoneNumber')?.errors?.['pattern']">
+        Please enter a valid phone number
+      </span>
+    </div>
+  </div>
 
-            <!-- Email input -->
-            <div>
-              <input
-                type="email"
-                placeholder="Your Email"
-                class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
-              >
-            </div>
+  <!-- Email input -->
+  <div>
+    <input
+      id="email"
+      type="email"
+      placeholder="Your Email"
+      formControlName="email"
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+      [class.border-red-500]="
+        contactForm.get('email')?.invalid &&
+        contactForm.get('email')?.touched
+      "
+    />
+    <div
+      *ngIf="
+        contactForm.get('email')?.invalid &&
+        contactForm.get('email')?.touched
+      "
+      class="mt-1 text-sm text-error"
+    >
+      <span *ngIf="contactForm.get('email')?.errors?.['required']">
+        Email is required
+      </span>
+      <span *ngIf="contactForm.get('email')?.errors?.['email']">
+        Please enter a valid email address
+      </span>
+    </div>
+  </div>
 
-            <!-- Property Interest dropdown -->
-            <div class="relative">
-              <label id="property-interest-label" class="sr-only">Country</label>
-              <select aria-labelledby="property-interest-label" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 appearance-none bg-white">
-                <option value="">Select your country</option>
-                <option
-                      *ngFor="let country of countries"
-                      [value]="country.name"
-                    >
-                      {{ country.name }}
-                    </option>
-              </select>
-              <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                <svg class="w-4 h-4 fill-current text-gray-400" viewBox="0 0 20 20">
-                  <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
-                </svg>
-              </div>
-            </div>
-                <div class="relative">
-              <label id="property-interest-label" class="sr-only">What type of property are you looking for ?</label>
-              <select aria-labelledby="property-interest-label" class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 appearance-none bg-white">
-                <option value="">What type of property are you looking for?</option>
-                <option
-                      *ngFor="let property of mockProperties"
-                      [value]="property.name"
-                    >
-                      {{ property.name }}
-                    </option>
-              </select>
-              <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
-                <svg class="w-4 h-4 fill-current text-gray-400" viewBox="0 0 20 20">
-                  <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
-                </svg>
-              </div>
-            </div>
+  <!-- Country dropdown -->
+  <div class="relative">
+    <label id="property-interest-label" class="sr-only">Country</label>
+    <select
+      id="country"
+      formControlName="country"
+      aria-labelledby="property-interest-label"
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 appearance-none bg-white"
+      [class.border-red-500]="
+        contactForm.get('country')?.invalid &&
+        contactForm.get('country')?.touched
+      "
+    >
+      <option value="">Select your country</option>
+      <option *ngFor="let country of countries" [value]="country.name">
+        {{ country.name }}
+      </option>
+    </select>
+    <div
+      *ngIf="
+        contactForm.get('country')?.invalid &&
+        contactForm.get('country')?.touched
+      "
+      class="mt-1 text-sm text-error"
+    >
+      <span *ngIf="contactForm.get('country')?.errors?.['required']">
+        Please select a country
+      </span>
+    </div>
+    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+      <svg class="w-4 h-4 fill-current text-gray-400" viewBox="0 0 20 20">
+        <path
+          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 
+          1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+        />
+      </svg>
+    </div>
+  </div>
 
-            <!-- Submit button -->
-            <button
-              type="submit"
-              class="w-full bg-primary hover:from-primary hover:to-amber-800 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
-              Send Enquiry
-            </button>
-          </form>
+  <!-- Property dropdown -->
+  <div class="relative">
+    <label id="property-type-label" class="sr-only">
+      What type of property are you looking for ?
+    </label>
+    <select
+      id="property"
+      formControlName="property"
+      aria-labelledby="property-type-label"
+      class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 appearance-none bg-white"
+      [class.border-red-500]="
+        contactForm.get('property')?.invalid &&
+        contactForm.get('property')?.touched
+      "
+    >
+      <option value="">What type of property are you looking for?</option>
+      <option *ngFor="let property of mockProperties" [value]="property.name">
+        {{ property.name }}
+      </option>
+    </select>
+    <div
+      *ngIf="
+        contactForm.get('property')?.invalid &&
+        contactForm.get('property')?.touched
+      "
+      class="mt-1 text-sm text-error"
+    >
+      <span *ngIf="contactForm.get('property')?.errors?.['required']">
+        Please select a property
+      </span>
+    </div>
+    <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+      <svg class="w-4 h-4 fill-current text-gray-400" viewBox="0 0 20 20">
+        <path
+          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 
+          1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+        />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Submit button -->
+  <button
+    type="submit"
+    [disabled]="contactForm.invalid || isLoading"
+    class="w-full disabled:text-gray-300 disabled:bg-gray-200 disabled:cursor-not-allowed disabled:border-[#FFFFFF] bg-primary hover:from-primary hover:to-amber-800 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+  >
+    <div *ngIf="isLoading" class="flex items-center">
+      <svg
+        class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          class="opacity-25"
+          cx="12"
+          cy="12"
+          r="10"
+          stroke="currentColor"
+          stroke-width="4"
+        ></circle>
+        <path
+          class="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 
+              5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 
+              7.938l3-2.647z"
+        ></path>
+      </svg>
+      Sending...
+    </div>
+    <span *ngIf="!isLoading">Send Enquiry</span>
+  </button>
+</form>
+
         </div>
       </div>
     </div>

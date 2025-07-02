@@ -27,55 +27,51 @@ export class SobhaComponent {
       fullName: ['', [Validators.required, Validators.minLength(2)]],
       phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]],
       email: ['', [Validators.required, Validators.email]],
-      country: ['', Validators.required]
+      country: ['', Validators.required],
+            property: ['', Validators.required]
+
     });
   }
   // Touch handling
   private touchStartX: number | null = null;
   private touchEndX: number | null = null;
   private minSwipeDistance: number = 50;
+mockProperties: any[] = [
+    {
+      id: 1,
+      name: '1 Bedroom Apartment',
+    },
+    {
+      id: 2,
+      name: '2 Bedroom Apartment',
 
+    },
+    {
+      id: 3,
+      name: '3 Bedroom Apartment',
+    }
+  ];
   images: any[] = [
     {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
+      full: '/sobha/Screenshot 2025-06-26 115109.jpg',
+      thumb: '/sobha/Screenshot 2025-06-26 115109.jpg',
       alt: 'Image 1'
     },
     {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
+      full: '/sobha/Screenshot 2025-06-26 114804.jpg',
+      thumb: '/sobha/Screenshot 2025-06-26 114804.jpg',
       alt: 'Image 2'
     },
     {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
+      full: '/sobha/Screenshot 2025-06-26 114614.jpg',
+      thumb: '/sobha/Screenshot 2025-06-26 114614.jpg',
       alt: 'Image 3'
     },
     {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
+      full: '/sobha/Screenshot 2025-06-26 114539.jpg',
+      thumb: '/sobha/Screenshot 2025-06-26 114539.jpg',
       alt: 'Image 4'
     },
-    {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      alt: 'Image 5'
-    },
-    {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      alt: 'Image 6'
-    },
-    {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      alt: 'Image 7'
-    },
-    {
-      full: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      thumb: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&h=900&fit=crop',
-      alt: 'Image 8'
-    }
     
   ];
 
@@ -244,9 +240,10 @@ export class SobhaComponent {
 
   // Add your villa images here
   images2 = [
-    'https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80',
-    'https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+    '/sobha/Screenshot 2025-06-26 115109.jpg',
+    '/sobha/Screenshot 2025-06-26 114804.jpg',
+    '/sobha/Screenshot 2025-06-26 114614.jpg',
+    '/sobha/Screenshot 2025-06-26 114539.jpg',
   ];
 
   

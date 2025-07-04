@@ -11,7 +11,7 @@
 
   <div class="my-12 flex flex-col items-center">
     <img
-      src="/Emaar/emaar-logo.png"
+      [src]="logoSrc"
       alt="imageAlt"
       class="w-20 mb-6 h-auto object-cover transition-transform duration-500 hover:scale-105"
       loading="lazy"
@@ -29,11 +29,11 @@
   </div>
   <section class="bg-black border border-fontPrimary py-16 px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col items-center max-w-7xl mx-auto">
-      <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold text-fontPrimary mb-6 text-center">
         Starting from just AED 1.2M – Flexible down payments from only 10%
 
       </h2>
-      <p class="text-lg text-gray-300 text-center max-w-2xl mb-8 ">
+      <p class="text-lg text-fontSecondary text-center max-w-2xl mb-8 ">
         Explore Emaar’s signature developments — blending world-class design, unbeatable locations, and high investment potential.
 
       </p>
@@ -641,33 +641,68 @@
                   for="fullName"
                   class="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  Full Name *
+                  First Name *
                 </label>
                 <input
-                  id="fullName"
+                  id="firstName"
                   type="text"
-                  formControlName="fullName"
+                  formControlName="firstName"
                   class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
                   [class.border-red-500]="
-                    contactForm.get('fullName')?.invalid &&
-                    contactForm.get('fullName')?.touched
+                    contactForm.get('firstName')?.invalid &&
+                    contactForm.get('firstName')?.touched
                   "
-                  placeholder="Enter your full name"
+                  placeholder="Enter your first name"
                 />
                 <div
                   *ngIf="
-                    contactForm.get('fullName')?.invalid &&
-                    contactForm.get('fullName')?.touched
+                    contactForm.get('firstName')?.invalid &&
+                    contactForm.get('firstName')?.touched
                   "
                   class="mt-1 text-sm text-error"
                 >
                   <span
-                    *ngIf="contactForm.get('fullName')?.errors?.['required']"
-                    >Full name is required</span
+                    *ngIf="contactForm.get('firstName')?.errors?.['required']"
+                    >First name is required</span
                   >
                   <span
-                    *ngIf="contactForm.get('fullName')?.errors?.['minlength']"
-                    >Full name must be at least 2 characters</span
+                    *ngIf="contactForm.get('firstName')?.errors?.['minlength']"
+                    >First name must be at least 2 characters</span
+                  >
+                </div>
+              </div>
+              <div>
+                <label
+                  for="lastName"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Last Name *
+                </label>
+                <input
+                  id="lastName"
+                  type="text"
+                  formControlName="lastName"
+                  class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+                  [class.border-red-500]="
+                    contactForm.get('lastName')?.invalid &&
+                    contactForm.get('lastName')?.touched
+                  "
+                  placeholder="Enter your last name"
+                />
+                <div
+                  *ngIf="
+                    contactForm.get('lastName')?.invalid &&
+                    contactForm.get('lastName')?.touched
+                  "
+                  class="mt-1 text-sm text-error"
+                >
+                  <span
+                    *ngIf="contactForm.get('lastName')?.errors?.['required']"
+                    >Last name is required</span
+                  >
+                  <span
+                    *ngIf="contactForm.get('lastName')?.errors?.['minlength']"
+                    >Last name must be at least 2 characters</span
                   >
                 </div>
               </div>
@@ -752,23 +787,17 @@
                 >
                   Country *
                 </label>
-                <select
+                <input
                   id="country"
+                  type="text"
                   formControlName="country"
                   class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
                   [class.border-red-500]="
                     contactForm.get('country')?.invalid &&
                     contactForm.get('country')?.touched
                   "
-                >
-                  <option value="">Select your country</option>
-                  <option
-                    *ngFor="let country of countries"
-                    [value]="country.name"
-                  >
-                    {{ country.name }}
-                  </option>
-                </select>
+                  placeholder="Enter your country"
+                />
                 <div
                   *ngIf="
                     contactForm.get('country')?.invalid &&
@@ -776,8 +805,13 @@
                   "
                   class="mt-1 text-sm text-error"
                 >
-                  <span *ngIf="contactForm.get('country')?.errors?.['required']"
-                    >Please select a country</span
+                  <span
+                    *ngIf="contactForm.get('country')?.errors?.['required']"
+                    >Country is required</span
+                  >
+                  <span
+                    *ngIf="contactForm.get('country')?.errors?.['minlength']"
+                    >Country must be at least 2 characters</span
                   >
                 </div>
               </div>
@@ -853,6 +887,7 @@
                 <span *ngIf="!isLoading">Submit Form</span>
               </button>
             </form>
+
 
             <!-- Success Message -->
             <div

@@ -2,8 +2,10 @@ import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { ButtonComponent } from '../sheard/button/button.component';
 import {  NgFor, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-
+import { HttpClientModule } from '@angular/common/http';
+import { SendDataService } from '../service/send-data.service';
+import { ToastrService } from 'ngx-toastr';
+import { ThemeToggleService } from '../theme-toggle.service';
 @Component({
   selector: 'app-sobha',
   imports: [ButtonComponent,NgIf,NgFor, ReactiveFormsModule, HttpClientModule],
@@ -22,13 +24,14 @@ export class SobhaComponent {
   slideInterval: any;
  currentSlide2: number = 0;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private fb: FormBuilder, private sendDataService: SendDataService,private toastr: ToastrService,private themeService: ThemeToggleService) {
     this.contactForm = this.fb.group({
-      fullName: ['', [Validators.required, Validators.minLength(2)]],
+      firstName: ['', [Validators.required, Validators.minLength(2)]],
+      lastName: ['', [Validators.required, Validators.minLength(2)]],
       phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]],
       email: ['', [Validators.required, Validators.email]],
       country: ['', Validators.required],
-            property: ['', Validators.required]
+      property: ['', Validators.required]
 
     });
   }
@@ -80,8 +83,14 @@ mockProperties: any[] = [
     this.checkMobile();
 
   }
-
+logoSrc = '';
   ngOnInit() {
+    this.themeService.isDarkMode$.subscribe((isDark) => {
+      this.logoSrc = isDark
+        ? '/sobha/sobha white.png'
+        : '/sobha/sobha black.png';
+    });
+     
     this.checkMobile();
     this.startSlider();
     this.startAutoAdvance();
@@ -202,34 +211,19 @@ mockProperties: any[] = [
       this.submitSuccess = false;
       this.submitError = '';
 
-      const formData = this.contactForm.value;
-
-      // Replace with your actual backend endpoint
-      this.http.post('https://your-api-endpoint.com/contact', formData)
-        .subscribe({
-          next: (response) => {
-            this.isLoading = false;
-            this.submitSuccess = true;
-            this.contactForm.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-              this.submitSuccess = false;
-            }, 5000);
-          },
-          error: (error) => {
-            this.isLoading = false;
-            this.submitError = 'There was an error submitting the form. Please try again.';
-            console.error('Form submission error:', error);
-            
-            // Hide error message after 5 seconds
-            setTimeout(() => {
-              this.submitError = '';
-            }, 5000);
-          }
-        });
+      this.sendDataService.submitContactForm({...this.contactForm.value,developer:"sobha"}).subscribe({
+        next: () => {
+          this.isLoading = false;
+          this.contactForm.reset();
+          this.toastr.success('Form submitted successfully!', 'Success');
+        },
+        error: (error) => {
+          this.isLoading = false;
+          console.error('Form submission error:', error);
+          this.toastr.error('There was an error submitting the form. Please try again.', 'Error');
+        }
+      });
     } else {
-      // Mark all fields as touched to show validation errors
       Object.keys(this.contactForm.controls).forEach(key => {
         this.contactForm.get(key)?.markAsTouched();
       });

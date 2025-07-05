@@ -5,14 +5,21 @@ import { ThemeToggleService } from '../theme-toggle.service';
   selector: 'app-slider',
   imports: [CommonModule],
   templateUrl: './slider.component.html',
-  styleUrl: './slider.component.css'
+  styleUrl: './slider.component.css',
 })
 export class SliderComponent {
- currentImageIndex = 0;
+  currentImageIndex = 0;
   private intervalId: any;
 
   constructor(private themeService: ThemeToggleService) {}
+  targetId: string = 'home-form'; // ID of the section to scroll to
 
+  scrollToSection() {
+    const section = document.getElementById(this.targetId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
   // 9 villa images - 3 for each slider
   images = [
     // First slider images (0-2)
@@ -60,7 +67,8 @@ export class SliderComponent {
   }
 
   previousImage() {
-    this.currentImageIndex = this.currentImageIndex === 0 ? 2 : this.currentImageIndex - 1;
+    this.currentImageIndex =
+      this.currentImageIndex === 0 ? 2 : this.currentImageIndex - 1;
     this.resetAutoAdvance();
   }
 

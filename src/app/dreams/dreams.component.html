@@ -1,47 +1,57 @@
- <div class="relative h-[600px] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden ">
-      <!-- Background Image with Overlay -->
-      <div class="absolute inset-0 bg-black/50"></div>
+<div
+  class="relative h-[600px] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden"
+>
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0 bg-black/50"></div>
 
-      <!-- City Skyline Background -->
-      <div
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style="background-image: url('/FAQ/LRvQOAlhrx (2).jpg');">
-      </div>
+  <!-- City Skyline Background -->
+  <div
+    class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style="background-image: url('/FAQ/LRvQOAlhrx (2).jpg')"
+  ></div>
 
-      <!-- Dark overlay for better text readability -->
-      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30"></div>
+  <!-- Dark overlay for better text readability -->
+  <div
+    class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/30"
+  ></div>
 
-      <!-- Content -->
-      <div class="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 backdrop-blur-sm bg-black/20 ">
-        <div class="text-center max-w-4xl mx-auto ">
-          <!-- Main Heading -->
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-transparent bg-clip-text bg-primary">
-            Turning Dreams into Addresses
-          </h2>
+  <!-- Content -->
+  <div
+    class="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 backdrop-blur-sm bg-black/20"
+  >
+    <div class="text-center max-w-4xl mx-auto">
+      <!-- Main Heading -->
+      <h2
+        class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-transparent bg-clip-text bg-primary"
+      >
+        Turning Dreams into Addresses
+      </h2>
 
-          <!-- Subheading -->
-          <p class="text-lg sm:text-xl lg:text-2xl text-secondary font-light mb-12 max-w-3xl mx-auto leading-relaxed">
-            Start your journey with us today. Browse our listings, or get in touch with one of our real estate experts for a personalized consultation.
-          </p>
+      <!-- Subheading -->
+      <p
+        class="text-lg sm:text-xl lg:text-2xl text-secondary font-light mb-12 max-w-3xl mx-auto leading-relaxed"
+      >
+        Start your journey with us today. Browse our listings, or get in touch
+        with one of our real estate experts for a personalized consultation.
+      </p>
 
-          <!-- CTA Button -->
-            <button
-                (click)="onGetInTouch()"
-                class="group relative px-8 py-4 bg-primary hover:bg-amber-800 text-secondary font-medium text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <span class="relative z-10">GET IN TOUCH</span>
-                <div class="absolute inset-0 bg-gradient-to-r from-primary to-amber-800 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
+      <!-- CTA Button -->
+      <button
+        (click)="scrollToSection()"
+        class="group relative px-8 py-4 bg-primary hover:bg-amber-800 text-secondary font-medium text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+      >
+        <span class="relative z-10">GET IN TOUCH</span>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-primary to-amber-800 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        ></div>
+      </button>
+    </div>
+  </div>
 
-
-
-        </div>
-      </div>
-
-      <!-- Scroll Indicator -->
-      <!-- <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+  <!-- Scroll Indicator -->
+  <!-- <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
           <div class="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div> -->
-    </div>
+</div>

@@ -5,6 +5,25 @@
   >
     <!-- Overlay layer -->
     <div class="absolute inset-0 bg-black opacity-70"></div>
+    <div class="text-center lg:text-left py-6 sm:py-0 z-10">
+      <h2
+        class="text-1xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight"
+      >
+        <span class="block text-primary">{{
+          "Alliance by" | letterByLetter : 100 | async
+        }}</span>
+        <!-- <span class="block text-primary"> H&B Elite Properties </span> -->
+      </h2>
+      <div class="flex justify-center ">
+
+        <img
+          src="/Damac/Damac white.png"
+          alt="imageAlt"
+          class="w-36 mb-6 h-auto object-cover transition-transform duration-500 hover:scale-105"
+          loading="lazy"
+        />
+      </div>
+    </div>
   </section>
 
   <div class="my-12 flex flex-col items-center">
@@ -618,7 +637,7 @@
       class="max-w-[1200px] w-full flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden"
     >
       <!-- Left: Form -->
-      <div class="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12">
+      <div  class="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12">
         <div class="w-full">
           <div class="bg-white">
             <div class="text-center mb-8">
@@ -631,6 +650,7 @@
             </div>
 
             <form
+            id="crm-header-form"
               [formGroup]="contactForm"
               (ngSubmit)="onSubmit()"
               class="space-y-4 lg:space-y-3"
@@ -788,7 +808,7 @@
                   for="country"
                   class="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  Country *
+                  Country 
                 </label>
                 <input
                   id="country"
@@ -823,7 +843,7 @@
                   for="property"
                   class="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  What type of property are you looking for? *
+                  What type of property are you looking for? 
                 </label>
                 <select
                   id="property"

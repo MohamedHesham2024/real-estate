@@ -33,8 +33,8 @@ export class HeroComponent {
       lastName: ['', [Validators.required, Validators.minLength(2)]],
       phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]],
       email: ['', [Validators.required, Validators.email]],
-      country: ['', Validators.required],
-      property: ['', Validators.required]
+      country: [''],
+      property: ['']
 
     });
   }

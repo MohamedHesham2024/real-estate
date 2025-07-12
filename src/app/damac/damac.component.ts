@@ -1,15 +1,17 @@
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { ButtonComponent } from '../sheard/button/button.component';
-import { NgClass, NgFor, NgIf } from '@angular/common';
+import { CommonModule, NgClass, NgFor, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SendDataService } from '../service/send-data.service';
 import { ToastrService } from 'ngx-toastr';
 import { ThemeToggleService } from '../theme-toggle.service';
+import { ActivatedRoute } from '@angular/router';
+import { LetterByLetterPipe } from '../Pipes/letter-by-letter.pipe';
 
 @Component({
   selector: 'app-damac',
-  imports: [ButtonComponent,NgIf,NgFor, ReactiveFormsModule, HttpClientModule],
+  imports: [CommonModule,LetterByLetterPipe,ButtonComponent,NgIf,NgFor, ReactiveFormsModule, HttpClientModule],
   templateUrl: './damac.component.html',
   styleUrl: './damac.component.css'
 })
@@ -25,14 +27,24 @@ currentSlide: number = 0;
   slideInterval: any;
  currentSlide2: number = 0;
 
-  constructor(private fb: FormBuilder, private sendDataService: SendDataService,private toastr: ToastrService,private themeService: ThemeToggleService) {
+  constructor(private route: ActivatedRoute,private fb: FormBuilder, private sendDataService: SendDataService,private toastr: ToastrService,private themeService: ThemeToggleService) {
     this.contactForm = this.fb.group({
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', [Validators.required, Validators.minLength(2)]],
       phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]],
       email: ['', [Validators.required, Validators.email]],
-      country: ['', Validators.required],
-      property: ['', Validators.required]
+      country: [''],
+      property: ['']
+    });
+  }
+  ngAfterViewInit() {
+    this.route.fragment.subscribe(fragment => {
+      if (fragment) {
+        const element = document.getElementById(fragment);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     });
   }
   // Touch handling

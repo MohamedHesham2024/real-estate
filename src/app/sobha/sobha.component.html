@@ -5,6 +5,25 @@
   >
     <!-- Overlay layer -->
     <div class="absolute inset-0 bg-black opacity-70"></div>
+    <div class="text-center lg:text-left py-6 sm:py-0 z-10">
+      <h2
+        class="text-1xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight"
+      >
+        <span class="block text-primary">{{
+          "Alliance by" | letterByLetter : 100 | async
+        }}</span>
+        <!-- <span class="block text-primary"> H&B Elite Properties </span> -->
+      </h2>
+      <div class="flex justify-center ">
+
+        <img
+          src="/sobha/sobha white.png"
+          alt="imageAlt"
+          class="w-36 mb-6 h-auto object-cover transition-transform duration-500 hover:scale-105"
+          loading="lazy"
+        />
+      </div>
+    </div>
   </section>
 
   <div class="my-12 flex flex-col items-center">
@@ -34,7 +53,9 @@
         Explore curated luxury — waterfront views, nature, and timeless
         elegance.
       </p>
-      <h2 class="text-3xl lg:text-4xl font-bold text-fontPrimary mb-6 text-center">
+      <h2
+        class="text-3xl lg:text-4xl font-bold text-fontPrimary mb-6 text-center"
+      >
         Prices start from AED 1.1M Flexible payment plans – down payment from
         just 10%
       </h2>
@@ -578,7 +599,10 @@
       class="max-w-[1200px] w-full flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden"
     >
       <!-- Left: Form -->
-      <div class="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12">
+      <div
+        id="crm-header-form"
+        class="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12"
+      >
         <div class="w-full">
           <div class="bg-white">
             <div class="text-center mb-8">
@@ -591,84 +615,84 @@
             </div>
 
             <form
+              id="crm-header-form"
               [formGroup]="contactForm"
               (ngSubmit)="onSubmit()"
               class="space-y-4 lg:space-y-3"
             >
               <!-- Full Name -->
-               <div class="flex gap-3">
-
-                 <div>
-                   <label
-                     for="fullName"
-                     class="block text-sm font-medium text-gray-700 mb-2"
-                   >
-                     First Name *
-                   </label>
-                   <input
-                     id="firstName"
-                     type="text"
-                     formControlName="firstName"
-                     class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
-                     [class.border-red-500]="
-                       contactForm.get('firstName')?.invalid &&
-                       contactForm.get('firstName')?.touched
-                     "
-                     placeholder="Enter your first name"
-                   />
-                   <div
-                     *ngIf="
-                       contactForm.get('firstName')?.invalid &&
-                       contactForm.get('firstName')?.touched
-                     "
-                     class="mt-1 text-sm text-error"
-                   >
-                     <span
-                       *ngIf="contactForm.get('firstName')?.errors?.['required']"
-                       >First name is required</span
-                     >
-                     <span
-                       *ngIf="contactForm.get('firstName')?.errors?.['minlength']"
-                       >First name must be at least 2 characters</span
-                     >
-                   </div>
-                 </div>
-                 <div>
-                   <label
-                     for="lastName"
-                     class="block text-sm font-medium text-gray-700 mb-2"
-                   >
-                     Last Name *
-                   </label>
-                   <input
-                     id="lastName"
-                     type="text"
-                     formControlName="lastName"
-                     class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
-                     [class.border-red-500]="
-                       contactForm.get('lastName')?.invalid &&
-                       contactForm.get('lastName')?.touched
-                     "
-                     placeholder="Enter your last name"
-                   />
-                   <div
-                     *ngIf="
-                       contactForm.get('lastName')?.invalid &&
-                       contactForm.get('lastName')?.touched
-                     "
-                     class="mt-1 text-sm text-error"
-                   >
-                     <span
-                       *ngIf="contactForm.get('lastName')?.errors?.['required']"
-                       >Last name is required</span
-                     >
-                     <span
-                       *ngIf="contactForm.get('lastName')?.errors?.['minlength']"
-                       >Last name must be at least 2 characters</span
-                     >
-                   </div>
-                 </div>
-               </div>
+              <div class="flex gap-3">
+                <div>
+                  <label
+                    for="fullName"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    First Name *
+                  </label>
+                  <input
+                    id="firstName"
+                    type="text"
+                    formControlName="firstName"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+                    [class.border-red-500]="
+                      contactForm.get('firstName')?.invalid &&
+                      contactForm.get('firstName')?.touched
+                    "
+                    placeholder="Enter your first name"
+                  />
+                  <div
+                    *ngIf="
+                      contactForm.get('firstName')?.invalid &&
+                      contactForm.get('firstName')?.touched
+                    "
+                    class="mt-1 text-sm text-error"
+                  >
+                    <span
+                      *ngIf="contactForm.get('firstName')?.errors?.['required']"
+                      >First name is required</span
+                    >
+                    <span
+                      *ngIf="contactForm.get('firstName')?.errors?.['minlength']"
+                      >First name must be at least 2 characters</span
+                    >
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="lastName"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Last Name *
+                  </label>
+                  <input
+                    id="lastName"
+                    type="text"
+                    formControlName="lastName"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+                    [class.border-red-500]="
+                      contactForm.get('lastName')?.invalid &&
+                      contactForm.get('lastName')?.touched
+                    "
+                    placeholder="Enter your last name"
+                  />
+                  <div
+                    *ngIf="
+                      contactForm.get('lastName')?.invalid &&
+                      contactForm.get('lastName')?.touched
+                    "
+                    class="mt-1 text-sm text-error"
+                  >
+                    <span
+                      *ngIf="contactForm.get('lastName')?.errors?.['required']"
+                      >Last name is required</span
+                    >
+                    <span
+                      *ngIf="contactForm.get('lastName')?.errors?.['minlength']"
+                      >Last name must be at least 2 characters</span
+                    >
+                  </div>
+                </div>
+              </div>
 
               <!-- Phone Number -->
               <div>
@@ -748,7 +772,7 @@
                   for="country"
                   class="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  Country *
+                  Country
                 </label>
                 <input
                   id="country"
@@ -768,8 +792,7 @@
                   "
                   class="mt-1 text-sm text-error"
                 >
-                  <span
-                    *ngIf="contactForm.get('country')?.errors?.['required']"
+                  <span *ngIf="contactForm.get('country')?.errors?.['required']"
                     >Country is required</span
                   >
                   <span
@@ -783,7 +806,7 @@
                   for="property"
                   class="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  What type of property are you looking for? *
+                  What type of property are you looking for?
                 </label>
                 <select
                   id="property"

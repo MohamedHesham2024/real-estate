@@ -1,6 +1,6 @@
-import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
+import { Component, HostListener, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import { ButtonComponent } from '../sheard/button/button.component';
-import { CommonModule, NgClass, NgFor, NgIf } from '@angular/common';
+import { CommonModule, isPlatformBrowser, NgClass, NgFor, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SendDataService } from '../service/send-data.service';
@@ -27,7 +27,7 @@ currentSlide: number = 0;
   slideInterval: any;
  currentSlide2: number = 0;
 
-  constructor(private route: ActivatedRoute,private fb: FormBuilder, private sendDataService: SendDataService,private toastr: ToastrService,private themeService: ThemeToggleService) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,private route: ActivatedRoute,private fb: FormBuilder, private sendDataService: SendDataService,private toastr: ToastrService,private themeService: ThemeToggleService) {
     this.contactForm = this.fb.group({
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', [Validators.required, Validators.minLength(2)]],
@@ -38,22 +38,24 @@ currentSlide: number = 0;
 
     });
   }
-  ngAfterViewInit() {
-    this.route.fragment.subscribe(fragment => {
-      if (fragment) {
-        const scrollToElement = () => {
-          const element = document.getElementById(fragment);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            element.scrollTo({ behavior: 'smooth'});
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      this.route.fragment.subscribe(fragment => {
+        if (fragment) {
+          // نستخدم retry scroll لأن العنصر ممكن يتأخر في الظهور
+          const tryScroll = (retries = 10) => {
+            const el = document.getElementById(fragment);
+            if (el) {
+              el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else if (retries > 0) {
+              setTimeout(() => tryScroll(retries - 1), 200); // نحاول تاني
+            }
+          };
 
-          } else {
-            setTimeout(scrollToElement, 100);
-          }
-        };
-        setTimeout(scrollToElement, 100);
-      }
-    });
+          setTimeout(() => tryScroll(), 200);
+        }
+      });
+    }
   }
   
   // Touch handling

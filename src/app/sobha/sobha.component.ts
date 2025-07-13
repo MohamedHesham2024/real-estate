@@ -40,13 +40,19 @@ export class SobhaComponent {
   ngAfterViewInit() {
     this.route.fragment.subscribe(fragment => {
       if (fragment) {
-        const element = document.getElementById(fragment);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
+        const scrollToElement = () => {
+          const element = document.getElementById(fragment);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          } else {
+            setTimeout(scrollToElement, 100);
+          }
+        };
+        setTimeout(scrollToElement, 100);
       }
     });
   }
+  
   // Touch handling
   private touchStartX: number | null = null;
   private touchEndX: number | null = null;

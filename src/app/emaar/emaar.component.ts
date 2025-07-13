@@ -45,6 +45,8 @@ currentSlide: number = 0;
           const element = document.getElementById(fragment);
           if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            element.scrollTo({ behavior: 'smooth'});
+
           } else {
             setTimeout(scrollToElement, 100);
           }

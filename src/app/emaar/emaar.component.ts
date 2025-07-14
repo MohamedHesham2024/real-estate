@@ -1,7 +1,25 @@
-import { Component, HostListener, Inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  Inject,
+  OnDestroy,
+  OnInit,
+  PLATFORM_ID,
+} from '@angular/core';
 import { ButtonComponent } from '../sheard/button/button.component';
-import { CommonModule, isPlatformBrowser, NgClass, NgFor, NgIf } from '@angular/common';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  CommonModule,
+  isPlatformBrowser,
+  NgClass,
+  NgFor,
+  NgIf,
+} from '@angular/common';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SendDataService } from '../service/send-data.service';
 import { ToastrService } from 'ngx-toastr';
@@ -11,12 +29,20 @@ import { LetterByLetterPipe } from '../Pipes/letter-by-letter.pipe';
 
 @Component({
   selector: 'app-emaar',
-  imports: [ButtonComponent,NgIf,NgFor, ReactiveFormsModule, HttpClientModule,CommonModule,LetterByLetterPipe],
+  imports: [
+    ButtonComponent,
+    NgIf,
+    NgFor,
+    ReactiveFormsModule,
+    HttpClientModule,
+    CommonModule,
+    LetterByLetterPipe,
+  ],
   templateUrl: './emaar.component.html',
-  styleUrl: './emaar.component.css'
+  styleUrl: './emaar.component.css',
 })
 export class EmaarComponent {
-currentSlide: number = 0;
+  currentSlide: number = 0;
   currentThumbPage: number = 0;
   isMobile: boolean = false;
   contactForm: FormGroup;
@@ -25,22 +51,28 @@ currentSlide: number = 0;
   submitError = '';
   slides = [0, 1, 2];
   slideInterval: any;
- currentSlide2: number = 0;
+  currentSlide2: number = 0;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object,private route: ActivatedRoute,private fb: FormBuilder, private sendDataService: SendDataService,private toastr: ToastrService,private themeService: ThemeToggleService) {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private route: ActivatedRoute,
+    private fb: FormBuilder,
+    private sendDataService: SendDataService,
+    private toastr: ToastrService,
+    private themeService: ThemeToggleService
+  ) {
     this.contactForm = this.fb.group({
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', [Validators.required, Validators.minLength(2)]],
       phoneNumber: ['', [Validators.required, Validators.pattern(/^[0-9]+$/)]],
       email: ['', [Validators.required, Validators.email]],
       country: [''],
-      property: ['']
-
+      property: [''],
     });
   }
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      this.route.fragment.subscribe(fragment => {
+      this.route.fragment.subscribe((fragment) => {
         if (fragment) {
           // نستخدم retry scroll لأن العنصر ممكن يتأخر في الظهور
           const tryScroll = (retries = 10) => {
@@ -57,55 +89,50 @@ currentSlide: number = 0;
       });
     }
   }
-  
+
   // Touch handling
   private touchStartX: number | null = null;
   private touchEndX: number | null = null;
   private minSwipeDistance: number = 50;
 
   images: any[] = [
-   
     {
       full: '/Emaar/VIDA_RH_DHE_IMAGE03 (1).jpg',
       thumb: '/Emaar/VIDA_RH_DHE_IMAGE03 (1).jpg',
-      alt: 'Image 2'
+      alt: 'Image 2',
     },
     {
       full: '/Emaar/Screenshot 2025-06-26 111103.jpg',
       thumb: '/Emaar/Screenshot 2025-06-26 111103.jpg',
-      alt: 'Image 3'
+      alt: 'Image 3',
     },
     {
       full: '/Emaar/ALTAN_DCH_IMAGE05.jpg',
       thumb: '/Emaar/ALTAN_DCH_IMAGE05.jpg',
-      alt: 'Image 4'
+      alt: 'Image 4',
     },
     {
       full: '/Emaar/Screenshot 2025-06-26 105544.jpg',
       thumb: '/Emaar/Screenshot 2025-06-26 105544.jpg',
-      alt: 'Image 5'
+      alt: 'Image 5',
     },
-    
-    
   ];
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.checkMobile();
-
   }
-logoSrc = '';
+  logoSrc = '';
   ngOnInit() {
     this.themeService.isDarkMode$.subscribe((isDark) => {
       this.logoSrc = isDark
         ? '/Emaar/emaar white.png'
         : '/Emaar/emaar black.png';
     });
-     
+
     this.checkMobile();
     this.startSlider();
     this.startAutoAdvance();
-
   }
 
   private checkMobile() {
@@ -136,7 +163,8 @@ logoSrc = '';
   }
 
   prevSlide() {
-    this.currentSlide = (this.currentSlide - 1 + this.images.length) % this.images.length;
+    this.currentSlide =
+      (this.currentSlide - 1 + this.images.length) % this.images.length;
     this.updateThumbPage();
   }
 
@@ -150,7 +178,8 @@ logoSrc = '';
   }
 
   prevThumbPage() {
-    this.currentThumbPage = (this.currentThumbPage - 1 + this.totalThumbPages) % this.totalThumbPages;
+    this.currentThumbPage =
+      (this.currentThumbPage - 1 + this.totalThumbPages) % this.totalThumbPages;
   }
 
   private updateThumbPage() {
@@ -180,7 +209,7 @@ logoSrc = '';
 
   onTouchEnd() {
     if (!this.touchStartX || !this.touchEndX) return;
-    
+
     const distance = this.touchStartX - this.touchEndX;
     const isLeftSwipe = distance > this.minSwipeDistance;
     const isRightSwipe = distance < -this.minSwipeDistance;
@@ -204,7 +233,6 @@ logoSrc = '';
   getThumbTransform(): string {
     return `translateX(-${this.currentThumbPage * 100}%)`;
   }
-  
 
   startSlider() {
     this.slideInterval = setInterval(() => {
@@ -216,31 +244,36 @@ logoSrc = '';
     this.currentSlide2 = index;
   }
 
-   onSubmit() {
+  onSubmit() {
     if (this.contactForm.valid) {
       this.isLoading = true;
       this.submitSuccess = false;
       this.submitError = '';
 
-      this.sendDataService.submitContactForm({...this.contactForm.value,developer:"emaar"}).subscribe({
-        next: () => {
-          this.isLoading = false;
-          this.contactForm.reset();
-          this.toastr.success('Form submitted successfully!', 'Success');
-        },
-        error: (error) => {
-          this.isLoading = false;
-          console.error('Form submission error:', error);
-          this.toastr.error('There was an error submitting the form. Please try again.', 'Error');
-        }
-      });
+      this.sendDataService
+        .submitContactForm({ ...this.contactForm.value, developer: 'emaar' })
+        .subscribe({
+          next: () => {
+            this.isLoading = false;
+            this.contactForm.reset();
+            this.toastr.success('Form submitted successfully!', 'Success');
+          },
+          error: (error) => {
+            this.isLoading = false;
+            console.error('Form submission error:', error);
+            this.toastr.error(
+              'There was an error submitting the form. Please try again.',
+              'Error'
+            );
+          },
+        });
     } else {
-      Object.keys(this.contactForm.controls).forEach(key => {
+      Object.keys(this.contactForm.controls).forEach((key) => {
         this.contactForm.get(key)?.markAsTouched();
       });
     }
   }
-   currentImageIndex = 0;
+  currentImageIndex = 0;
   private intervalId: any;
 
   // Add your villa images here
@@ -250,8 +283,6 @@ logoSrc = '';
     '/Emaar/VIDA_RH_DHE_IMAGE03 (1).jpg',
     '/Emaar/Screenshot 2025-06-26 111103.jpg',
   ];
-
-  
 
   ngOnDestroy() {
     if (this.intervalId) {
@@ -265,8 +296,10 @@ logoSrc = '';
   }
 
   previousImage() {
-    this.currentImageIndex = this.currentImageIndex === 0 ?
-      this.images2.length - 1 : this.currentImageIndex - 1;
+    this.currentImageIndex =
+      this.currentImageIndex === 0
+        ? this.images2.length - 1
+        : this.currentImageIndex - 1;
     this.resetAutoAdvance();
   }
 
@@ -278,7 +311,8 @@ logoSrc = '';
 
   private startAutoAdvance() {
     this.intervalId = setInterval(() => {
-      this.currentImageIndex = (this.currentImageIndex + 1) % this.images2.length;
+      this.currentImageIndex =
+        (this.currentImageIndex + 1) % this.images2.length;
     }, 5000);
   }
 
@@ -288,7 +322,7 @@ logoSrc = '';
     }
     this.startAutoAdvance();
   }
-  
+
   // countries = [
   //   { name: "Afghanistan", code: "AF", dial_code: "+93", flag: "https://flagcdn.com/w40/af.png" },
   //   { name: "Albania", code: "AL", dial_code: "+355", flag: "https://flagcdn.com/w40/al.png" },
@@ -485,14 +519,14 @@ logoSrc = '';
   //   { name: "Zimbabwe", code: "ZW", dial_code: "+263", flag: "https://flagcdn.com/w40/zw.png" }
   // ];
   countries = [
-  { name: "Egypt" },
-  { name: "Saudi Arabia" },
-  { name: "United Arab Emirates" },
-  { name: "Qatar" },
-  { name: "United Kingdom" },
-  { name: "United States" },
-];
- mockProperties: any[] = [
+    { name: 'Egypt' },
+    { name: 'Saudi Arabia' },
+    { name: 'United Arab Emirates' },
+    { name: 'Qatar' },
+    { name: 'United Kingdom' },
+    { name: 'United States' },
+  ];
+  mockProperties: any[] = [
     {
       id: 1,
       name: '1 Bedroom Apartment',
@@ -500,12 +534,10 @@ logoSrc = '';
     {
       id: 2,
       name: '2 Bedroom Apartment',
-
     },
     {
       id: 3,
       name: '3 Bedroom Apartment',
-    }
+    },
   ];
-  
 }

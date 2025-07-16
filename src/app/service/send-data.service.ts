@@ -15,9 +15,9 @@ export class SendDataService {
       First_Name: formData.firstName,
       Last_Name: formData.lastName,
       Email: formData.email,
-      Phone: formData.phoneNumber,
+      Mobile: formData.phoneNumber,
       Mailing_Country: formData.country,
-      Developer: formData.developer,
+      Project: formData.developer,
       Property: formData.property,
     };
     return this.http.post(this.apiUrl, payload);

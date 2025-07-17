@@ -7,11 +7,13 @@ import { SobhaComponent } from './sobha/sobha.component';
 import { DamacComponent } from './damac/damac.component';
 import { MeraasComponent } from './meraas/meraas.component';
 import { EmaarComponent } from './emaar/emaar.component';
+import { OurTeamComponent } from './our-team/our-team.component';
 
 export const routes: Routes = [{ path: '', component: HomeComponent},
   { path: 'faq', component: FAQComponent },
   { path: 'about', component: AboutUsComponent },
   { path: 'contact', component: ContactUsComponent },
+  { path: 'our-team', component: OurTeamComponent },
   { path: 'developer/sobha', component: SobhaComponent },
   { path: 'developer/damac', component: DamacComponent },
   { path: 'developer/merass', component: MeraasComponent },

@@ -1,0 +1,105 @@
+<div
+  class="min-h-screen transition-all duration-500 bg-thread dark:bg-dark-background"
+>
+  <section
+    class="relative h-[450px] bg-cover bg-center px-4 flex items-center justify-center text-center mb-36"
+    style="background-image: url('/our-team/our-team.jpg')"
+  >
+    <!-- Overlay layer -->
+    <div class="absolute inset-0 bg-black opacity-70"></div>
+    <div
+      class="flex flex-col items-center justify-center lg:text-left py-6 sm:py-0 z-10"
+    >
+      <h2
+        class="text-5xl sm:text-6xl lg:text-7xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight"
+      >
+        <span class="block text-primary">{{
+          "Our Team" | letterByLetter : 100 | async
+        }}</span>
+        <!-- <span class="block text-primary"> H&B Elite Properties </span> -->
+      </h2>
+
+      <p class="text-sm md:text-lg text-white md:w-1/2 text-center">
+        Meet our dedicated real estate professionals who are committed to
+        turning your property dreams into reality with expertise and passion.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team Grid -->
+  <section class="relative pb-32 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="space-y-24">
+        <div
+          *ngFor="let member of teamMembers; let i = index"
+          class="relative flex items-center"
+          [class.justify-start]="i % 2 === 0"
+          [class.justify-end]="i % 2 !== 0"
+        >
+          <!-- Card Container -->
+          <div class="relative w-full max-w-4xl group">
+            <!-- Large Profile Image - Breaking out of card -->
+            <div
+              class="absolute -top-16 z-20"
+              [class.left-12]="i % 2 === 0"
+              [class.right-12]="i % 2 !== 0"
+            >
+              <div class="relative group">
+                <img
+                  [src]="member.image"
+                  [alt]="member.name"
+                  class="w-36 h-36 rounded-3xl object-cover shadow-2xl transition-all duration-700 group-hover:scale-110 group-hover:rotate-3 ring-4 ring-primary/40 group-hover:ring-primary/60"
+                />
+                <!-- Glowing effect behind image -->
+                <div
+                  class="absolute -inset-4 rounded-3xl blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-500 bg-primary/30"
+                ></div>
+
+                <!-- Floating specialty badge -->
+                <div
+                  class="absolute w-auto -bottom-4 px-3 py-1 rounded-full text-md font-medium bg-white text-primary border border-primary/30 shadow-lg transition-all duration-700 group-hover:scale-110 group-hover:rotate-3 "
+                  [class.-right-12]="i % 2 === 0"
+                  [class.-left-12]="i % 2 !== 0"
+                >
+                  {{ member.specialty }}
+                </div>
+              </div>
+            </div>
+
+            <!-- Main Card -->
+            <div
+              class="relative pt-24 pb-12 px-12 rounded-3xl transition-all duration-700 hover:transform hover:scale-105 backdrop-blur-sm bg-white/90 dark:bg-dark-background  shadow-xl hover:shadow-2xl border border-primary"
+            >
+              <!-- Content aligned based on image position -->
+              <div
+                [ngClass]="{
+                  'ml-0 mr-0': true,
+                  'sm:ml-20': i % 2 === 0,
+                  'sm:mr-20': i % 2 !== 0
+                }"
+              >
+                <!-- Name with enhanced styling -->
+                <div class="flex justify-center items-center gap-2 mb-6">
+                  <h3 class="text-3xl font-bold  text-primary">
+                    {{ member.name }}
+                  </h3>
+
+                  <!-- Role with icon -->
+                  <!-- <p class="font-semibold text-lg  text-fontPrimary">
+                    {{ member.role }}
+                  </p> -->
+                </div>
+
+                <!-- Bio with improved typography -->
+                <p class="text-lg leading-relaxed mb-6 text-fontThread text-justify">
+  {{ member.bio }}
+</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

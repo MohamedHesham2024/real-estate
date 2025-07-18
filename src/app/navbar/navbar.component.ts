@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ThemeToggleComponent } from "../theme-toggle/theme-toggle.component";
-
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageSwitcherComponent } from "../language-switcher/language-switcher.component";
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule, RouterModule, ThemeToggleComponent],
+  imports: [CommonModule, RouterModule, ThemeToggleComponent, TranslateModule, LanguageSwitcherComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })

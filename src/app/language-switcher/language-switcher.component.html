@@ -1,0 +1,29 @@
+<div class="relative block w-full max-w-[180px] sm:max-w-[200px] mx-auto">
+  <!-- Trigger button -->
+  <button
+    class="w-full bg-primary text-secondary dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md px-3 py-2 text-sm sm:text-base text-left shadow-md focus:outline-none focus:ring-2 focus:ring-primary flex justify-between items-center"
+    (click)="toggleDropdown()"
+  >
+    <span class="truncate">{{ getLangLabel(languageService.currentLang) }}</span>
+    <svg class="w-4 h-4 ml-2 text-secondary shrink-0" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M5.23 7.21a.75.75 0 011.06.02L10 11.29l3.71-4.06a.75.75 0 111.1 1.02l-4.25 4.65a.75.75 0 01-1.1 0L5.23 8.29a.75.75 0 01.02-1.08z"/>
+    </svg>
+  </button>
+
+  <!-- Dropdown menu -->
+  <div
+    *ngIf="dropdownOpen"
+    class="absolute z-50 mt-1 w-full rounded-md bg-white dark:bg-gray-800 shadow-lg border border-gray-200 dark:border-gray-700"
+  >
+    <div
+      *ngFor="let lang of languageService.availableLangs"
+      (click)="selectLang(lang)"
+      class="px-4 py-2 text-sm sm:text-base cursor-pointer hover:bg-primary hover:text-white text-primary transition"
+      [ngClass]="{ 'bg-primary text-white': lang === languageService.currentLang }"
+    >
+      {{ getLangLabel(lang) }}
+    </div>
+  </div>
+</div>
+
+

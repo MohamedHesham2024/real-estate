@@ -1,0 +1,110 @@
+<div class="bg-thread dark:bg-dark-background">
+    <!-- Hero Section -->
+    <section
+      class="relative h-[450px] bg-cover bg-center px-4 flex items-center justify-center text-center"
+      style="background-image: url('/Properties/image1.jpg');"
+    >
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+      <div class="text-center lg:text-left py-6 sm:py-0 z-10">
+        <h2 class="text-1xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight">
+          <span class="block text-primary">
+            {{ ('Freehold_vs_Leasehold_in_Dubai_Real_Estate.title' | translate) | letterByLetter : 100 | async }}
+          </span>
+        </h2>
+      </div>
+    </section>
+  
+    <div class="max-w-6xl mx-auto px-6 py-12">
+      <!-- Hero Image Section -->
+      <div class="mb-8">
+        <img
+          src="/Properties/image1.jpg"
+          alt="Freehold vs Leasehold"
+          class="w-full    rounded-lg shadow-lg"
+        />
+      </div>
+  
+      <!-- Intro Section -->
+      <div class="mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 text-fontPrimary">
+          {{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.subtitle' | translate }}
+        </h1>
+        <p class="text-lg leading-relaxed mb-6 text-fontSecondary">
+          {{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.introduction' | translate }}
+        </p>
+      </div>
+  
+      <!-- Definitions Section -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 text-fontPrimary">
+          {{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.section_title_definitions' | translate }}
+        </h2>
+        <p class="text-fontSecondary mb-4">
+          {{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.section_intro_definitions' | translate }}
+        </p>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="p-4 rounded-lg border border-fontPrimary">
+            <h3 class="text-xl font-semibold text-fontPrimary mb-2">Freehold</h3>
+            <p class="mb-2 text-fontSecondary">{{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.freehold_definition' | translate }}</p>
+            <p class="mb-2 text-fontSecondary">{{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.freehold_benefits' | translate }}</p>
+            <p class="text-fontSecondary">{{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.freehold_areas' | translate }}</p>
+          </div>
+          <div class="p-4 rounded-lg border border-fontPrimary">
+            <h3 class="text-xl font-semibold text-fontPrimary mb-2">Leasehold</h3>
+            <p class="mb-2 text-fontSecondary">{{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.leasehold_definition' | translate }}</p>
+            <p class="mb-2 text-fontSecondary">{{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.leasehold_benefits' | translate }}</p>
+            <p class="text-fontSecondary">{{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.leasehold_areas' | translate }}</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Key Differences Section -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 text-fontPrimary">
+          {{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.section_title_differences' | translate }}
+        </h2>
+        <ul class="list-disc list-inside space-y-2 mx-4">
+          <li class="text-fontSecondary" *ngFor="let item of ('Freehold_vs_Leasehold_in_Dubai_Real_Estate.differences_list' | translate)">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Which to Choose Section -->
+      <div class="mb-12">
+        <h2 class="text-2xl font-bold mb-4 text-fontPrimary">
+          {{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.section_title_which_to_choose' | translate }}
+        </h2>
+        <p class="mb-4 text-fontSecondary">
+          {{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.which_to_choose_advice' | translate }}
+        </p>
+        <p class="font-medium text-fontSecondary">
+          {{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.contract_tip' | translate }}
+        </p>
+      </div>
+  
+      <!-- Final Thoughts Section -->
+      <div class="text-center mb-12">
+        <p class="text-lg mb-4 text-fontSecondary">
+          {{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.final_thoughts' | translate }}
+        </p>
+        <p class="text-xl font-semibold" style="color: #AF8255;">
+          {{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.question' | translate }}
+        </p>
+      </div>
+  
+      <!-- CTA Section -->
+      <div class="rounded-lg p-8 text-center" style="background: linear-gradient(135deg, #AF8255 0%, #111010 100%); color: #FFFFFF;">
+        <p class="text-lg mb-6">
+          {{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.cta' | translate }}
+        </p>
+        <button
+          class="font-bold py-3 px-8 rounded-lg hover:opacity-90 transition duration-300 transform hover:scale-105"
+          style="background-color: #FFFFFF; color: #AF8255;"
+        >
+          {{ 'Freehold_vs_Leasehold_in_Dubai_Real_Estate.cta_button' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+  

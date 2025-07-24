@@ -8,21 +8,20 @@
   <!-- Content -->
   <div class="relative z-10">
     <h1 class="text-4xl md:text-5xl font-bold text-fontPrimary drop-shadow-lg font-exo">
-      Frequently Asked Questions
+      {{ "faq-first-section.title" | translate }}
     </h1>
-    <p class="mt-4 text-2xl text-white">You've asked, and we've answered!</p>
+    <p class="mt-4 text-2xl text-white">{{ "faq-first-section.subtitle" | translate }}</p>
   </div>
 </section>
 
 <section class="bg-thread dark:bg-dark-background  py-16 px-4 ">
   <div class="max-w-6xl mx-auto ">
     <p class="text-center text-fontSecondary text-lg max-w-3xl mx-auto mb-12">
-      At H&B Elite Properties, we understand that buying, selling, or investing in real estate can be a complex process.
-      To help you navigate it with ease, we’ve compiled answers to some of the most common questions we receive.
+      {{ "faq-first-section.introduction" | translate }}
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-      <ng-container *ngFor="let item of faqs">
+      <ng-container *ngFor="let item of faqs trackBy: trackByFn">
         <div class="border border-gray-300 rounded  transition-all duration-300">
           <button
             class="flex items-center w-full px-4 py-2 text-left"

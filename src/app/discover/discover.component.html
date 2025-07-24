@@ -2,19 +2,19 @@
       <div class="max-w-3xl mx-auto text-center">
         <!-- Main Heading -->
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-light text-primary mb-8 tracking-wide font-exo">
-          Discover Dubai's Finest Properties
+           {{ 'home.section1.title' | translate }}
         </h1>
 
         <!-- Content Container -->
         <div class="space-y-8 text-fontThread">
           <!-- First Paragraph -->
           <p class="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-            At <span class="font-semibold text-primary">H&B Elite Properties</span>, we specialize in connecting you with premium real estate opportunities across Dubai. Whether you're looking for your dream home, a lucrative investment, or the perfect commercial space, our team is dedicated to helping you find the right property that suits your needs.
+            {{ 'home.section1.points.0' | translate }} <span class="font-semibold text-primary">{{ 'home.section1.points.1' | translate }}</span>{{ 'home.section1.points.2' | translate }}
           </p>
 
           <!-- Second Paragraph -->
           <p class="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-            From luxurious villas in Palm Jumeirah to stylish apartments in Downtown Dubai, we offer a diverse portfolio of properties in prime locations across the city. Each property is handpicked to ensure it meets the highest standards of quality, design, and lifestyle.
+            {{ 'home.section1.points.3' | translate }}
           </p>
         </div>
 
@@ -23,7 +23,7 @@
           <button 
           (click)="scrollToSection()"
           class="bg-primary hover:bg-gradient-to-r from-primary to-amber-800 group-hover:opacity-100  text-secondary font-medium py-3 px-8 rounded-md transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-black tracking-wider uppercase">
-            Explore Properties
+{{ 'home.section1.button' | translate }}
           </button>
         </div>
 

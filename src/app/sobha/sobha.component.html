@@ -12,10 +12,8 @@
         <span class="block text-primary">{{
           "Alliance by" | letterByLetter : 100 | async
         }}</span>
-        <!-- <span class="block text-primary"> H&B Elite Properties </span> -->
       </h2>
       <div class="flex justify-center ">
-
         <img
           src="/sobha/sobha white.png"
           alt="imageAlt"
@@ -35,14 +33,13 @@
     />
 
     <h1 class="text-3xl font-bold text-center mb-6 text-fontPrimary font-exo">
-      Live the Sobha Standard — Register Your Interest
+      {{ 'sobha.hero_section.title' | translate }}
     </h1>
     <p class="text-center max-w-6xl text-fontSecondary mx-auto mb-8">
-      Refined design, flawless finishes, and luxury that lasts. Let us help you
-      find the perfect Sobha property.
+      {{ 'sobha.hero_section.description' | translate }}
     </p>
     <div class="flex justify-center">
-      <app-button label="ENQUIRE NOW" targetId="crm-form"></app-button>
+      <app-button label="{{ 'sobha.hero_section.enquire_now' | translate }}" targetId="crm-form"></app-button>
     </div>
   </div>
   <section
@@ -50,25 +47,23 @@
   >
     <div class="flex flex-col items-center max-w-7xl mx-auto">
       <p class="text-center max-w-6xl text-fontSecondary mx-auto mb-8">
-        Explore curated luxury — waterfront views, nature, and timeless
-        elegance.
+        {{ 'sobha.pricing_section.explore_text' | translate }}
       </p>
       <h2
         class="text-3xl lg:text-4xl font-bold text-fontPrimary mb-6 text-center"
       >
-        Prices start from AED 1.1M Flexible payment plans – down payment from
-        just 10%
+        {{ 'sobha.pricing_section.pricing_title' | translate }}
       </h2>
       <p class="text-lg text-fontSecondary text-center max-w-2xl mb-8">
-        Whether you're looking for a peaceful island retreat, a cityside green
-        haven, or a luxury waterfront address, Sobha offers refined living with
-        long-term value.
+        {{ 'sobha.pricing_section.description' | translate }}
       </p>
     </div>
   </section>
   <div class="flex justify-center my-12">
-    <app-button label="ENQUIRE NOW" targetId="crm-form"></app-button>
+    <app-button label="{{ 'sobha.hero_section.enquire_now' | translate }}" targetId="crm-form"></app-button>
   </div>
+  
+ 
   <section class="py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -79,26 +74,19 @@
             <h2
               class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
             >
-              About Sobha
+              Sobha Hartland
             </h2>
 
             <div class="prose prose-lg text-fontSecondary leading-relaxed">
               <p class="text-justify">
-                Sobha Realty is a globally recognized luxury real estate
-                developer, known for setting new benchmarks in quality and
-                craftsmanship. With deep roots in design and construction, Sobha
-                controls every aspect of development — from concept to
-                completion. Based in Dubai and backed by a legacy of over four
-                decades, Sobha is the force behind award-winning communities
-                like <strong>Sobha Hartland,Sobha SeaHaven</strong>, and the
-                ultra-exclusive <strong>Siniya Island</strong>. Each project
-                reflects Sobha’s signature: flawless finishes, prime locations,
-                and refined architecture that elevates everyday living.
+                {{ 'sobha.about.description' | translate }} <strong>{{ 'sobha.about.projects' | translate }}</strong>, and the
+                ultra-exclusive <strong>{{ 'sobha.about.exclusive_project' | translate }}</strong>. 
+                {{ 'sobha.about.signature' | translate }}
               </p>
             </div>
           </div>
           <div class="flex mt-20">
-            <app-button label="KNOW MORE" targetId="crm-form"></app-button>
+            <app-button label="{{ 'sobha.projects.hartland.know_more' | translate }}" targetId="crm-form"></app-button>
           </div>
         </div>
         <!-- Right Side - Content -->
@@ -144,23 +132,20 @@
             <h2
               class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
             >
-              Sobha SeaHaven
+              Sobha Siniya Island
             </h2>
 
             <div class="prose prose-lg text-fontSecondary leading-relaxed">
               <p class="text-justify">
-                Wake up to the sound of waves and the view of Palm Jumeirah. A
-                collection of high-rise luxury residences designed to capture
-                the essence of coastal living — modern, calm, and irresistibly
-                stylish.
+                {{ 'sobha.projects.seahaven.description' | translate }}
 
-                <strong>Just minutes from Dubai Marina and JBR. </strong>
+                <strong>{{ 'sobha.projects.seahaven.location' | translate }} </strong>
               </p>
             </div>
           </div>
           <div class="flex mt-20">
             <app-button
-              label="REQUEST A CALLBACK"
+              label="{{ 'sobha.projects.siniya.request_callback' | translate }}"
               targetId="crm-form"
             ></app-button>
           </div>
@@ -168,7 +153,7 @@
       </div>
     </div>
   </section>
-  <section class="py-16 px-4 sm:px-6 lg:px-8">
+   <section class="py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Left Side - Image -->
@@ -178,24 +163,21 @@
             <h2
               class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
             >
-              Sobha Hartland
+              About Sobha
             </h2>
 
             <div class="prose prose-lg text-fontSecondary leading-relaxed">
               <p class="text-justify">
-                A lush, green oasis in the heart of Dubai. This master-planned
-                community blends elegant apartments and villas with forest
-                living, international schools, and world-class wellness.
+                {{ 'sobha.projects.hartland.description' | translate }}
 
                 <strong>
-                  Close to Downtown Dubai, Meydan, and Ras Al Khor Wildlife
-                  Sanctuary.
+                  {{ 'sobha.projects.hartland.location' | translate }}
                 </strong>
               </p>
             </div>
           </div>
           <div class="flex mt-20">
-            <app-button label="KNOW MORE" targetId="crm-form"></app-button>
+            <app-button label="{{ 'sobha.projects.hartland.know_more' | translate }}" targetId="crm-form"></app-button>
           </div>
         </div>
         <!-- Right Side - Content -->
@@ -241,25 +223,22 @@
             <h2
               class="text-4xl lg:text-5xl font-bold leading-tight mb-6 text-fontPrimary"
             >
-              Sobha Siniya Island
+              Sobha SeaHaven
             </h2>
 
             <div class="prose prose-lg leading-relaxed text-fontSecondary">
               <p class="text-justify">
-                A private island escape offering villas and apartments
-                surrounded by mangroves and crystal waters. Designed for
-                serenity, luxury, and long-term value.
+                {{ 'sobha.projects.siniya.description' | translate }}
 
                 <strong>
-                  A unique opportunity to own waterfront property in a natural
-                  sanctuary — just 30 mins from Sharjah.
+                  {{ 'sobha.projects.siniya.location' | translate }}
                 </strong>
               </p>
             </div>
           </div>
           <div class="flex mt-20">
             <app-button
-              label="REQUEST A CALLBACK"
+              label="{{ 'sobha.projects.siniya.request_callback' | translate }}"
               targetId="crm-form"
             ></app-button>
           </div>
@@ -267,7 +246,6 @@
       </div>
     </div>
   </section>
-
   <div class="max-w-6xl mx-auto px-4 py-12">
     <!-- Header -->
     <h2 class="text-2xl md:text-3xl font-bold text-fontPrimary mb-12">
@@ -294,11 +272,10 @@
           </div>
         </div>
         <h3 class="font-semibold text-fontPrimary mb-2">
-          In-house Construction Excellence
+          {{ 'sobha.why_choose.features.construction.title' | translate }}
         </h3>
         <p class="text-sm text-fontSecondary leading-relaxed">
-          Sobha builds everything — no outsourcing — guaranteeing quality and
-          precision in every detail.
+          {{ 'sobha.why_choose.features.construction.description' | translate }}
         </p>
       </div>
 
@@ -359,10 +336,11 @@
             </svg>
           </div>
         </div>
-        <h3 class="font-semibold text-fontPrimary mb-2">Prime Locations</h3>
+        <h3 class="font-semibold text-fontPrimary mb-2">
+          {{ 'sobha.why_choose.features.locations.title' | translate }}
+        </h3>
         <p class="text-sm text-fontSecondary leading-relaxed">
-          Every development is positioned in fast-growing, high-demand areas
-          across Dubai and the UAE.
+          {{ 'sobha.why_choose.features.locations.description' | translate }}
         </p>
       </div>
 
@@ -384,11 +362,10 @@
           </div>
         </div>
         <h3 class="font-semibold text-fontPrimary mb-2">
-          Master-Planned Communities
+          {{ 'sobha.why_choose.features.communities.title' | translate }}
         </h3>
         <p class="text-sm text-gray-600 leading-relaxed">
-          Homes surrounded by greenery, schools, retail, wellness, and leisure —
-          all seamlessly connected.
+          {{ 'sobha.why_choose.features.communities.description' | translate }}
         </p>
       </div>
 
@@ -410,11 +387,10 @@
           </div>
         </div>
         <h3 class="font-semibold text-fontPrimary mb-2">
-          Focused on Value & Delivery
+          {{ 'sobha.why_choose.features.value.title' | translate }}
         </h3>
         <p class="text-sm text-fontSecondary leading-relaxed">
-          High ROI, realistic payment plans, and on-time project completion make
-          Sobha a smart investment.
+          {{ 'sobha.why_choose.features.value.description' | translate }}
         </p>
       </div>
 
@@ -438,11 +414,10 @@
           </div>
         </div>
         <h3 class="font-semibold text-fontPrimary mb-2">
-          Design-Driven Philosophy
+          {{ 'sobha.why_choose.features.design.title' | translate }}
         </h3>
         <p class="text-sm text-fontSecondary leading-relaxed">
-          From facade to flooring, Sobha homes reflect unmatched aesthetic and
-          structural integrity.
+          {{ 'sobha.why_choose.features.design.description' | translate }}
         </p>
       </div>
 
@@ -465,9 +440,11 @@
             </svg>
           </div>
         </div>
-        <h3 class="font-semibold text-fontPrimary mb-2">Conventional Safety</h3>
+        <h3 class="font-semibold text-fontPrimary mb-2">
+          {{ 'sobha.why_choose.features.safety.title' | translate }}
+        </h3>
         <p class="text-sm text-fontSecondary leading-relaxed">
-          Dubai is extremely safe and they are very strict with individual
+          {{ 'sobha.why_choose.features.safety.description' | translate }}
         </p>
       </div>
     </div>

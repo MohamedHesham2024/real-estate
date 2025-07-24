@@ -1,0 +1,147 @@
+<div class="bg-thread dark:bg-dark-background">
+    <!-- Hero Section -->
+    <section
+      class="relative h-[450px] bg-cover bg-center px-4 flex items-center justify-center text-center"
+      style="background-image: url('/Properties/image3.jpg');"
+    >
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+      <div class="text-center lg:text-left py-6 sm:py-0 z-10">
+        <h2 class="text-1xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight">
+          <span class="block text-primary">
+            {{ ('Oqood_System_in_Dubai_Real_Estate.name' | translate) | letterByLetter : 100 | async }}
+          </span>
+        </h2>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Hero Image -->
+        <div class="mb-8">
+          <img 
+            src="/Properties/image3.jpg" 
+            alt="Oqood System in Dubai" 
+            class="w-full rounded-lg shadow-lg"
+          />
+        </div>
+  
+        <!-- Header Section -->
+        <div class="mb-12">
+          <h1 class="text-3xl md:text-4xl font-bold mb-4 text-fontPrimary">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.title' | translate }}
+          </h1>
+          <p class="text-lg leading-relaxed mb-4 text-fontSecondary">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.introduction' | translate }}
+          </p>
+          <p class="text-lg font-medium mb-4 text-fontSecondary">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.summary' | translate }}
+          </p>
+        </div>
+
+        <!-- What is Oqood Section -->
+        <div class="rounded-lg mb-8">
+          <h3 class="text-2xl font-bold mb-4 text-fontPrimary">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.what_is.title' | translate }}
+          </h3>
+          <p class="text-fontSecondary">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.what_is.description' | translate }}
+          </p>
+        </div>
+
+        <!-- Why Introduced Section -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 text-fontPrimary">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.why_introduced.title' | translate }}
+          </h3>
+          <p class="mb-4 text-fontSecondary">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.why_introduced.description' | translate }}
+          </p>
+          <ul class="list-disc list-inside space-y-2 mx-4">
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.why_introduced.purposes.0' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.why_introduced.purposes.1' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.why_introduced.purposes.2' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.why_introduced.purposes.3' | translate }}</li>
+          </ul>
+        </div>
+
+        <!-- Oqood Includes Section -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 text-fontPrimary">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.oqood_includes.title' | translate }}
+          </h3>
+          <ul class="list-disc list-inside space-y-2 mx-4 mb-4">
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.oqood_includes.items.0' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.oqood_includes.items.1' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.oqood_includes.items.2' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.oqood_includes.items.3' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.oqood_includes.items.4' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.oqood_includes.items.5' | translate }}</li>
+          </ul>
+          <p class="text-fontSecondary">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.oqood_includes.conclusion' | translate }}
+          </p>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 text-fontPrimary">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.benefits.title' | translate }}
+          </h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div *ngFor="let item of [0,1,2,3,4]" class="p-4 rounded-lg border border-fontPrimary">
+              <div class="flex items-start gap-2">
+                <svg class="w-5 h-5 mt-1" fill="#AF8255" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <p class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.benefits.items.'+item | translate }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How to Get Section -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 text-fontPrimary">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.how_to_get.title' | translate }}
+          </h3>
+          <ul class="list-disc list-inside space-y-2 mx-4 mb-4">
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.how_to_get.steps.0' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.how_to_get.steps.1' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Oqood_System_in_Dubai_Real_Estate.how_to_get.steps.2' | translate }}</li>
+          </ul>
+          <div class="mt-6 p-4 rounded-lg border border-fontPrimary">
+            <div class="flex gap-2">
+              <div class="flex-shrink-0">
+                <svg class="w-5 h-5" fill="#AF8255" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div class="ml-3">
+                <p class="font-semibold" style="color: #AF8255;">{{ 'Oqood_System_in_Dubai_Real_Estate.how_to_get.warning' | translate }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Final Thoughts -->
+        <div class="text-center mb-8">
+          <p class="text-lg mb-4 text-fontSecondary">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.final_thoughts.text' | translate }}
+          </p>
+          <p class="text-xl font-semibold" style="color: #AF8255;">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.final_thoughts.question' | translate }}
+          </p>
+        </div>
+  
+        <!-- CTA Section -->
+        <div class="rounded-lg p-8 text-center" style="background: linear-gradient(135deg, #AF8255 0%, #111010 100%); color: #FFFFFF;">
+          <p class="text-lg mb-6">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.cta.text' | translate }}
+          </p>
+          <button class="font-bold py-3 px-8 rounded-lg hover:opacity-90 transition duration-300 transform hover:scale-105" 
+                  style="background-color: #FFFFFF; color: #AF8255;">
+            {{ 'Oqood_System_in_Dubai_Real_Estate.cta.button' | translate }}
+          </button>
+        </div>
+    </div>
+</div>

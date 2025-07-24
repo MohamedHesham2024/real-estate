@@ -1,0 +1,110 @@
+<div class="min-h-screen bg-thread pb-10 dark:bg-dark-background">
+  <section
+    class="relative h-[450px] bg-cover bg-center px-4 flex items-center justify-center text-center mb-10"
+    style="background-image: url('/review/4.jpeg')"
+  >
+    <!-- Overlay layer -->
+    <div class="absolute inset-0 bg-black opacity-70"></div>
+    <div
+      class="flex flex-col items-center justify-center lg:text-left py-6 sm:py-0 z-10"
+    >
+      <h2
+        class="text-5xl sm:text-6xl lg:text-7xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight"
+      >
+        <span class="block text-primary">{{
+          "Customer Reviews" | letterByLetter : 100 | async
+        }}</span>
+        <!-- <span class="block text-primary"> H&B Elite Properties </span> -->
+      </h2>
+
+      <p class="text-sm md:text-lg text-white text-center">
+        See what our customers are saying about us
+      </p>
+    </div>
+  </section>
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      <div
+        *ngFor="let review of currentReviews"
+        class="bg-white dark:bg-dark-background dark:border dark:border-fontPrimary rounded-2xl p-6 "
+      >
+        <div class="flex items-center mb-4">
+          <div
+            class="w-12 h-12 bg-thread rounded-full flex items-center justify-center text-fontPrimary font-semibold text-md mr-4"
+          >
+            {{ getInitials(review.name) }}
+          </div>
+          <div>
+            <h3 class="font-semibold text-fontPrimary">{{ review.name }}</h3>
+            <div class="flex space-x-1">
+              <ng-container *ngFor="let star of [1, 2, 3, 4, 5]">
+                <svg
+                  class="w-5 h-5"
+                  [ngClass]="{
+                    'text-yellow-400': star <= review.rating,
+                    'text-gray-300': star > review.rating
+                  }"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                  />
+                </svg>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+        <p class="text-fontSecondary text-sm leading-relaxed">
+          {{ review.comment }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="flex justify-center items-center space-x-2">
+        <!-- Previous Button -->
+        <button
+          (click)="changePage(currentPage - 1)"
+          [disabled]="currentPage === 1"
+          class="flex items-center px-3 py-2 rounded-md transition-colors"
+          [ngClass]="{
+            'bg-gray-200 text-gray-300 cursor-not-allowed ': currentPage === 1,
+            'bg-secondary text-fontThread hover:bg-thread border border-fontPrimary dark:bg-dark-background': currentPage !== 1
+          }"
+        >
+          ‹ Previous
+        </button>
+      
+        <!-- Page Numbers -->
+        <ng-container *ngFor="let page of [].constructor(totalPages); let i = index">
+          <button
+            (click)="changePage(i + 1)"
+            class="px-3 py-2 rounded-md transition-colors"
+            [ngClass]="{
+              'bg-primary text-white dark:bg-dark.primary': currentPage === i + 1,
+              'bg-secondary text-fontThread hover:bg-thread border border-fontPrimary dark:bg-dark-background':
+                currentPage !== i + 1
+            }"
+          >
+            {{ i + 1 }}
+          </button>
+        </ng-container>
+      
+        <!-- Next Button -->
+        <button
+          (click)="changePage(currentPage + 1)"
+          [disabled]="currentPage === totalPages"
+          class="flex items-center px-3 py-2 rounded-md transition-colors"
+          [ngClass]="{
+            'bg-gray-200 text-gray-300 cursor-not-allowed dark:bg-dark.thread dark:text-dark.fontThread': currentPage === totalPages,
+            'bg-secondary text-fontThread hover:bg-thread border border-fontPrimary dark:bg-dark-background':
+              currentPage !== totalPages
+          }"
+        >
+          Next ›
+        </button>
+      </div>
+      
+</div>

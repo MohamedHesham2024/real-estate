@@ -1,0 +1,189 @@
+<div class="bg-thread dark:bg-dark-background">
+    <!-- Hero Section -->
+    <section
+      class="relative h-[450px] bg-cover bg-center px-4 flex items-center justify-center text-center"
+      style="background-image: url('/Properties/image5.jpg');"
+    >
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+      <div class="text-center lg:text-left py-6 sm:py-0 z-10">
+        <h2 class="text-1xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight">
+          <span class="block text-primary">
+            {{ ('Is_Dubai_Really_Tax_Free.name' | translate) | letterByLetter : 100 | async }}
+          </span>
+        </h2>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Hero Image -->
+        <div class="mb-8">
+          <img 
+            src="/Properties/image5.jpg" 
+            alt="Dubai Tax Free Skyline" 
+            class="w-full rounded-lg shadow-lg"
+          />
+        </div>
+  
+        <!-- Header Section -->
+        <div class="mb-12">
+          <h1 class="text-3xl md:text-4xl font-bold mb-4 text-fontPrimary">
+            {{ 'Is_Dubai_Really_Tax_Free.title' | translate }}
+          </h1>
+          <p class="text-lg leading-relaxed mb-4 text-fontSecondary">
+            {{ 'Is_Dubai_Really_Tax_Free.introduction' | translate }}
+          </p>
+          <p class="text-lg font-medium mb-4 text-fontSecondary" style="color: #AF8255;">
+            {{ 'Is_Dubai_Really_Tax_Free.spoiler' | translate }}
+          </p>
+        </div>
+
+        <!-- Tax Free Meaning Section -->
+        <div class="rounded-lg mb-8">
+          <h3 class="text-2xl font-bold mb-4 text-fontPrimary">
+            {{ 'Is_Dubai_Really_Tax_Free.tax_free_meaning.title' | translate }}
+          </h3>
+          <ul class="list-disc list-inside space-y-2 mx-4 mb-4">
+            <li class="text-fontSecondary">{{ 'Is_Dubai_Really_Tax_Free.tax_free_meaning.points.0' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Is_Dubai_Really_Tax_Free.tax_free_meaning.points.1' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Is_Dubai_Really_Tax_Free.tax_free_meaning.points.2' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Is_Dubai_Really_Tax_Free.tax_free_meaning.points.3' | translate }}</li>
+            <li class="text-fontSecondary">{{ 'Is_Dubai_Really_Tax_Free.tax_free_meaning.points.4' | translate }}</li>
+          </ul>
+          <p class="text-fontSecondary">
+            {{ 'Is_Dubai_Really_Tax_Free.tax_free_meaning.conclusion' | translate }}
+          </p>
+        </div>
+
+        <!-- Taxes and Fees Section -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 text-fontPrimary">
+            {{ 'Is_Dubai_Really_Tax_Free.taxes_fees.title' | translate }}
+          </h3>
+          <p class="mb-4 text-fontSecondary">
+            {{ 'Is_Dubai_Really_Tax_Free.taxes_fees.intro' | translate }}
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-4 mb-6">
+            <!-- DLD Fees -->
+            <div class="p-4 rounded-lg border border-fontPrimary">
+              <h4 class="text-xl font-semibold mb-2 text-fontPrimary">
+                {{ 'Is_Dubai_Really_Tax_Free.taxes_fees.items.0.title' | translate }}
+              </h4>
+              <p class="text-fontSecondary">
+                {{ 'Is_Dubai_Really_Tax_Free.taxes_fees.items.0.description' | translate }}
+              </p>
+            </div>
+            
+            <!-- Admin Fees -->
+            <div class="p-4 rounded-lg border border-fontPrimary">
+              <h4 class="text-xl font-semibold mb-2 text-fontPrimary">
+                {{ 'Is_Dubai_Really_Tax_Free.taxes_fees.items.1.title' | translate }}
+              </h4>
+              <p class="text-fontSecondary">
+                {{ 'Is_Dubai_Really_Tax_Free.taxes_fees.items.1.description' | translate }}
+              </p>
+            </div>
+            
+            <!-- VAT -->
+            <div class="p-4 rounded-lg border border-fontPrimary">
+              <h4 class="text-xl font-semibold mb-2 text-fontPrimary">
+                {{ 'Is_Dubai_Really_Tax_Free.taxes_fees.items.2.title' | translate }}
+              </h4>
+              <ul class="list-disc list-inside space-y-1">
+                <li class="text-fontSecondary">{{ 'Is_Dubai_Really_Tax_Free.taxes_fees.items.2.points.0' | translate }}</li>
+                <li class="text-fontSecondary">{{ 'Is_Dubai_Really_Tax_Free.taxes_fees.items.2.points.1' | translate }}</li>
+              </ul>
+            </div>
+            
+            <!-- Corporate Tax -->
+            <div class="p-4 rounded-lg border border-fontPrimary">
+              <h4 class="text-xl font-semibold mb-2 text-fontPrimary">
+                {{ 'Is_Dubai_Really_Tax_Free.taxes_fees.items.3.title' | translate }}
+              </h4>
+              <p class="text-fontSecondary">
+                {{ 'Is_Dubai_Really_Tax_Free.taxes_fees.items.3.description' | translate }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="mb-8">
+          <h3 class="text-2xl font-bold mb-4 text-fontPrimary">
+            {{ 'Is_Dubai_Really_Tax_Free.benefits.title' | translate }}
+          </h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <div class="p-4 rounded-lg border border-fontPrimary">
+              <div class="flex items-start gap-2">
+                <svg class="w-5 h-5 mt-1" fill="#AF8255" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <p class="text-fontSecondary">{{ 'Is_Dubai_Really_Tax_Free.benefits.points.0' | translate }}</p>
+              </div>
+            </div>
+            <div class="p-4 rounded-lg border border-fontPrimary">
+              <div class="flex items-start gap-2">
+                <svg class="w-5 h-5 mt-1" fill="#AF8255" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <p class="text-fontSecondary">{{ 'Is_Dubai_Really_Tax_Free.benefits.points.1' | translate }}</p>
+              </div>
+            </div>
+            <div class="p-4 rounded-lg border border-fontPrimary">
+              <div class="flex items-start gap-2">
+                <svg class="w-5 h-5 mt-1" fill="#AF8255" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <p class="text-fontSecondary">{{ 'Is_Dubai_Really_Tax_Free.benefits.points.2' | translate }}</p>
+              </div>
+            </div>
+            <div class="p-4 rounded-lg border border-fontPrimary">
+              <div class="flex items-start gap-2">
+                <svg class="w-5 h-5 mt-1" fill="#AF8255" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                <p class="text-fontSecondary">{{ 'Is_Dubai_Really_Tax_Free.benefits.points.3' | translate }}</p>
+              </div>
+            </div>
+          </div>
+          <p class="text-fontSecondary">
+            {{ 'Is_Dubai_Really_Tax_Free.benefits.conclusion' | translate }}
+          </p>
+        </div>
+
+        <!-- Foreign Investors Section -->
+        <div class="rounded-lg mb-8">
+          <h3 class="text-2xl font-bold mb-4 text-fontPrimary">
+            {{ 'Is_Dubai_Really_Tax_Free.foreign_investors.title' | translate }}
+          </h3>
+          <p class="mb-4 text-fontSecondary">
+            {{ 'Is_Dubai_Really_Tax_Free.foreign_investors.description' | translate }}
+          </p>
+          <p class="text-fontSecondary">
+            {{ 'Is_Dubai_Really_Tax_Free.foreign_investors.additional' | translate }}
+          </p>
+        </div>
+
+        <!-- Final Thoughts -->
+        <div class="text-center mb-8">
+          <p class="text-lg mb-4 text-fontSecondary">
+            {{ 'Is_Dubai_Really_Tax_Free.final_thoughts.text' | translate }}
+          </p>
+          <p class="text-xl font-semibold" style="color: #AF8255;">
+            {{ 'Is_Dubai_Really_Tax_Free.final_thoughts.question' | translate }}
+          </p>
+        </div>
+  
+        <!-- CTA Section -->
+        <div class="rounded-lg p-8 text-center" style="background: linear-gradient(135deg, #AF8255 0%, #111010 100%); color: #FFFFFF;">
+          <p class="text-lg mb-6">
+            {{ 'Is_Dubai_Really_Tax_Free.cta.text' | translate }}
+          </p>
+          <button class="font-bold py-3 px-8 rounded-lg hover:opacity-90 transition duration-300 transform hover:scale-105" 
+                  style="background-color: #FFFFFF; color: #AF8255;">
+            {{ 'Is_Dubai_Really_Tax_Free.cta.button' | translate }}
+          </button>
+        </div>
+    </div>
+</div>

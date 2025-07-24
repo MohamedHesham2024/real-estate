@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ThemeToggleService } from '../theme-toggle.service';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-slider',
-  imports: [CommonModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './slider.component.html',
   styleUrl: './slider.component.css',
 })

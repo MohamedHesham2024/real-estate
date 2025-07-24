@@ -1,0 +1,68 @@
+<div
+  class="min-h-screen transition-all duration-500 bg-thread dark:bg-dark-background pb-8"
+>
+  <section
+    class="relative h-[450px] bg-cover bg-center px-4 flex items-center justify-center text-center mb-16"
+    style="background-image: url('/our-team/our-team.jpg')"
+  >
+    <!-- Overlay layer -->
+    <div class="absolute inset-0 bg-black opacity-70"></div>
+    <div
+      class="flex flex-col items-center justify-center lg:text-left py-6 sm:py-0 z-10"
+    >
+      <h2
+        class="text-5xl sm:text-6xl lg:text-7xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight"
+      >
+        <span class="block text-primary">
+  {{
+    ("Secondary Listing" | translate) | letterByLetter : 100 | async
+  }}
+</span>
+        <!-- <span class="block text-primary"> H&B Elite Properties </span> -->
+      </h2>
+
+      <!-- <p class="text-sm md:text-lg text-white md:w-1/2 text-center">
+        Meet our dedicated real estate professionals who are committed to
+        turning your property dreams into reality with expertise and passion.
+      </p> -->
+    </div>
+  </section>
+  <!-- Team Grid ######################## -->
+ <div class="container mx-auto px-4 sm:mb-6 mb-1 flex-grow  ">
+
+      <!-- Grid Container -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 mb-8 bg-thread dark:bg-dark-background">
+        <app-item-card
+          *ngFor="let item of getCurrentPageItems()"
+          [item]="item">
+        </app-item-card>
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex justify-center items-center space-x-4">
+        <button
+          (click)="previousPage()"
+          [disabled]="currentPage === 1"
+          class="px-4 py-2 bg-primary text-white rounded-lg disabled:bg-gray-400 disabled:cursor-not-allowed hover:bg-primary transition-colors">
+          Previous
+        </button>
+
+        <span class="text-gray-600">
+          Page {{ currentPage }} of {{ totalPages }}
+        </span>
+
+        <button
+          (click)="nextPage()"
+          [disabled]="currentPage === totalPages"
+          class="px-4 py-2 bg-primary text-white rounded-lg disabled:bg-gray-400 disabled:cursor-not-allowed hover:bg-primary transition-colors">
+          Next
+        </button>
+      </div>
+
+      <!-- Page Info -->
+      <div class="text-center text-gray-500 mt-2">
+        {{ getStartIndex() + 1 }}-{{ getEndIndex() }} of {{ items.length }} items
+      </div>
+
+    </div>
+</div>

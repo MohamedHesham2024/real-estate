@@ -10,9 +10,10 @@ import {
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SendDataService } from '../service/send-data.service';
 import { ToastrService } from 'ngx-toastr';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-hero',
-  imports: [CommonModule,LetterByLetterPipe,ReactiveFormsModule,HttpClientModule],
+  imports: [CommonModule,LetterByLetterPipe,ReactiveFormsModule,HttpClientModule,TranslateModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })

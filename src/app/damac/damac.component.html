@@ -1,21 +1,19 @@
 <div class="bg-thread dark:bg-dark-background">
+  <!-- Hero Section -->
   <section
     class="relative h-[450px] bg-cover bg-center px-4 flex items-center justify-center text-center"
     style="background-image: url('/Damac/Screenshot 2025-06-26 123431.jpg')"
   >
-    <!-- Overlay layer -->
     <div class="absolute inset-0 bg-black opacity-70"></div>
     <div class="text-center lg:text-left py-6 sm:py-0 z-10">
       <h2
         class="text-1xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight"
       >
         <span class="block text-primary">{{
-          "Alliance by" | letterByLetter : 100 | async
+          "damac.Hero_Section.0" | translate | letterByLetter : 100 | async
         }}</span>
-        <!-- <span class="block text-primary"> H&B Elite Properties </span> -->
       </h2>
-      <div class="flex justify-center ">
-
+      <div class="flex justify-center">
         <img
           src="/Damac/Damac white.png"
           alt="imageAlt"
@@ -26,6 +24,7 @@
     </div>
   </section>
 
+  <!-- Register Interest Section -->
   <div class="my-12 flex flex-col items-center">
     <img
       [src]="logoSrc"
@@ -33,178 +32,78 @@
       class="w-28 mb-6 h-auto object-cover transition-transform duration-500 hover:scale-105"
       loading="lazy"
     />
-    
     <h1 class="text-3xl font-bold text-center mb-6 text-fontPrimary font-exo">
-      Live Without Limits — Register Your Interest
+      {{ "damac.Hero_Section.1" | translate }}
     </h1>
     <p class="text-center max-w-6xl text-fontSecondary mx-auto mb-8">
-      Luxury, lifestyle, and long-term value — tell us what you’re looking for
-      and our experts will help you choose the perfect DAMAC property.
+      {{ "damac.Hero_Section.2" | translate }}
     </p>
     <div class="flex justify-center">
-      <app-button label="ENQUIRE NOW" targetId="crm-form"></app-button>
+      <app-button
+        [label]="'damac.Hero_Section.3' | translate"
+        targetId="crm-form"
+      ></app-button>
     </div>
   </div>
+
+  <!-- Black Banner Section -->
   <section
     class="bg-black border border-fontPrimary py-16 px-4 sm:px-6 lg:px-8"
   >
     <div class="flex flex-col items-center max-w-7xl mx-auto">
       <p class="text-center max-w-6xl text-fontSecondary mx-auto mb-8">
-      Bold, creative, and full of life — discover where luxury takes new form.
-
-    </p>
-      <h2 class="text-3xl lg:text-4xl font-bold text-fontPrimary mb-6 text-center">
-        Prices start from AED 925K Flexible payment plans — down payments from
-        as low as 10%
+        {{ "damac.Hero_Section.4" | translate }}
+      </p>
+      <h2
+        class="text-3xl lg:text-4xl font-bold text-fontPrimary mb-6 text-center"
+      >
+        {{ "damac.Hero_Section.5" | translate }}
       </h2>
       <p class="text-lg text-fontSecondary text-center max-w-2xl mb-8">
-        Explore a curated selection of DAMAC’s most iconic developments — from
-        resort-style living to branded towers in the heart of the city.
+        {{ "damac.Hero_Section.6" | translate }}
       </p>
     </div>
   </section>
+
   <div class="flex justify-center my-12">
-    <app-button label="ENQUIRE NOW" targetId="crm-form"></app-button>
+    <app-button
+      [label]="'damac.Hero_Section.3' | translate"
+      targetId="crm-form"
+    ></app-button>
   </div>
+
+  <!-- Safa Two Section -->
   <section class="py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <!-- Left Side - Image -->
-
         <div class="order-2 lg:order-1 space-y-6">
           <div>
             <h2
               class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
             >
-              About Damac
+              {{ "damac.Safa_Two_Section.title" | translate }}
             </h2>
-
             <div class="prose prose-lg text-fontSecondary leading-relaxed">
               <p class="text-justify">
-                Founded in 2002, DAMAC Properties has become one of the most
-                recognizable luxury developers in the region. Known for bold
-                designs, global collaborations, and lifestyle-driven
-                communities, DAMAC has delivered over 40,000 units across the
-                UAE and beyond. From waterfront towers and branded apartments to
-                lush golf-course villas, DAMAC projects stand out for their
-                flair, innovation, and lifestyle value. Signature collaborations
-                include de GRISOGONO, Cavalli, and Versace — blending real
-                estate with high fashion and art.
-                <strong>
-                  With DAMAC, luxury isn’t a feature — it’s the foundation.
-                </strong>
-              </p>
-            </div>
-          </div>
-          <div class="flex mt-20">
-            <app-button label="KNOW MORE" targetId="crm-form"></app-button>
-          </div>
-        </div>
-        <!-- Right Side - Content -->
-        <div class="order-1 lg:order-2">
-          <div class="relative overflow-hidden rounded-lg">
-            <img
-              src="/Damac/Screenshot 2025-06-26 123855.jpg"
-              alt="imageAlt"
-              class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
-              loading="lazy"
-            />
-            <!-- Optional overlay for better text contrast if needed -->
-            <div
-              class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"
-            ></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <!-- Left Side - Image -->
-        <div class="order-2 lg:order-1">
-          <div class="relative overflow-hidden rounded-lg">
-            <img
-              src="/Damac/Screenshot 2025-06-26 124115.jpg"
-              alt="imageAlt"
-              class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
-              loading="lazy"
-            />
-            <!-- Optional overlay for better text contrast if needed -->
-            <div
-              class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"
-            ></div>
-          </div>
-        </div>
-
-        <!-- Right Side - Content -->
-        <div class="order-1 lg:order-2 space-y-6">
-          <div>
-            <h2
-              class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
-            >
-              DAMAC Lagoons
-            </h2>
-
-            <div class="prose prose-lg text-fontSecondary leading-relaxed">
-              <p class="text-justify">
-                Inspired by the charm of the Mediterranean, this master
-                community offers beachfront-style living with lagoons, white
-                sandy beaches, and themed clusters like Santorini and Venice.
-
-                <strong> Every day feels like a holiday. </strong>
+                {{ "damac.Safa_Two_Section.description" | translate }}
               </p>
             </div>
           </div>
           <div class="flex mt-20">
             <app-button
-              label="REQUEST A CALLBACK"
+              [label]="'damac.Safa_Two_Section.button' | translate"
               targetId="crm-form"
             ></app-button>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <section class="py-16 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <!-- Left Side - Image -->
-
-        <div class="order-2 lg:order-1 space-y-6">
-          <div>
-            <h2
-              class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
-            >
-              Safa Two by de GRISOGONO
-            </h2>
-
-            <div class="prose prose-lg text-fontSecondary leading-relaxed">
-              <p class="text-justify">
-                A jewel of architecture, this twin-tower skyscraper features
-                emerald-inspired interiors, glass-edge pools, and panoramic city
-                views — all steps from Downtown Dubai.
-
-                <strong>
-                  Luxury reimagined for those who dare to stand out.
-                </strong>
-              </p>
-            </div>
-          </div>
-          <div class="flex mt-20">
-            <app-button label="KNOW MORE" targetId="crm-form"></app-button>
-          </div>
-        </div>
-        <!-- Right Side - Content -->
         <div class="order-1 lg:order-2">
           <div class="relative overflow-hidden rounded-lg">
             <img
               src="/Damac/Screenshot 2025-06-26 124620.jpg"
               alt="imageAlt"
-              class="w-full h-[600px]  transition-transform duration-500 hover:scale-105"
+              class="w-full h-[600px] transition-transform duration-500 hover:scale-105"
               loading="lazy"
             />
-            <!-- Optional overlay for better text contrast if needed -->
             <div
               class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"
             ></div>
@@ -213,10 +112,11 @@
       </div>
     </div>
   </section>
+
+  <!-- Aykon City Section -->
   <section class="py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <!-- Left Side - Image -->
         <div class="order-2 lg:order-1">
           <div class="relative overflow-hidden rounded-lg">
             <img
@@ -225,37 +125,27 @@
               class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
               loading="lazy"
             />
-            <!-- Optional overlay for better text contrast if needed -->
             <div
               class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"
             ></div>
           </div>
         </div>
-
-        <!-- Right Side - Content -->
         <div class="order-1 lg:order-2 space-y-6">
           <div>
             <h2
               class="text-4xl lg:text-5xl font-bold leading-tight mb-6 text-fontPrimary"
             >
-              Aykon City
+              {{ "damac.Aykon_City_Section.title" | translate }}
             </h2>
-
             <div class="prose prose-lg leading-relaxed text-fontSecondary">
               <p class="text-justify">
-                A sleek, urban-style development on Sheikh Zayed Road with
-                branded interiors, hotel-style amenities, and direct views of
-                Dubai Canal and Burj Khalifa.
-
-                <strong>
-                  Ideal for investors and professionals craving city energy.
-                </strong>
+                {{ "damac.Aykon_City_Section.description" | translate }}
               </p>
             </div>
           </div>
           <div class="flex mt-20">
             <app-button
-              label="REQUEST A CALLBACK"
+              [label]="'damac.Aykon_City_Section.button' | translate"
               targetId="crm-form"
             ></app-button>
           </div>
@@ -263,36 +153,113 @@
       </div>
     </div>
   </section>
+
+  <!-- About Damac Section -->
   <section class="py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        <!-- Left Side - Image -->
-
         <div class="order-2 lg:order-1 space-y-6">
           <div>
             <h2
               class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
             >
-              DAMAC Hills
+              {{ "damac.About_Damac.title" | translate }}
             </h2>
-
             <div class="prose prose-lg text-fontSecondary leading-relaxed">
               <p class="text-justify">
-                An elite golf community with villas, apartments, schools, and
-                lush greenery all in one. Home to the Trump International Golf
-                Club, it offers upscale living with world-class amenities.
-                <strong
-                  >Perfect for families seeking space, serenity, and
-                  sport.</strong
-                >
+                {{ "damac.About_Damac.description" | translate }}
               </p>
             </div>
           </div>
           <div class="flex mt-20">
-            <app-button label="KNOW MORE" targetId="crm-form"></app-button>
+            <app-button
+              [label]="'damac.About_Damac.button' | translate"
+              targetId="crm-form"
+            ></app-button>
           </div>
         </div>
-        <!-- Right Side - Content -->
+        <div class="order-1 lg:order-2">
+          <div class="relative overflow-hidden rounded-lg">
+            <img
+              src="/Damac/Screenshot 2025-06-26 123855.jpg"
+              alt="imageAlt"
+              class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Damac Lagoons Section -->
+  <section class="px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="relative overflow-hidden rounded-lg">
+            <img
+              src="/Damac/Screenshot 2025-06-26 124115.jpg"
+              alt="imageAlt"
+              class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"
+            ></div>
+          </div>
+        </div>
+        <div class="order-1 lg:order-2 space-y-6">
+          <div>
+            <h2
+              class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
+            >
+              {{ "damac.Damac_Lagoons.title" | translate }}
+            </h2>
+            <div class="prose prose-lg text-fontSecondary leading-relaxed">
+              <p class="text-justify">
+                {{ "damac.Damac_Lagoons.description" | translate }}
+              </p>
+            </div>
+          </div>
+          <div class="flex mt-20">
+            <app-button
+              [label]="'damac.Damac_Lagoons.button' | translate"
+              targetId="crm-form"
+            ></app-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Damac Hills Section -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="order-2 lg:order-1 space-y-6">
+          <div>
+            <h2
+              class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
+            >
+              {{ "damac.Damac_Hills.title" | translate }}
+            </h2>
+            <div class="prose prose-lg text-fontSecondary leading-relaxed">
+              <p class="text-justify">
+                {{ "damac.Damac_Hills.description" | translate }}
+              </p>
+            </div>
+          </div>
+          <div class="flex mt-20">
+            <app-button
+              [label]="'damac.Damac_Hills.button' | translate"
+              targetId="crm-form"
+            ></app-button>
+          </div>
+        </div>
         <div class="order-1 lg:order-2">
           <div class="relative overflow-hidden rounded-lg">
             <img
@@ -301,7 +268,6 @@
               class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
               loading="lazy"
             />
-            <!-- Optional overlay for better text contrast if needed -->
             <div
               class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"
             ></div>
@@ -310,13 +276,12 @@
       </div>
     </div>
   </section>
+
+  <!-- Why Invest Section -->
   <div class="max-w-6xl mx-auto px-4 py-12">
-    <!-- Header -->
     <h2 class="text-2xl md:text-3xl font-bold text-fontPrimary mb-12">
       WHY INVEST IN DUBAI?
     </h2>
-
-    <!-- Features Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Higher Rental Yields -->
       <div class="text-center">
@@ -336,11 +301,10 @@
           </div>
         </div>
         <h3 class="font-semibold text-fontPrimary mb-2">
-          Luxury with Personality
+          {{ "damac.Why_Invest.features.0.title" | translate }}
         </h3>
         <p class="text-sm text-fontSecondary leading-relaxed">
-          Every project carries a distinct design story — from fashion-branded homes to lagoon getaways.
-
+          {{ "damac.Why_Invest.features.0.description" | translate }}
         </p>
       </div>
 
@@ -401,10 +365,11 @@
             </svg>
           </div>
         </div>
-        <h3 class="font-semibold text-fontPrimary mb-2">Prime & Emerging Locations</h3>
+         <h3 class="font-semibold text-fontPrimary mb-2">
+          {{ "damac.Why_Invest.features.1.title" | translate }}
+        </h3>
         <p class="text-sm text-fontSecondary leading-relaxed">
-          From Downtown Dubai to Dubailand, DAMAC builds where value grows.
-
+          {{ "damac.Why_Invest.features.1.description" | translate }}
         </p>
       </div>
 
@@ -425,10 +390,11 @@
             </svg>
           </div>
         </div>
-        <h3 class="font-semibold text-fontPrimary mb-2">Bold Architecture</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">
-          Daring shapes, striking facades, and artistic interiors that leave a lasting impression.
-
+        <h3 class="font-semibold text-fontPrimary mb-2">
+          {{ "damac.Why_Invest.features.2.title" | translate }}
+        </h3>
+        <p class="text-sm text-fontSecondary leading-relaxed">
+          {{ "damac.Why_Invest.features.2.description" | translate }}
         </p>
       </div>
 
@@ -449,12 +415,11 @@
             </svg>
           </div>
         </div>
-        <h3 class="font-semibold text-fontPrimary mb-2">
-          Strong Investment Potential
+          <h3 class="font-semibold text-fontPrimary mb-2">
+          {{ "damac.Why_Invest.features.3.title" | translate }}
         </h3>
         <p class="text-sm text-fontSecondary leading-relaxed">
-          Affordable entry points, high ROI, and demand across rental markets.
-
+          {{ "damac.Why_Invest.features.3.description" | translate }}
         </p>
       </div>
 
@@ -477,10 +442,11 @@
             </svg>
           </div>
         </div>
-        <h3 class="font-semibold text-fontPrimary mb-2">Global Collaborations</h3>
+         <h3 class="font-semibold text-fontPrimary mb-2">
+          {{ "damac.Why_Invest.features.4.title" | translate }}
+        </h3>
         <p class="text-sm text-fontSecondary leading-relaxed">
-          Partnered with luxury brands like Versace, Cavalli, and de GRISOGONO to deliver unforgettable living experiences.
-
+          {{ "damac.Why_Invest.features.4.description" | translate }}
         </p>
       </div>
 
@@ -503,16 +469,19 @@
             </svg>
           </div>
         </div>
-        <h3 class="font-semibold text-fontPrimary mb-2">Conventional Safety</h3>
+         <h3 class="font-semibold text-fontPrimary mb-2">
+          {{ "damac.Why_Invest.features.5.title" | translate }}
+        </h3>
         <p class="text-sm text-fontSecondary leading-relaxed">
-          Dubai is extremely safe and they are very strict with individual
+          {{ "damac.Why_Invest.features.5.description" | translate }}
         </p>
       </div>
     </div>
   </div>
+
+  <!-- Image Carousel Section -->
   <div class="container mx-auto mt-8 px-4">
     <div class="relative">
-      <!-- Main Carousel -->
       <div class="relative overflow-hidden rounded-lg bg-gray-900 w-full">
         <div
           class="flex transition-transform duration-500 ease-in-out"
@@ -533,8 +502,6 @@
             />
           </div>
         </div>
-
-        <!-- Main carousel navigation arrows -->
         <div class="absolute left-0 top-1/2">
           <button
             (click)="prevSlide()"
@@ -578,13 +545,8 @@
           </button>
         </div>
       </div>
-
-      <!-- Thumbnail Navigation -->
       <div
-        [class]="
-          'bg-white bg-opacity-30 absolute bottom-0 left-0 right-0 px-12'
-        "
-        class="py-3 rounded-lg"
+        class="bg-white bg-opacity-30 absolute bottom-0 left-0 right-0 px-12 py-3 rounded-lg"
       >
         <div class="relative overflow-hidden">
           <div
@@ -628,15 +590,16 @@
       </div>
     </div>
   </div>
+
+  <!-- Contact Form Section -->
   <div
-  id="crm-form"
-  class="min-h-screen mt-10 bg-thread dark:bg-dark-background flex items-center justify-center px-4 py-12"
+    id="crm-form"
+    class="min-h-screen mt-10 bg-thread dark:bg-dark-background flex items-center justify-center px-4 py-12"
   >
     <div
       class="max-w-[1200px] w-full flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden"
     >
-      <!-- Left: Form -->
-      <div  class="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12">
+      <div class="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12">
         <div class="w-full">
           <div class="bg-white">
             <div class="text-center mb-8">
@@ -654,88 +617,101 @@
               (ngSubmit)="onSubmit()"
               class="space-y-4 lg:space-y-3"
             >
-              <!-- Full Name -->
-               <div class="flex gap-3">
+              <div class="flex gap-3">
+                <div>
+                  <label
+                    for="firstName"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    {{ "damac.Contact_Form.fields.firstName" | translate }}
+                  </label>
+                  <input
+                    id="firstName"
+                    type="text"
+                    formControlName="firstName"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+                    [class.border-red-500]="
+                      contactForm.get('firstName')?.invalid &&
+                      contactForm.get('firstName')?.touched
+                    "
+                    placeholder="{{
+                      'damac.Contact_Form.fields.firstName' | translate
+                    }}"
+                  />
+                  <div
+                    *ngIf="
+                      contactForm.get('firstName')?.invalid &&
+                      contactForm.get('firstName')?.touched
+                    "
+                    class="mt-1 text-sm text-error"
+                  >
+                    <span
+                      *ngIf="contactForm.get('firstName')?.errors?.['required']"
+                    >
+                      {{ "damac.Contact_Form.fields.firstName" | translate }} is
+                      required
+                    </span>
+                    <span
+                      *ngIf="contactForm.get('firstName')?.errors?.['minlength']"
+                    >
+                      {{
+                        "damac.Contact_Form.fields.firstName" | translate
+                      }}
+                      must be at least 2 characters
+                    </span>
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="lastName"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    {{ "damac.Contact_Form.fields.lastName" | translate }}
+                  </label>
+                  <input
+                    id="lastName"
+                    type="text"
+                    formControlName="lastName"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+                    [class.border-red-500]="
+                      contactForm.get('lastName')?.invalid &&
+                      contactForm.get('lastName')?.touched
+                    "
+                    placeholder="{{
+                      'damac.Contact_Form.fields.lastName' | translate
+                    }}"
+                  />
+                  <div
+                    *ngIf="
+                      contactForm.get('lastName')?.invalid &&
+                      contactForm.get('lastName')?.touched
+                    "
+                    class="mt-1 text-sm text-error"
+                  >
+                    <span
+                      *ngIf="contactForm.get('lastName')?.errors?.['required']"
+                    >
+                      {{ "damac.Contact_Form.fields.lastName" | translate }} is
+                      required
+                    </span>
+                    <span
+                      *ngIf="contactForm.get('lastName')?.errors?.['minlength']"
+                    >
+                      {{
+                        "damac.Contact_Form.fields.lastName" | translate
+                      }}
+                      must be at least 2 characters
+                    </span>
+                  </div>
+                </div>
+              </div>
 
-                 <div>
-                   <label
-                     for="fullName"
-                     class="block text-sm font-medium text-gray-700 mb-2"
-                   >
-                     First Name *
-                   </label>
-                   <input
-                     id="firstName"
-                     type="text"
-                     formControlName="firstName"
-                     class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
-                     [class.border-red-500]="
-                       contactForm.get('firstName')?.invalid &&
-                       contactForm.get('firstName')?.touched
-                     "
-                     placeholder="Enter your first name"
-                   />
-                   <div
-                     *ngIf="
-                       contactForm.get('firstName')?.invalid &&
-                       contactForm.get('firstName')?.touched
-                     "
-                     class="mt-1 text-sm text-error"
-                   >
-                     <span
-                       *ngIf="contactForm.get('firstName')?.errors?.['required']"
-                       >First name is required</span
-                     >
-                     <span
-                       *ngIf="contactForm.get('firstName')?.errors?.['minlength']"
-                       >First name must be at least 2 characters</span
-                     >
-                   </div>
-                 </div>
-                 <div>
-                   <label
-                     for="lastName"
-                     class="block text-sm font-medium text-gray-700 mb-2"
-                   >
-                     Last Name *
-                   </label>
-                   <input
-                     id="lastName"
-                     type="text"
-                     formControlName="lastName"
-                     class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
-                     [class.border-red-500]="
-                       contactForm.get('lastName')?.invalid &&
-                       contactForm.get('lastName')?.touched
-                     "
-                     placeholder="Enter your last name"
-                   />
-                   <div
-                     *ngIf="
-                       contactForm.get('lastName')?.invalid &&
-                       contactForm.get('lastName')?.touched
-                     "
-                     class="mt-1 text-sm text-error"
-                   >
-                     <span
-                       *ngIf="contactForm.get('lastName')?.errors?.['required']"
-                       >Last name is required</span
-                     >
-                     <span
-                       *ngIf="contactForm.get('lastName')?.errors?.['minlength']"
-                       >Last name must be at least 2 characters</span
-                     >
-                   </div>
-                 </div>
-               </div>
-
-              <!-- Phone Number -->
               <div>
                 <label
                   for="phoneNumber"
                   class="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  Phone Number *
+                  {{ "damac.Contact_Form.fields.phoneNumber" | translate }}
                 </label>
                 <input
                   id="phoneNumber"
@@ -746,7 +722,9 @@
                     contactForm.get('phoneNumber')?.invalid &&
                     contactForm.get('phoneNumber')?.touched
                   "
-                  placeholder="Enter your phone number"
+                  placeholder="{{
+                    'damac.Contact_Form.fields.phoneNumber' | translate
+                  }}"
                 />
                 <div
                   *ngIf="
@@ -757,22 +735,24 @@
                 >
                   <span
                     *ngIf="contactForm.get('phoneNumber')?.errors?.['required']"
-                    >Phone number is required</span
                   >
+                    {{ "damac.Contact_Form.fields.phoneNumber" | translate }} is
+                    required
+                  </span>
                   <span
                     *ngIf="contactForm.get('phoneNumber')?.errors?.['pattern']"
-                    >Please enter a valid phone number</span
                   >
+                    Please enter a valid phone number
+                  </span>
                 </div>
               </div>
 
-              <!-- Email -->
               <div>
                 <label
                   for="email"
                   class="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  Email *
+                  {{ "damac.Contact_Form.fields.email" | translate }}
                 </label>
                 <input
                   id="email"
@@ -783,7 +763,9 @@
                     contactForm.get('email')?.invalid &&
                     contactForm.get('email')?.touched
                   "
-                  placeholder="Enter your email address"
+                  placeholder="{{
+                    'damac.Contact_Form.fields.email' | translate
+                  }}"
                 />
                 <div
                   *ngIf="
@@ -792,22 +774,22 @@
                   "
                   class="mt-1 text-sm text-error"
                 >
-                  <span *ngIf="contactForm.get('email')?.errors?.['required']"
-                    >Email is required</span
-                  >
-                  <span *ngIf="contactForm.get('email')?.errors?.['email']"
-                    >Please enter a valid email address</span
-                  >
+                  <span *ngIf="contactForm.get('email')?.errors?.['required']">
+                    {{ "damac.Contact_Form.fields.email" | translate }} is
+                    required
+                  </span>
+                  <span *ngIf="contactForm.get('email')?.errors?.['email']">
+                    Please enter a valid email address
+                  </span>
                 </div>
               </div>
 
-              <!-- Country -->
               <div>
                 <label
                   for="country"
                   class="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  Country 
+                  {{ "damac.Contact_Form.fields.country" | translate }}
                 </label>
                 <input
                   id="country"
@@ -818,31 +800,18 @@
                     contactForm.get('country')?.invalid &&
                     contactForm.get('country')?.touched
                   "
-                  placeholder="Enter your country"
+                  placeholder="{{
+                    'damac.Contact_Form.fields.country' | translate
+                  }}"
                 />
-                <div
-                  *ngIf="
-                    contactForm.get('country')?.invalid &&
-                    contactForm.get('country')?.touched
-                  "
-                  class="mt-1 text-sm text-error"
-                >
-                  <span
-                    *ngIf="contactForm.get('country')?.errors?.['required']"
-                    >Country is required</span
-                  >
-                  <span
-                    *ngIf="contactForm.get('country')?.errors?.['minlength']"
-                    >Country must be at least 2 characters</span
-                  >
-                </div>
               </div>
+
               <div>
                 <label
                   for="property"
                   class="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  What type of property are you looking for? 
+                  {{ "damac.Contact_Form.fields.property" | translate }}
                 </label>
                 <select
                   id="property"
@@ -854,7 +823,9 @@
                   "
                 >
                   <option value="">
-                    What type of property are you looking for?
+                    {{
+                      "damac.Contact_Form.fields.property_options" | translate
+                    }}
                   </option>
                   <option
                     *ngFor="let property of mockProperties"
@@ -863,21 +834,8 @@
                     {{ property.name }}
                   </option>
                 </select>
-                <div
-                  *ngIf="
-                    contactForm.get('property')?.invalid &&
-                    contactForm.get('property')?.touched
-                  "
-                  class="mt-1 text-sm text-error"
-                >
-                  <span
-                    *ngIf="contactForm.get('property')?.errors?.['required']"
-                    >Please select a property</span
-                  >
-                </div>
               </div>
 
-              <!-- Submit Button -->
               <button
                 type="submit"
                 [disabled]="contactForm.invalid || isLoading"
@@ -904,13 +862,14 @@
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                     ></path>
                   </svg>
-                  Submitting...
+                  {{ "damac.Contact_Form.submit" | translate }}...
                 </div>
-                <span *ngIf="!isLoading">Submit Form</span>
+                <span *ngIf="!isLoading">{{
+                  "damac.Contact_Form.submit" | translate
+                }}</span>
               </button>
             </form>
 
-            <!-- Success Message -->
             <div
               *ngIf="submitSuccess"
               class="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg"
@@ -927,11 +886,10 @@
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                Form submitted successfully!
+                {{ "damac.Contact_Form.success" | translate }}
               </div>
             </div>
 
-            <!-- Error Message -->
             <div
               *ngIf="submitError"
               class="mt-4 p-4 bg-red-100 border border-red-400 text-error rounded-lg"
@@ -948,14 +906,13 @@
                     clip-rule="evenodd"
                   ></path>
                 </svg>
-                {{ submitError }}
+                {{ "damac.Contact_Form.error" | translate }}
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Right: Slider -->
       <div class="w-full lg:w-1/2 relative overflow-hidden group">
         <div class="relative h-full">
           <img
@@ -963,8 +920,6 @@
             [alt]="'Slide ' + (currentImageIndex + 1)"
             class="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-105"
           />
-
-          <!-- Indicators -->
           <div class="absolute bottom-4 w-full flex justify-center space-x-2">
             <button
               *ngFor="let image of images2; let i = index"

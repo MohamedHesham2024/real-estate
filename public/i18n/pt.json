@@ -1,12 +1,1023 @@
 {
   "title": "Bem-vindo",
   "description": "Este é um site multilíngue",
+
   "Back to Listings": "Voltar para Listagens",
   "More Details": "Mais Detalhes",
   "contact": "Contacte-nos",
   "price": "Preço",
   "Description": "Descrição",
   "Secondary Listing": "Listagem Secundária",
-  "Details": "Detalhes"
+  "Details": "Detalhes",
+
+  "binghatti": {
+    "Hero_Section": {
+      "0": "Viva o estilo de vida Binghatti — Registre seu interesse.",
+      "1": "Torres esculturais, colaborações com marcas globais e design exclusivo — deixe-nos ajudá-lo a encontrar seu lugar no horizonte da Binghatti.",
+      "2": "Explorar Projetos"
+    },
+    "About_binghatti": {
+      "0": "A Binghatti é uma incorporadora com sede em Dubai, conhecida por sua arquitetura inovadora e identidade ousada. Com uma linguagem de design que mistura geometria moderna e herança árabe, a Binghatti lidera a inovação no mercado imobiliário. A marca conquistou reconhecimento global por meio de parcerias com ícones do luxo como Bugatti e Jacob & Co, entregando projetos que vão além da propriedade — são declarações de poder, status e visão artística. Cada projeto da Binghatti combina estilo de vida, engenharia e narrativa de marca — com foco absoluto em qualidade e impacto atemporal.",
+      "3": "Solicitar agora"
+    },
+    "Featured_Projects_by_binghatti": {
+      "0": "Starting from just AED 850K – Flexible down payments from only 10%",
+      "1": "Explore Binghatti’s iconic developments — where sculptural architecture, global luxury brands, and strategic city locations come together in perfect harmony."
+    },
+    "Burj_Binghatti_Jacob_&_Co_Residences": {
+      "0": "Set to be one of the tallest residential towers in the world, this ultra-luxury skyscraper is inspired by fine jewelry and crafted in collaboration with Jacob & Co. Expect diamond-like finishes, private pools, and iconic views of Downtown Dubai Where haute horology meets real estate."
+    },
+    "Bugatti_Residences": {
+      "0": "Uma obra-prima arquitetônica inspirada no universo automotivo, com mansões suspensas e luxo estilo Riviera. A torre combina o espírito da Bugatti com um design imobiliário raro — incluindo elevadores de carro direto para sua sala de estar. Um estilo de vida hiper luxuoso, nascido na França e aperfeiçoado em Dubai."
+    },
+    "Binghatti_Onyx": {
+      "0": "Uma torre arrojada no Jumeirah Village Circle com design geométrico, interiores sofisticados e plantas inteligentes. Combina praticidade com acabamentos de alto padrão — ideal tanto para investidores quanto para moradores. Elegância e eficiência, lado a lado."
+    },
+    "Binghatti_Canal": {
+      "0": "Residências modernas à beira d’água com um toque artístico e localização estratégica próxima ao Canal de Dubai. Design marcante, plantas flexíveis e fácil acesso aos principais destinos da cidade. Viva à beira da água. Esteja no centro de tudo."
+    },
+    "Why_Choose_binghatti": {
+      "0": "Identidade Arquitetônica Artística",
+      "1": "Torres ousadas e imediatamente reconhecíveis, inspiradas na arte, herança e geometria.",
+      "2": "Parcerias com Marcas de Luxo",
+      "3": "Parcerias exclusivas com ícones globais como Bugatti e Jacob & Co tornam a Binghatti única.",
+      "4": "Localizações Urbanas Estratégicas",
+      "5": "Empreendimentos em áreas de alta demanda como Business Bay, JVC e corredores do Downtown.",
+      "6": "Layouts Inteligentes e Eficiência no Design",
+      "7": "Cada espaço é otimizado para unir elegância, funcionalidade e valor a longo prazo.",
+      "8": "Desenvolvimento e Execução Internos",
+      "9": "Do conceito à construção — a Binghatti controla todo o processo, garantindo precisão e consistência.",
+      "10": "Alto Apelo de Luxo e Retorno sobre o Investimento",
+      "11": "Com branding icônico e unidades exclusivas, os imóveis da Binghatti geram forte demanda e valorização duradoura."
+    }
+  },
+  "Escrow_Account_in_Dubai_Real_Estate": {
+    "name": "Conta Escrow no Mercado Imobiliário de Dubai",
+    "title": "O que é uma Conta Escrow no Mercado Imobiliário de Dubai?",
+    "subtitle": "Um guia completo para investidores",
+    "introduction": "O mercado imobiliário de Dubai é conhecido por seus empreendimentos luxuosos, alto retorno sobre investimento e regulamentações favoráveis aos investidores. Mas com tantos projetos em planta e transações de grande valor, como a cidade garante a segurança do seu dinheiro?",
+    "answer": "A resposta: contas escrow. São contas bancárias legalmente exigidas que protegem os fundos dos compradores e só permitem que os desenvolvedores acessem o dinheiro conforme o progresso da construção.",
+    "guide": "Neste guia, vamos explicar o que é uma conta escrow, como funciona em Dubai e por que ela é essencial para quem investe em imóveis.",
+    "what_Escrow_Account": "O que é uma conta escrow?",
+
+    "definition": "É uma conta bancária especial onde seus pagamentos por imóveis em planta são mantidos em segurança. Ela é regulamentada pela RERA (Real Estate Regulatory Agency) e protege os compradores contra fraudes, atrasos ou abandono de projeto.",
+    "developer_access": "O desenvolvedor só pode acessar os fundos quando marcos específicos de construção forem atingidos e verificados por um engenheiro independente.",
+
+    "why_dubai": "Dubai implementou a Lei nº (8) de 2007 para tornar o mercado mais seguro e transparente. Antes disso, os compradores pagavam diretamente aos desenvolvedores — o que envolvia altos riscos.",
+    "why_quettion": "Por que Dubai usa contas escrow?",
+
+    "today": "Hoje, contas escrow são obrigatórias para todos os projetos em planta:",
+    "today_points": [
+      "O desenvolvedor deve registrar o projeto e abrir uma conta escrow",
+      "Os pagamentos são feitos para essa conta, não diretamente ao desenvolvedor",
+      "O dinheiro é liberado somente com progresso certificado"
+    ],
+    "benefits": "Esse sistema aumenta a confiança e reduz riscos para investidores locais e estrangeiros.",
+    "how_q": "Como a conta escrow protege o investido?",
+    "how_it_protects": "Como a conta escrow protege o investidor:",
+    "benefits_list": [
+      "Pagamentos seguros",
+      "Liberação conforme o progresso da obra",
+      "Risco reduzido de fraudes ou atrasos",
+      "Supervisão regulatória pela RERA",
+      "Transparência com o app Dubai REST"
+    ],
+    "who_manages": "Quem gerencia a conta escrow?",
+    "who_manages_points": [
+      "Só pode ser aberta com aprovação da RERA",
+      "Deve estar em banco autorizado",
+      "Sujeita a auditorias regulares pela DLD"
+    ],
+    "how_ver_q": "Como verificar uma conta escrow?",
+    "verification": "Antes de investir:",
+    "verification_points": [
+      "Verifique o status do projeto pelo app Dubai REST",
+      "Solicite o número de registro do projeto à RERA",
+      "Confirme que o pagamento está sendo solicitado por canais oficiais"
+    ],
+    "warning": "Nunca transfira dinheiro fora do sistema escrow.",
+    "final_thoughts": "As contas escrow são uma das principais razões pelas quais Dubai é um dos mercados mais seguros do mundo para investir em imóveis. Elas garantem a entrega da propriedade e protegem seu dinheiro.",
+    "question": "Antes de investir, faça esta pergunta: “Onde está a conta escrow?”",
+    "cta": "Quer investir com segurança em projetos aprovados pela RERA? Na H&B Properties, trabalhamos apenas com desenvolvedores verificados e acompanhamos você em cada etapa — da escolha até a entrega da unidade.",
+    "cta_button": "Converse com nossos especialistas"
+  },
+  "Freehold_vs_Leasehold_in_Dubai_Real_Estate": {
+    "title": "Qual a diferença entre Freehold e Leasehold — e qual é a melhor opção para você?",
+    "introduction": "Se você está planejando investir em imóveis em Dubai, vai se deparar com dois termos importantes: Freehold (propriedade plena) e Leasehold (arrendamento de longo prazo). Ambos são reconhecidos legalmente, mas têm diferenças significativas — entender essas diferenças é essencial para fazer um investimento seguro.",
+    "freehold_definition": "Freehold significa que você possui o imóvel e o terreno — por tempo ilimitado.",
+    "freehold_benefits": "Você tem controle total: pode morar, alugar, vender ou deixar de herança.",
+    "freehold_areas": "Exemplos de áreas: Downtown Dubai, Dubai Marina, Business Bay, Dubai Hills, Palm Jumeirah.",
+    "leasehold_definition": "Leasehold significa que você possui o imóvel, mas não o terreno, por um período fixo (geralmente entre 30 e 99 anos).",
+    "leasehold_benefits": "Você ainda pode morar, alugar ou vender o direito de uso — mas com possíveis restrições contratuais.",
+    "leasehold_areas": "O Leasehold tende a ser mais acessível, e é comum em locais como: Green Community, Jebel Ali, Discovery Gardens, e partes do Dubai Silicon Oasis.",
+    "differences": "Principais Diferenças",
+    "differences_list": [
+      "Duração: Freehold = permanente / Leasehold = prazo definido",
+      "Terreno: Freehold inclui o terreno / Leasehold não",
+      "Controle: Total com Freehold / Limitado com Leasehold",
+      "Transferência: Freehold é livremente transferível e herdável",
+      "Custo: Leasehold costuma ser mais barato",
+      "Perfil ideal: Freehold = longo prazo / Leasehold = menor orçamento ou prazo curto"
+    ],
+    "which_to_choose": "Qual escolher?",
+    "which_to_choose_advice": "Se você busca controle total, valorização do capital e propriedade legal completa — Freehold é a melhor opção. Se tem orçamento menor ou deseja um investimento de médio prazo, o Leasehold pode funcionar — contanto que compreenda bem os termos do contrato.",
+    "contract_tip": "Dica: revise cuidadosamente a duração do lease, cláusulas de renovação e restrições de uso.",
+    "final_thoughts": "Ambas as opções podem ser bons investimentos em Dubai. A escolha certa depende dos seus objetivos financeiros, prazo e nível de risco.",
+    "cta": "Na H&B Properties, ajudamos você a escolher com segurança, oferecendo orientação especializada e suporte legal.",
+    "cta_button": "Fale com nossa equipe de investimentos",
+    "subtitle": "Freehold vs Leasehold no mercado imobiliário de Dubai",
+    "section_title_definitions": "Entendendo os tipos de propriedade",
+    "section_intro_definitions": "Vamos explorar o que Freehold e Leasehold realmente significam no mercado imobiliário de Dubai.",
+    "section_title_differences": "Freehold vs Leasehold em resumo",
+    "section_title_which_to_choose": "Fazendo a escolha certa",
+    "question": "Pronto para explorar as oportunidades imobiliárias em Dubai?"
+  },
+  "Is_Dubai_Really_Tax_Free": {
+    "name": "Dubai é realmente isenta de impostos?",
+    "title": "O que os investidores precisam saber antes de comprar um imóvel em Dubai",
+    "introduction": "Dubai há muito é conhecida como uma cidade livre de impostos, atraindo investidores, empreendedores e indivíduos de alto patrimônio do mundo todo. Mas será que é realmente isenta de impostos — especialmente no setor imobiliário?",
+    "spoiler": "Sim, Dubai é um dos mercados imobiliários mais eficientes em termos fiscais do mundo — mas há alguns pontos importantes a considerar.",
+    "tax_free_meaning": {
+      "title": "O que realmente significa 'livre de impostos'?",
+      "points": [
+        "Sem imposto de renda sobre salários ou aluguéis",
+        "Sem imposto sobre ganho de capital ao vender o imóvel",
+        "Sem imposto sobre propriedade anual",
+        "Sem imposto de herança",
+        "Sem IVA sobre imóveis residenciais (na maioria dos casos)"
+      ],
+      "conclusion": "Isso torna Dubai extremamente atrativa para investidores imobiliários, principalmente em comparação com mercados como Reino Unido, EUA ou Europa."
+    },
+    "taxes_fees": {
+      "title": "Existem taxas ou impostos que preciso considerar?",
+      "intro": "Dubai é quase livre de impostos — mas não totalmente livre de custos. Veja o que considerar:",
+      "items": [
+        {
+          "title": "Taxa do Dubai Land Department (DLD)",
+          "description": "4% do valor do imóvel, paga uma única vez no ato da compra."
+        },
+        {
+          "title": "Taxas administrativas",
+          "description": "Custos baixos (geralmente abaixo de AED 10.000) para emissão de escritura e registro."
+        },
+        {
+          "title": "IVA (Imposto sobre Valor Agregado)",
+          "points": [
+            "Imóveis comerciais novos: 5% de IVA",
+            "Imóveis residenciais: geralmente isentos (especialmente na planta)"
+          ]
+        },
+        {
+          "title": "Imposto sobre empresas (não afeta a maioria)",
+          "description": "Implementado em 2023 com alíquota de 9%, mas só para empresas com lucros acima de AED 375.000 — não se aplica a investidores individuais."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Por que isso favorece o investidor?",
+      "points": [
+        "Receba 100% da sua renda de aluguel",
+        "Venda imóveis sem imposto sobre ganho de capital",
+        "Evite impostos recorrentes sobre propriedade",
+        "Maximize seu ROI com deduções mínimas"
+      ],
+      "conclusion": "Essa estrutura faz com que muitos investidores internacionais direcionem seus investimentos para Dubai."
+    },
+    "foreign_investors": {
+      "title": "Investidores estrangeiros também se beneficiam?",
+      "description": "Sim — estrangeiros têm os mesmos benefícios fiscais que residentes. Ao comprar em uma zona freehold, você terá plena propriedade e isenção de impostos.",
+      "additional": "E não é necessário residir nos Emirados para comprar — embora alguns vistos (como o Golden Visa) ofereçam vantagens extras."
+    },
+    "final_thoughts": {
+      "text": "Dubai se destaca como um dos mercados imobiliários mais vantajosos para investidores em todo o mundo. Apesar de algumas taxas únicas, a ausência de impostos sobre renda, ganho de capital e propriedade cria um ambiente imbatível para investir.",
+      "question": "Quer fazer seu patrimônio crescer com mínima carga tributária? Dubai pode ser o destino certo para você."
+    },
+    "cta": {
+      "text": "Pronto para investir em um mercado isento de impostos?",
+      "button": "Fale com um consultor imobiliário"
+    }
+  },
+  "What_Is_the_Oqood_System_in_Dubai_Real_Estate": {
+    "title": "Tudo que o investidor precisa saber sobre o sistema Oqood em Dubai",
+    "introduction": "Se você está pensando em investir em imóveis na planta em Dubai, provavelmente já ouviu falar do termo “Oqood”. Mas o que é exatamente — e por que é tão importante?",
+    "definition": "Em resumo, o Oqood é um sistema de registro digital apoiado pelo governo que protege o comprador e garante total transparência nas transações de imóveis na planta.",
+    "purpose": "Objetivos do Oqood:",
+    "purpose_list": [
+      "Impedir que a mesma unidade seja vendida mais de uma vez",
+      "Registrar todos os contratos oficialmente com o DLD",
+      "Acompanhar a construção e a titularidade de forma transparente",
+      "Fornecer ao comprador prova legal da compra, antes mesmo da entrega"
+    ],
+    "certificate_details": "Inclui:",
+    "certificate_details_list": [
+      "Nome do comprador",
+      "Nome e licença da incorporadora",
+      "Detalhes do projeto",
+      "Número da unidade e especificações",
+      "Plano de pagamento",
+      "Data estimada de entrega"
+    ],
+    "benefits": "Vantagens do Oqood para investidores",
+    "benefits_list": [
+      "Segurança: seu imóvel está legalmente registrado",
+      "Transparência: acesso via sistemas oficiais do governo",
+      "Financiamento: exigido pela maioria dos bancos para imóveis na planta",
+      "Confiança: validação oficial do imóvel e da transação",
+      "Elegibilidade para vistos: imóveis registrados podem qualificar para vistos de investidor (dependendo do valor)"
+    ],
+    "how_to_get": "Como obter um certificado Oqood?",
+    "how_to_get_list": [
+      "O registro é iniciado pela incorporadora",
+      "Você recebe o certificado por e-mail ou no app Dubai REST",
+      "A taxa de registro (geralmente 4%) pode ser cobrada"
+    ],
+    "final_thoughts": "O sistema Oqood é um dos pilares de confiança do mercado imobiliário de Dubai — especialmente no setor de imóveis na planta. Para o investidor, é proteção legal e segurança de que está lidando com uma incorporadora regulamentada.",
+    "cta": "Quer investir com segurança em projetos aprovados pela RERA? Na H&B Properties, só trabalhamos com incorporadoras confiáveis e garantimos que todos os seus investimentos estejam registrados e protegidos — do Oqood até a escritura.",
+    "cta_button": "Fale com um consultor agora"
+  },
+  "Top_Areas_in_Dubai_with_the_Highest_ROI": {
+    "title": "Onde os investidores inteligentes estão colocando seu dinheiro em 2025",
+    "introduction": "O mercado imobiliário de Dubai continua oferecendo alguns dos maiores retornos sobre investimento (ROI) do mundo — mas nem todas as regiões têm o mesmo desempenho.",
+    "location_importance": "Se você busca rendimento com aluguel, valorização de longo prazo ou crescimento estável, o local certo é essencial.",
+    "areas": [
+      {
+        "name": "Jumeirah Village Circle (JVC)",
+        "description": "Com ROI entre 6% e 8%, o JVC é uma das áreas mais rentáveis de Dubai. Ideal para estúdios e apartamentos de 1 quarto, com preços acessíveis e boa infraestrutura.",
+        "highlights": [
+          "Alta procura por unidades pequenas",
+          "Investimento inicial baixo",
+          "Múltiplos lançamentos de novos projetos"
+        ]
+      },
+      {
+        "name": "Dubai Marina",
+        "description": "Popular entre turistas e investidores, Dubai Marina oferece propriedades luxuosas e alto valor para aluguel de curto prazo. ROI de até 6,5%.",
+        "highlights": [
+          "Forte demanda para locação turística",
+          "Estilo de vida vibrante com vista para o mar",
+          "Aluguéis premium para residências de marca"
+        ]
+      },
+      {
+        "name": "Business Bay",
+        "description": "Vizinha ao Downtown, mistura espaços residenciais, comerciais e varejo. ROI médio de 6%, com alto potencial de valorização.",
+        "highlights": [
+          "Localização central",
+          "Infraestrutura moderna",
+          "Boa liquidez e revenda"
+        ]
+      },
+      {
+        "name": "Dubai Silicon Oasis",
+        "description": "Zona em expansão voltada para tecnologia e educação, com ROI de 7% ou mais. Boa escolha para investidores de médio porte.",
+        "highlights": [
+          "Preços atrativos",
+          "Alta procura de estudantes e profissionais",
+          "Área com apoio governamental"
+        ]
+      },
+      {
+        "name": "Dubai Hills Estate",
+        "description": "Desenvolvido pela Emaar, é ideal para investidores focados em crescimento patrimonial. Alta qualidade de vida, com infraestrutura de luxo.",
+        "highlights": [
+          "Projetos de alto padrão",
+          "Baixa vacância",
+          "Indicado para investidores do Golden Visa"
+        ]
+      }
+    ],
+    "final_thoughts": "Dubai é mais que luxo — é um polo de oportunidades com retorno mensurável. Com o local certo, você transforma investimento em patrimônio duradouro.",
+    "cta": "Na H&B Properties, conectamos você às áreas mais lucrativas da cidade.",
+    "cta_button": "Comece com imóveis voltados para ROI"
+  },
+  "Oqood_System_in_Dubai_Real_Estate": {
+    "name": "sistema Oqood em Dubai",
+    "title": "Tudo que o investidor precisa saber sobre o sistema Oqood em Dubai",
+    "introduction": "Se você está pensando em investir em imóveis na planta em Dubai, provavelmente já ouviu falar do termo \"Oqood\". Mas o que é exatamente — e por que é tão importante?",
+    "summary": "Em resumo, o Oqood é um sistema de registro digital apoiado pelo governo que protege o comprador e garante total transparência nas transações de imóveis na planta. É uma etapa legal essencial ao comprar um imóvel em construção.",
+    "what_is": {
+      "title": "O que é o sistema Oqood?",
+      "description": "Oqood (que significa \"contratos\" em árabe) é uma plataforma gerenciada pelo Dubai Land Department (DLD) por meio da sua agência reguladora RERA. É usada para registrar vendas de imóveis que ainda não foram construídos, e documentar legalmente a relação entre comprador e incorporador."
+    },
+    "why_introduced": {
+      "title": "Por que o Oqood foi criado?",
+      "description": "Antes do Oqood, havia pouca fiscalização sobre vendas na planta — o que deixava investidores vulneráveis a fraudes, atrasos e até vendas duplicadas.",
+      "purposes": [
+        "Impedir que a mesma unidade seja vendida mais de uma vez",
+        "Registrar todos os contratos oficialmente com o DLD",
+        "Acompanhar a construção e a titularidade de forma transparente",
+        "Fornecer ao comprador prova legal da compra, antes mesmo da entrega"
+      ]
+    },
+    "oqood_includes": {
+      "title": "O que contém o Certificado Oqood?",
+      "items": [
+        "Nome do comprador",
+        "Nome e licença da incorporadora",
+        "Detalhes do projeto",
+        "Número da unidade e especificações",
+        "Plano de pagamento",
+        "Data estimada de entrega"
+      ],
+      "conclusion": "É uma prova oficial da propriedade até a emissão do título definitivo (Title Deed)."
+    },
+    "benefits": {
+      "title": "Vantagens do Oqood para investidores",
+      "items": [
+        "Segurança: seu imóvel está legalmente registrado",
+        "Transparência: acesso via sistemas oficiais do governo",
+        "Financiamento: exigido pela maioria dos bancos para imóveis na planta",
+        "Confiança: validação oficial do imóvel e da transação",
+        "Elegibilidade para vistos: imóveis registrados podem qualificar para vistos de investidor (dependendo do valor)"
+      ]
+    },
+    "how_to_get": {
+      "title": "Como obter um certificado Oqood?",
+      "steps": [
+        "O registro é iniciado pela incorporadora",
+        "Você recebe o certificado por e-mail ou no app Dubai REST",
+        "A taxa de registro (geralmente 4%) pode ser cobrada"
+      ],
+      "warning": "Sempre confirme com seu agente ou incorporador se a unidade está registrada no Oqood."
+    },
+    "final_thoughts": {
+      "text": "O sistema Oqood é um dos pilares de confiança do mercado imobiliário de Dubai — especialmente no setor de imóveis na planta. Para o investidor, é proteção legal e segurança de que está lidando com uma incorporadora regulamentada.",
+      "question": "Antes de comprar na planta, exija o registro Oqood."
+    },
+    "cta": {
+      "text": "Quer investir com segurança em projetos aprovados pela RERA?",
+      "button": "Fale com um consultor agora"
+    }
+  },
+  "Top_Areas_in_Dubai_with_Highest_ROI": {
+    "name": "Melhores áreas de Dubai com maior ROI",
+    "title": "Onde os investidores inteligentes estão colocando seu dinheiro em 2025",
+    "introduction": "O mercado imobiliário de Dubai continua oferecendo alguns dos maiores retornos sobre investimento (ROI) do mundo — mas nem todas as regiões têm o mesmo desempenho.",
+    "summary": "Veja as áreas mais promissoras com base em dados reais, tendências de mercado e movimentação de investidores.",
+    "areas": [
+      {
+        "name": "Jumeirah Village Circle (JVC)",
+        "tagline": "Preço acessível – alta demanda por aluguel",
+        "description": "Com ROI entre 6% e 8%, o JVC é uma das áreas mais rentáveis de Dubai. Ideal para estúdios e apartamentos de 1 quarto, com preços acessíveis e boa infraestrutura.",
+        "highlights": [
+          "Alta procura por unidades pequenas",
+          "Investimento inicial baixo",
+          "Múltiplos lançamentos de novos projetos"
+        ]
+      },
+      {
+        "name": "Dubai Marina",
+        "tagline": "Vida à beira-mar – apelo internacional",
+        "description": "Popular entre turistas e investidores, Dubai Marina oferece propriedades luxuosas e alto valor para aluguel de curto prazo. ROI de até 6,5%.",
+        "highlights": [
+          "Forte demanda para locação turística",
+          "Estilo de vida vibrante com vista para o mar",
+          "Aluguéis premium para residências de marca"
+        ]
+      },
+      {
+        "name": "Business Bay",
+        "tagline": "Centro corporativo – valorização e aluguel premium",
+        "description": "Vizinha ao Downtown, mistura espaços residenciais, comerciais e varejo. ROI médio de 6%, com alto potencial de valorização.",
+        "highlights": [
+          "Localização central",
+          "Infraestrutura moderna",
+          "Boa liquidez e revenda"
+        ]
+      },
+      {
+        "name": "Dubai Silicon Oasis",
+        "tagline": "Polo tecnológico acessível – crescimento rápido",
+        "description": "Zona em expansão voltada para tecnologia e educação, com ROI de 7% ou mais. Boa escolha para investidores de médio porte.",
+        "highlights": [
+          "Preços atrativos",
+          "Alta procura de estudantes e profissionais",
+          "Área com apoio governamental"
+        ]
+      },
+      {
+        "name": "Dubai Hills Estate",
+        "tagline": "Vida premium – valorização contínua",
+        "description": "Desenvolvido pela Emaar, é ideal para investidores focados em crescimento patrimonial. Alta qualidade de vida, com infraestrutura de luxo.",
+        "highlights": [
+          "Projetos de alto padrão",
+          "Baixa vacância",
+          "Indicado para investidores do Golden Visa"
+        ]
+      }
+    ],
+    "final_thoughts": {
+      "text": "Dubai é mais que luxo — é um polo de oportunidades com retorno mensurável. Com o local certo, você transforma investimento em patrimônio duradouro.",
+      "cta": "Na H&B Properties, conectamos você às áreas mais lucrativas da cidade."
+    },
+    "cta": {
+      "text": "Quer investir onde o ROI é mais forte?",
+      "button": "Comece com imóveis voltados para ROI"
+    }
+  },
+  "Highest_Transaction_Areas_in_Dubai": {
+    "name": "Áreas com Maior Volume de Transações em Dubai",
+    "title": "Onde os compradores mais investem em 2025?",
+    "introduction": "No mercado imobiliário de Dubai, o volume de transações faz toda a diferença. As áreas com muitas vendas e revendas indicam demanda real, liquidez e confiança do investidor.",
+    "section1": {
+      "title": "1. Business Bay",
+      "subtitle": "Alto volume – Alta liquidez",
+      "content": "Uma das zonas mais movimentadas de Dubai, Business Bay continua liderando em número de transações. Muito próxima do centro e do Burj Khalifa.",
+      "points": [
+        "Popular entre profissionais e investidores",
+        "Uso misto: residencial + comercial",
+        "Alta demanda por aluguel"
+      ]
+    },
+    "section2": {
+      "title": "2. Dubai Marina",
+      "subtitle": "Luxo com liquidez",
+      "content": "Dubai Marina combina vida sofisticada com forte demanda de locação e revenda. Ideal para aluguel de curta temporada.",
+      "points": [
+        "Forte atividade de revenda",
+        "Excelente mercado de aluguel turístico",
+        "Ótima para gerar renda passiva"
+      ]
+    },
+    "section3": {
+      "title": "3. Downtown Dubai",
+      "subtitle": "Imóveis premium – Alta rotatividade",
+      "content": "Com o Burj Khalifa e Dubai Mall, Downtown atrai compradores de alto poder aquisitivo. Mesmo com preços elevados, o volume de vendas continua alto.",
+      "points": [
+        "Forte valorização",
+        "Demanda constante de investidores globais",
+        "Ponto turístico e imobiliário icônico"
+      ]
+    },
+    "section4": {
+      "title": "4. Jumeirah Village Circle (JVC)",
+      "subtitle": "Preço acessível – Vendas em massa",
+      "content": "Perfeita para quem está começando no mercado. Várias opções modernas e planos de pagamento flexíveis garantem alta movimentação.",
+      "points": [
+        "Ideal para pequenos investidores",
+        "Rápido desenvolvimento urbano",
+        "Boa liquidez no mercado secundário"
+      ]
+    },
+    "section5": {
+      "title": "5. Dubai Creek Harbour",
+      "subtitle": "O futuro centro da cidade?",
+      "content": "Com projetos como a Dubai Creek Tower, a área está crescendo rapidamente — principalmente nas vendas off-plan.",
+      "points": [
+        "Alta demanda por lançamentos",
+        "Mega projeto apoiado pelo governo",
+        "Grande potencial de valorização"
+      ]
+    },
+    "why_matters": {
+      "title": "Por que o volume importa?",
+      "points": [
+        "Mais fácil de vender quando quiser",
+        "Demanda comprovada",
+        "Menor risco de liquidez",
+        "Melhores retornos"
+      ]
+    },
+    "final_thoughts": "Não invista só com base na tendência — siga os números. As áreas mais ativas de Dubai são dados reais de confiança do mercado.",
+    "cta": "Quer investir onde o mercado mais gira?",
+    "cta_button": "Explore projetos de alto giro"
+  },
+  "Primary_vs_Secondary_Market_in_Dubai": {
+    "name": "Mercado Primário vs Secundário em Dubai",
+    "title": "Onde investir: imóvel na planta ou pronto?",
+    "introduction": "Se você está pensando em investir em imóveis em Dubai, uma das primeiras decisões é: Comprar na planta (mercado primário) ou imóvel pronto (mercado secundário)?",
+    "primary_market": {
+      "title": "O que é o mercado primário?",
+      "content": "Imóveis vendidos diretamente por incorporadoras, antes de estarem prontos. Você é o primeiro dono e paga em parcelas ao longo do tempo até a entrega.",
+      "points": [
+        "Preço inicial mais baixo",
+        "Parcelamento facilitado (a partir de 5–10%)",
+        "Valorização durante a obra",
+        "Oportunidade de comprar no início do projeto",
+        "Ideal para investidores de longo prazo"
+      ]
+    },
+    "secondary_market": {
+      "title": "O que é o mercado secundário?",
+      "content": "Imóveis prontos, geralmente ocupados ou disponíveis para mudança imediata. Compra feita de um proprietário atual.",
+      "points": [
+        "Aluguel imediato",
+        "Sem atrasos de obra",
+        "Possibilidade de visita física antes de comprar",
+        "Escritura e histórico jurídico já disponíveis",
+        "Ideal para retorno rápido ou uso próprio"
+      ]
+    },
+    "considerations": {
+      "title": "O que considerar antes de escolher",
+      "timeline": {
+        "title": "Seu prazo",
+        "points": [
+          "Quer renda agora? Escolha imóvel pronto",
+          "Pode esperar 2–4 anos? A planta pode render mais"
+        ]
+      },
+      "budget": {
+        "title": "Seu orçamento",
+        "points": [
+          "Planta = entrada menor",
+          "Pronto = valor total ou financiamento"
+        ]
+      },
+      "risk": {
+        "title": "Risco",
+        "points": [
+          "Imóvel pronto é mais seguro",
+          "Planta envolve espera, mas maior potencial de valorização"
+        ]
+      },
+      "roi": {
+        "title": "Estratégia de retorno",
+        "points": ["Pronto = fluxo de caixa", "Planta = crescimento do capital"]
+      }
+    },
+    "market_trends": {
+      "title": "Tendências de mercado em 2025",
+      "content": "O mercado na planta está em alta em Dubai, com projetos de frente para o mar e marcas premium. Mas imóveis prontos em Downtown, Marina e JVC ainda têm alta demanda e bons retornos.",
+      "advice": "Investidores inteligentes combinam os dois — planta para o futuro e imóveis prontos para renda atual."
+    },
+    "final_thoughts": "Não há resposta única. Ambos os mercados oferecem ótimas oportunidades — desde que alinhados aos seus objetivos.",
+    "cta": "Precisa de ajuda para decidir?",
+    "cta_button": "Veja imóveis na planta e prontos"
+  },
+
+  "sobha": {
+    "hero_section": {
+      "title": "Viva o padrão Sobha — Cadastre seu interesse",
+      "description": "Design refinado, acabamentos impecáveis e luxo duradouro. Deixe-nos ajudá-lo a encontrar o imóvel Sobha ideal.",
+      "enquire_now": "Solicitar Informações"
+    },
+    "pricing_section": {
+      "explore_text": "Explore o luxo sob medida — vistas para a água, natureza e elegância atemporal.",
+      "pricing_title": "Preços a partir de AED 1.1 milhão Planos de pagamento flexíveis — entrada a partir de apenas 10%",
+      "description": "Seja um refúgio tranquilo em uma ilha, um oásis verde urbano ou uma residência à beira-mar, a Sobha oferece um estilo de vida refinado com valorização garantida a longo prazo."
+    },
+    "projects": {
+      "hartland": {
+        "title": "Sobha Hartland",
+        "description": "Um oásis verde e exuberante no coração de Dubai. Esta comunidade planejada combina apartamentos e vilas elegantes com vida em meio à natureza, escolas internacionais e bem-estar de padrão internacional.",
+        "location": "Perto do Downtown Dubai, Meydan e do Santuário de Vida Selvagem Ras Al Khor.",
+        "know_more": "Saiba mais"
+      },
+      "siniya": {
+        "title": "Siniya Island",
+        "description": "Um refúgio em ilha privada com vilas e apartamentos cercados por manguezais e águas cristalinas. Projetado para oferecer serenidade, luxo e valorização a longo prazo.",
+        "location": "Uma oportunidade única de possuir um imóvel à beira-mar em um santuário natural — a apenas 30 minutos de Sharjah.",
+        "request_callback": "Solicitar contato"
+      },
+      "seahaven": {
+        "title": "Sobha SeaHaven",
+        "description": "Acorde com o som das ondas e vista para a Palm Jumeirah. Uma coleção de residências de luxo em arranha-céus, projetadas para refletir a essência do viver à beira-mar — moderno, tranquilo e irresistivelmente elegante.",
+        "location": "A poucos minutos da Marina de Dubai e JBR."
+      }
+    },
+    "about": {
+      "title": "Sobre a Sobha",
+      "description": "A Sobha Realty é uma incorporadora de imóveis de luxo reconhecida globalmente, conhecida por estabelecer novos padrões de qualidade e excelência artesanal. Com raízes profundas em design e construção, a Sobha controla todas as etapas do desenvolvimento — do conceito à conclusão.",
+      "projects": "Sobha Hartland, Sobha SeaHaven",
+      "exclusive_project": "Siniya Island",
+      "signature": "Cada projeto reflete a assinatura da marca: acabamentos impecáveis, localizações privilegiadas e arquitetura refinada que eleva a experiência de viver bem."
+    },
+    "why_choose": {
+      "title": "Por que escolher a Sobha?",
+      "features": {
+        "construction": {
+          "title": "Excelência em Construção Interna",
+          "description": "A Sobha realiza toda a construção internamente — sem terceirização — garantindo qualidade e precisão em cada detalhe."
+        },
+        "locations": {
+          "title": "Localizações Estratégicas",
+          "description": "Cada empreendimento é posicionado em áreas de alto crescimento e grande demanda em Dubai e nos Emirados."
+        },
+        "communities": {
+          "title": "Comunidades Planejadas",
+          "description": "Residências cercadas por áreas verdes, escolas, comércio, bem-estar e lazer — tudo interligado com harmonia."
+        },
+        "value": {
+          "title": "Foco em Valor e Entrega",
+          "description": "Alto retorno sobre investimento, planos de pagamento acessíveis e entrega pontual tornam a Sobha um investimento inteligente."
+        },
+        "design": {
+          "title": "Filosofia Orientada ao Design",
+          "description": "Desde a fachada até o piso, os imóveis Sobha refletem estética incomparável e integridade estrutural."
+        },
+        "safety": {
+          "title": "Segurança Rigorosa",
+          "description": "Dubai é extremamente segura e aplica regras rígidas para garantir a segurança de todos os indivíduos."
+        }
+      }
+    },
+    "contact_form": {
+      "title": "Entre em contato",
+      "subtitle": "Preencha o formulário abaixo e entraremos em contato",
+      "fields": {
+        "first_name": "Nome",
+        "last_name": "Sobrenome",
+        "phone_number": "Telefone",
+        "email": "Email",
+        "country": "País",
+        "property_type": "Que tipo de imóvel você procura?"
+      },
+      "placeholders": {
+        "first_name": "Digite seu nome",
+        "last_name": "Digite seu sobrenome",
+        "phone_number": "Digite seu telefone",
+        "email": "Digite seu email",
+        "country": "Digite seu país",
+        "property_type": "Que tipo de imóvel você procura?"
+      },
+      "submit": "Enviar formulário",
+      "submitting": "Enviando...",
+      "success": "Formulário enviado com sucesso!",
+      "validation": {
+        "first_name_required": "O nome é obrigatório",
+        "first_name_minlength": "O nome deve ter pelo menos 2 caracteres",
+        "last_name_required": "O sobrenome é obrigatório",
+        "last_name_minlength": "O sobrenome deve ter pelo menos 2 caracteres",
+        "phone_required": "O telefone é obrigatório",
+        "phone_pattern": "Por favor, insira um telefone válido",
+        "email_required": "O email é obrigatório",
+        "email_invalid": "Por favor, insira um email válido",
+        "country_required": "O país é obrigatório",
+        "country_minlength": "O país deve ter pelo menos 2 caracteres",
+        "property_required": "Por favor, selecione um imóvel"
+      }
+    }
+  },
+
+  "emaar": {
+    "hero_section": {
+      "main_title": "Viva o estilo de vida Emaar — Registre seu interesse",
+      "subtitle": "Localizações icônicas, design luxuoso e planos de pagamento flexíveis — deixe-nos te ajudar a encontrar o imóvel ideal.",
+      "enquire_now": "Fale com a gente agora"
+    },
+    "pricing_section": {
+      "title": "A partir de apenas AED 1,2 milhão — com entrada flexível a partir de 10%",
+      "description": "Explore os empreendimentos exclusivos da Emaar — combinando design de nível internacional, localizações privilegiadas e alto potencial de investimento."
+    },
+    "address_residences": {
+      "title": "Address Residences",
+      "description": "Viva o ultra luxo nos locais mais icônicos de Dubai — Downtown, Marina e JBR. Uma experiência que combina serviços de hotel cinco estrelas com residências privadas, perfeita para quem busca um estilo de vida sofisticado.",
+      "highlight": "A poucos passos do Burj Khalifa, Dubai Mall e dos melhores restaurantes da cidade.",
+      "button": "Ver Projeto"
+    },
+    "vida_residences": {
+      "title": "Vida Residences",
+      "description": "Um estilo de vida contemporâneo com espírito jovem e social. Essas residências foram criadas para a vida dinâmica da cidade — ideais para profissionais e famílias modernas.",
+      "highlight": "Localizadas em áreas vibrantes como Creek Harbour e The Hills, com acesso direto ao estilo de vida dos hotéis Vida.",
+      "button": "Ver Projeto"
+    },
+    "about_emaar": {
+      "title": "About EMAAR",
+      "description": "A Emaar Properties é uma das incorporadoras imobiliárias mais valiosas e inovadoras do mundo, conhecida por transformar o horizonte de Dubai. Fundada em 1997, a Emaar está por trás de ícones globais como o Burj Khalifa, The Dubai Mall e Dubai Marina. Com mais de duas décadas entregando comunidades de classe mundial, a Emaar construiu uma reputação sólida em qualidade, inovação e valor duradouro. De arranha-céus luxuosos a bairros planejados integrados, seus empreendimentos combinam excelência arquitetônica com comodidades que elevam o estilo de vida. Hoje, a Emaar molda o futuro das cidades nos Emirados e além, oferecendo aos moradores e investidores a oportunidade de viver e prosperar em espaços extraordinários.",
+      "button": "Fale com a gente agora"
+    },
+    "dubai_creek_harbour": {
+      "title": "Dubai Creek Harbour",
+      "description": "Um destino futurista à beira-mar onde a energia da cidade encontra a natureza. Desfrute de vistas panorâmicas do skyline de Dubai, parques amplos e calçadões tranquilos — a apenas 10 minutos do centro e do aeroporto DXB.",
+      "highlight": "Viva em uma comunidade vibrante e sustentável, projetada para o futuro.",
+      "button": "Ver Projeto"
+    },
+    "silva_by_emaar": {
+      "title": "Silva by Emaar",
+      "description": "Entre em um estilo de vida onde a natureza te envolve e cada detalhe é feito para o seu conforto. Silva é mais do que uma casa — é o seu refúgio particular longe da correria da cidade.",
+      "highlight": "Áreas verdes exuberantes, design moderno e inteligente, e um clima comunitário acolhedor — a poucos minutos das melhores escolas, parques e vias principais.",
+      "button": "Ver Projeto"
+    },
+    "why_invest": {
+      "title": "Por que escolher a Emaar?",
+      "features": {
+        "landmark_developments": {
+          "title": "Projetos icônicos",
+          "description": "Criadora de marcos globais como o Burj Khalifa, The Dubai Mall e Dubai Marina."
+        },
+        "prime_locations": {
+          "title": "Localizações estratégicas",
+          "description": "Todos os projetos estão localizados nos bairros mais desejados de Dubai."
+        },
+        "reliable_delivery": {
+          "title": "Entrega pontual e confiável",
+          "description": "Histórico comprovado de entregas no prazo com padrões excepcionais de qualidade."
+        },
+        "master_planned_communities": {
+          "title": "Comunidades planejadas",
+          "description": "Viver com tudo ao seu redor: parques, escolas, comércio e lazer — em um só lugar."
+        },
+        "strong_investment_value": {
+          "title": "Alto valor de investimento",
+          "description": "Altos retornos de aluguel e excelente potencial de revenda em todos os tipos de propriedades."
+        },
+        "global_brand_reputation": {
+          "title": "Reputação global da marca",
+          "description": "O nome Emaar agrega valor duradouro, prestígio e confiança em cada imóvel — reconhecido mundialmente por investidores."
+        }
+      }
+    }
+  },
+  "meraas": {
+    "hero_section": {
+      "tagline": "Viva o Estilo de Vida Meraas — Registre seu Interesse",
+      "description": "Design sofisticado, vista para a praia e bairros icônicos — conte-nos o que te inspira e vamos te ajudar a encontrar o lar perfeito da Meraas.",
+      "enquire_now": "Solicite mais informações"
+    },
+    "pricing_section": {
+      "experience_text": "Viva a arte de morar — com design de nível mundial, localizações vibrantes e o conforto inspirado na praia.",
+      "pricing_title": "Preços a partir de AED 1,5 milhão Entrada a partir de apenas 10%",
+      "pricing_description": "Explore comunidades focadas em estilo de vida, criadas para quem valoriza criatividade, praticidade e o charme litorâneo — das margens de Jumeirah ao coração da cidade."
+    },
+    "properties": {
+      "city_walk": {
+        "title": "City Walk",
+        "description": "Um bairro urbano e moderno que combina apartamentos sofisticados com lojas ao ar livre, cafés e arte. A poucos minutos do centro de Dubai — perfeito para profissionais e criativos.",
+        "tagline": "Estilo de vida elegante no coração da cultura.",
+        "know_more": "Saiba mais"
+      },
+      "la_mer": {
+        "title": "La Mer",
+        "description": "Uma comunidade à beira-mar com prédios baixos, cores vibrantes e uma atmosfera costeira relaxante. Acesso direto à praia, lojas boutique e um estilo de vida tranquilo.",
+        "tagline": "Onde a cidade encontra o mar.",
+        "request_callback": "Solicitar contato"
+      },
+      "bluewaters": {
+        "title": "Bluewaters Island",
+        "description": "Uma ilha artificial com apartamentos com vista para o mar, alta gastronomia e a famosa",
+        "ain_dubai": "Ain Dubai",
+        "continuation": "Onde o luxo à beira-mar encontra a vibração da cidade.",
+        "tagline": "Icônica, exclusiva e sempre cheia de vida."
+      },
+      "central_park": {
+        "title": "Central Park",
+        "description": "Um refúgio verde no coração da cidade. Apartamentos contemporâneos cercados por árvores, pistas de corrida e cafés ao ar livre — projetados para uma vida equilibrada.",
+        "tagline": "Um estilo de vida urbano inspirado na natureza, a poucos passos do centro de Dubai."
+      }
+    },
+    "about": {
+      "title": "Sobre a Meraas",
+      "description": "A Meraas é uma incorporadora com sede em Dubai que está redefinindo a vida urbana por meio de designs ousados, localizações icônicas e comunidades voltadas para o estilo de vida. De refúgios à beira-mar a polos urbanos artísticos, cada empreendimento da Meraas é uma experiência única pensada para a vida moderna. Com destinos como",
+      "bluewaters_island": "Bluewaters Island, La Mer",
+      "and": "e",
+      "city_walk": "City Walk",
+      "continuation": ". A Meraas mistura arquitetura, cultura e lazer — transformando cada imóvel em uma história e cada bairro em um estilo de vida. A Meraas não está apenas construindo residências — está moldando os lugares mais desejados de Dubai para viver, conectar e prosperar."
+    },
+    "why_choose": {
+      "title": "Por que escolher a Meraas?",
+      "features": {
+        "prime_locations": {
+          "title": "Localizações Premium de Estilo de Vida",
+          "description": "Empreendimentos nas áreas mais vibrantes e desejadas de Dubai — de Jumeirah ao Downtown."
+        },
+        "design_philosophy": {
+          "title": "Filosofia com Foco no Design",
+          "description": "Arquitetura moderna e ousada com toques artísticos que tornam cada lar Meraas visualmente icônico."
+        },
+        "beachfront_urban": {
+          "title": "Fusão entre Praia e Cidade",
+          "description": "Aproveite vistas para o mar, bairros animados e varejo integrado a poucos passos da sua porta."
+        },
+        "green_communities": {
+          "title": "Comunidades Verdes e Habitáveis",
+          "description": "Espaços como o Central Park trazem natureza, bem-estar e tranquilidade para o coração da cidade."
+        },
+        "high_roi": {
+          "title": "Apelo de Alto Padrão & Alto Retorno",
+          "description": "Ideal para quem busca estilo de vida e para investidores inteligentes focados em valor a longo prazo."
+        },
+        "experiential_living": {
+          "title": "Estilo de Vida Experiencial",
+          "description": "A Meraas cria comunidades onde arte, cultura, gastronomia e lazer se unem — fazendo de cada dia uma experiência."
+        }
+      }
+    }
+  },
+  "damac": {
+    "Hero_Section": [
+      "Damac Properties",
+      "Luxo, reinventado.",
+      "De arranha-céus icônicos a comunidades vibrantes, a Damac cria estilos de vida ousados para os ambiciosos. Descubra um jeito de viver com design em destaque nos destinos mais desejados de Dubai — onde cada dia é uma afirmação.",
+      "[ Explorar Projetos ]",
+      "Ousado, criativo e cheio de vida — descubra onde o luxo ganha nova forma.",
+      "Preços a partir de AED 925.000 Planos de pagamento flexíveis — entrada a partir de apenas 10%",
+      "Explore uma seleção exclusiva dos empreendimentos mais icônicos da DAMAC — de um estilo de vida resort a torres de marca no coração da cidade."
+    ],
+    "Safa_Two_Section": {
+      "title": "Safa Two by de GRISOGONO",
+      "description": "Uma joia da arquitetura — este arranha-céu com torres gêmeas apresenta interiores inspirados em esmeraldas, piscinas com bordas de vidro e vistas panorâmicas da cidade — a poucos passos de Downtown Dubai. Luxo reinventado para quem ousa se destacar.",
+      "button": "[Ver Projeto]"
+    },
+    "Aykon_City_Section": {
+      "title": "Aykon City",
+      "description": "Um empreendimento urbano sofisticado na Sheikh Zayed Road, com interiores de marca, comodidades estilo hotel e vistas diretas para o Canal de Dubai e o Burj Khalifa. Ideal para investidores e profissionais que buscam a energia vibrante da cidade.",
+      "button": "[Ver Projeto]"
+    },
+    "About_Damac": {
+      "title": "About Damac",
+      "description": "Fundada em 2002, a DAMAC Properties tornou-se um dos desenvolvedores de luxo mais reconhecidos da região. Conhecida por seus designs ousados, colaborações globais e comunidades centradas no estilo de vida, a DAMAC já entregou mais de 40.000 unidades nos Emirados e além. De torres à beira-mar a apartamentos de marca e vilas em campos de golfe, os projetos da DAMAC se destacam por seu estilo, inovação e valor de vida. Colaborações exclusivas incluem nomes como de GRISOGONO, Cavalli e Versace — onde o mercado imobiliário se encontra com a moda e a arte. Na DAMAC, luxo não é um detalhe — é o alicerce.",
+      "button": "[Solicitar agora]"
+    },
+    "Damac_Lagoons": {
+      "title": "DAMAC Lagoons",
+      "description": "Inspirada pelo charme do Mediterrâneo, esta comunidade planejada oferece um estilo de vida à beira-mar com lagoas, praias de areia branca e bairros temáticos como Santorini e Veneza. Aqui, todo dia parece férias.",
+      "button": "[Ver Projeto]"
+    },
+    "Damac_Hills": {
+      "title": "DAMAC Hills",
+      "description": "Uma comunidade de golfe de elite com vilas, apartamentos, escolas e áreas verdes — tudo em um só lugar. Lar do Trump International Golf Club, oferece uma vida sofisticada com comodidades de padrão internacional. Perfeita para famílias que buscam espaço, tranquilidade e esportes.",
+      "button": "[Ver Projeto]"
+    },
+    "Why_Invest": {
+      "title": "Por que escolher a DAMAC?",
+      "features": [
+        {
+          "title": "Luxo com personalidade",
+          "description": "Cada projeto conta uma história de design única — de casas com marcas de moda a refúgios com lagoas cristalinas."
+        },
+        {
+          "title": "Localizações principais e emergentes",
+          "description": "De Downtown Dubai a Dubailand, a DAMAC constrói onde o valor cresce."
+        },
+        {
+          "title": "Arquitetura ousada",
+          "description": "Formas inovadoras, fachadas marcantes e interiores artísticos inesquecíveis."
+        },
+        {
+          "title": "Alto potencial de investimento",
+          "description": "Preços acessíveis, ROI elevado e forte demanda no mercado de aluguéis."
+        },
+        {
+          "title": "Parcerias globais",
+          "description": "Colaborações com marcas de luxo como Versace, Cavalli e de GRISOGONO para experiências de vida memoráveis."
+        },
+        {
+          "title": "Comodidades estilo resort",
+          "description": "De lagoas cristalinas e campos de golfe a spas e praias privadas — as comunidades DAMAC são feitas para quem valoriza o estilo de vida."
+        }
+      ]
+    },
+    "Contact_Form": {
+      "title": "Viva sem limites — Registre seu interesse",
+      "subtitle": "Luxo, estilo de vida e valorização a longo prazo — diga-nos o que você procura e nossos especialistas vão ajudá-lo a escolher o imóvel DAMAC ideal.",
+      "submit": "[Registrar agora]"
+    }
+  },
+  "home": {
+    "hero": {
+      "title1": "Bem-vindo à",
+      "title2": "H&B Elite Properties",
+      "description": "Sua porta de entrada para imóveis de elite em Dubai"
+    },
+    "section1": {
+      "title": "Descubra os melhores imóveis de Dubai",
+      "points": [
+        "Na",
+        "H&B Elite Properties",
+        "somos especializados em conectar você com oportunidades imobiliárias premium em Dubai. Seja para encontrar a casa dos seus sonhos, um investimento lucrativo ou o espaço comercial ideal, nossa equipe está comprometida em ajudá-lo a encontrar o imóvel certo para suas necessidades.",
+        "De vilas luxuosas em Palm Jumeirah a apartamentos modernos no centro de Dubai, oferecemos um portfólio diversificado de propriedades em localizações privilegiadas da cidade. Cada imóvel é cuidadosamente selecionado para garantir os mais altos padrões de qualidade, design e estilo de vida."
+      ],
+      "button": "Explorar Imóveis"
+    },
+    "Spacious-Lagoon-Facing": {
+      "header": "Villas Espaçosas com Vista para a Lagoa",
+      "subtitle": "Vista",
+      "des": "As villas oferecem vistas deslumbrantes da lagoa tranquila, onde águas cintilantes se encontram com vegetação exuberante, criando um cenário pitoresco e sereno para o seu lar.",
+      "usbtitle2": "Localização",
+      "des2": "Cada villa é cuidadosamente projetada com plantas amplas, arquitetura moderna e acabamentos premium, criando um ambiente sofisticado e elegante. Desfrute de áreas de convivência espaçosas, jardins privados e acesso direto à lagoa — perfeito para relaxar ou receber convidados. Estas villas proporcionam uma experiência de vida incomparável, combinando beleza natural e conforto refinado.",
+      "button": "SAIBA MAIS"
+    },
+    "Premium-Lifestyle-Collection": {
+      "header": "Coleção de Estilo de Vida Premium",
+      "subtitle": "Exclusividade",
+      "des": "Descubra uma coleção exclusiva de residências premium que redefinem o conceito de luxo com atenção incomparável aos detalhes e comodidades de padrão internacional.",
+      "usbtitle2": "Investimento",
+      "des2": "Essas propriedades prestigiadas representam oportunidades de investimento excepcionais em localizações privilegiadas, oferecendo estilo de vida sofisticado e valorização a longo prazo.",
+      "button": "SAIBA MAIS"
+    },
+    "Dreams":{
+      "header":"Transformando sonhos em endereços",
+      "des":"Comece sua jornada conosco hoje. Explore nossas listagens ou fale com um de nossos especialistas para uma consultoria personalizada.",
+      "button":"Entre em contato"
+    },
+    "Clients-Say":{
+      "header": "O que dizem nossos clientes",
+      "des": "Na H&B Elite Properties, nosso compromisso com a excelência nos serviços imobiliários conquistou a confiança e satisfação de nossos clientes. Não fique apenas com a nossa palavra — veja o que alguns de nossos clientes felizes têm a dizer"
+    }
+    
+  },
+  
+  "CONTACT": {
+    "TITLE": "Envie-nos uma mensagem",
+    "FORM": {
+      "NAME": "Seu nome",
+      "PHONE": "Número de telefone",
+      "EMAIL": "Seu e-mail",
+      "BUTTON": "Enviar consulta"
+    },
+    "INFO": {
+      "TITLE": "Informações de contato",
+      "ADDRESS": "Dubai, Emirados Árabes Unidos",
+      "EMAIL": "admin@hbeliteproperties.com",
+      "PHONE": "+971 50 579 1507"
+    }
+  },
+  
+  "about": {
+    "vision": {
+      "title": "Nossa Visão",
+      "content": "Nossa visão é redefinir o setor imobiliário oferecendo aos clientes os mais altos padrões de serviço, garantindo que cada experiência com imóveis seja fluida, bem-informada e personalizada às suas necessidades. Nosso objetivo é estabelecer um novo padrão no mercado imobiliário de Dubai, promovendo transparência, profissionalismo e integridade em cada transação."
+    },
+    "expertise": {
+      "title": "Nossa Expertise",
+      "content": "Com anos de experiência no setor imobiliário de Dubai, desenvolvemos um conhecimento profundo do mercado que nos permite identificar tendências e oportunidades vantajosas para nossos clientes. De residências luxuosas nos bairros mais icônicos de Dubai a oportunidades de investimento com alto retorno e espaços comerciais sob medida, nossa expertise abrange todos os segmentos do mercado."
+    },
+    "why_choose": {
+      "title": "Por que escolher a H&B Elite Properties?",
+      "points": [
+        {
+          "title": "Conhecimento local",
+          "content": "Temos um conhecimento profundo do mercado imobiliário de Dubai, o que nos permite oferecer conselhos estratégicos que maximizam o valor."
+        },
+        {
+          "title": "Serviço personalizado",
+          "content": "Nossa abordagem é baseada na compreensão dos seus objetivos únicos, garantindo uma experiência sob medida, seja comprando, vendendo ou investindo."
+        },
+        {
+          "title": "Foco no cliente",
+          "content": "Colocamos nossos clientes no centro de tudo o que fazemos, oferecendo orientações transparentes, confiáveis e honestas."
+        }
+      ]
+    },
+    "stats": {
+      "years_experience": "10+ anos de experiência",
+      "apartments_sold": "155+ apartamentos vendidos",
+      "satisfied_clients": "430+ clientes satisfeitos",
+      "houses_rented": "210+ casas alugadas"
+    }
+  },
+  "faq-first-section": {
+    "title": "Perguntas Frequentes",
+    "subtitle": "Você perguntou, e nós respondemos!",
+    "introduction": "Na H&B Elite Properties, entendemos que comprar, vender ou investir em imóveis pode ser um processo complexo. Para ajudá-lo a navegar com facilidade, compilamos respostas para algumas das perguntas mais frequentes que recebemos."
+  },
+    "faq": [
+      {
+        "question": "Quais serviços a H&B Elite Properties oferece?",
+        "answer": "Oferecemos uma ampla variedade de serviços imobiliários, incluindo vendas, locação e administração de propriedades."
+      },
+      {
+        "question": "Como posso iniciar o processo de compra de um imóvel em Dubai?",
+        "answer": "Comece entrando em contato com um dos nossos consultores. Vamos guiá-lo em cada etapa do processo."
+      },
+      {
+        "question": "Quais são os benefícios de trabalhar com a H&B Elite Properties?",
+        "answer": "Oferecemos conhecimento especializado, integridade e um compromisso com a satisfação do cliente."
+      },
+      {
+        "question": "Qual é o processo para alugar um imóvel em Dubai?",
+        "answer": "Nossa equipe ajudará você a buscar, visitar e assinar contratos de aluguel com facilidade."
+      },
+      {
+        "question": "Por que devo investir em imóveis em Dubai?",
+        "answer": "Dubai oferece altos rendimentos de aluguel, renda isenta de impostos e um mercado imobiliário estável."
+      },
+      {
+        "question": "Estrangeiros podem comprar imóveis em Dubai?",
+        "answer": "Sim, estrangeiros podem comprar propriedades com posse plena (freehold) em áreas designadas."
+      },
+      {
+        "question": "Como posso vender meu imóvel com a H&B Elite Properties?",
+        "answer": "Basta entrar em contato com nossa equipe de vendas e nós o guiaremos em todo o processo de listagem e marketing."
+      },
+      {
+        "question": "Como funcionam as avaliações de imóveis?",
+        "answer": "As avaliações são baseadas nas tendências do mercado, na condição do imóvel e na localização."
+      }
+    ],
+    
+  "testimonials": [
+    {
+      "quote": "Eu era nova no mercado imobiliário de Dubai, e a H&B Elite Properties tornou todo o processo de compra fácil e sem estresse. A equipe foi experiente, atenciosa e me ajudou a encontrar a casa dos meus sonhos rapidamente. Estou muito feliz!",
+      "name": "Sarah L.",
+      "role": "Proprietária"
+    },
+    {
+      "quote": "Desde o momento em que entrei em contato com a H&B Elite Properties, senti confiança nas suas habilidades. Eles entenderam exatamente o que eu procurava em um imóvel para alugar e cuidaram de tudo com profissionalismo. Altamente recomendados!",
+      "name": "Ahmed R.",
+      "role": "Inquilino"
+    },
+    {
+      "quote": "Queria diversificar minha carteira de investimentos e a H&B Elite Properties me orientou durante todo o processo de compra de um imóvel comercial em Dubai. O conhecimento de mercado deles é inestimável. Já estou vendo ótimos retornos!",
+      "name": "Abdul J.",
+      "role": "Empresário"
+    }
+  ]
+
+
+  
+
+
 
 }

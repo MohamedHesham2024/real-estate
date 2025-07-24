@@ -8,9 +8,10 @@ import { ToastrService } from 'ngx-toastr';
 import { ThemeToggleService } from '../theme-toggle.service';
 import { ActivatedRoute } from '@angular/router';
 import { LetterByLetterPipe } from '../Pipes/letter-by-letter.pipe';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-sobha',
-  imports: [CommonModule,ButtonComponent,NgIf,NgFor, ReactiveFormsModule, HttpClientModule,LetterByLetterPipe],
+  imports: [CommonModule,ButtonComponent,NgIf,NgFor, ReactiveFormsModule, HttpClientModule,LetterByLetterPipe,TranslateModule],
   templateUrl: './sobha.component.html',
   styleUrl: './sobha.component.css'
 })
@@ -205,7 +206,8 @@ logoSrc = '';
   }
 
   getMainTransform(): string {
-    return `translateX(-${this.currentSlide * 100}%)`;
+    const rtl = document.documentElement.dir === 'rtl';
+    return rtl?`translateX(${this.currentSlide * 100}%)`:`translateX(-${this.currentSlide * 100}%)`;
   }
 
   getThumbTransform(): string {

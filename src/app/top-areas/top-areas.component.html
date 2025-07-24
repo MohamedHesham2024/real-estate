@@ -1,0 +1,88 @@
+<div class="bg-thread dark:bg-dark-background">
+    <!-- Hero Section -->
+    <section
+      class="relative h-[450px] bg-cover bg-center px-4 flex items-center justify-center text-center"
+      style="background-image: url('/Properties/image4.jpg');"
+    >
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+      <div class="text-center lg:text-left py-6 sm:py-0 z-10">
+        <h2 class="text-1xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight">
+          <span class="block text-primary">
+            {{ ('Top_Areas_in_Dubai_with_Highest_ROI.name' | translate) | letterByLetter : 100 | async }}
+          </span>
+        </h2>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        <!-- Hero Image -->
+        <div class="mb-8">
+          <img 
+            src="/Properties/image4.jpg" 
+            alt="Top ROI Areas in Dubai" 
+            class="w-full rounded-lg shadow-lg"
+          />
+        </div>
+  
+        <!-- Header Section -->
+        <div class="mb-12">
+          <h1 class="text-3xl md:text-4xl font-bold mb-4 text-fontPrimary">
+            {{ 'Top_Areas_in_Dubai_with_Highest_ROI.title' | translate }}
+          </h1>
+          <p class="text-lg leading-relaxed mb-4 text-fontSecondary">
+            {{ 'Top_Areas_in_Dubai_with_Highest_ROI.introduction' | translate }}
+          </p>
+          <p class="text-lg font-medium mb-4 text-fontSecondary">
+            {{ 'Top_Areas_in_Dubai_with_Highest_ROI.summary' | translate }}
+          </p>
+        </div>
+
+        <!-- Areas Grid -->
+        <div class="space-y-12 mb-8">
+          <div *ngFor="let area of [0,1,2,3,4]" class="border-b border-fontPrimary pb-8 last:border-b-0">
+            <div class="md:flex gap-8">
+              <div class="md:w-1/3 mb-4 md:mb-0">
+                <h3 class="text-2xl font-bold text-fontPrimary">
+                  {{ 'Top_Areas_in_Dubai_with_Highest_ROI.areas.'+area+'.name' | translate }}
+                </h3>
+                <p class="text-lg font-semibold mt-2" style="color: #AF8255;">
+                  {{ 'Top_Areas_in_Dubai_with_Highest_ROI.areas.'+area+'.tagline' | translate }}
+                </p>
+              </div>
+              <div class="md:w-2/3">
+                <p class="mb-4 text-fontSecondary">
+                  {{ 'Top_Areas_in_Dubai_with_Highest_ROI.areas.'+area+'.description' | translate }}
+                </p>
+                <ul class="list-disc list-inside space-y-2">
+                  <li class="text-fontSecondary">{{ 'Top_Areas_in_Dubai_with_Highest_ROI.areas.'+area+'.highlights.0' | translate }}</li>
+                  <li class="text-fontSecondary">{{ 'Top_Areas_in_Dubai_with_Highest_ROI.areas.'+area+'.highlights.1' | translate }}</li>
+                  <li class="text-fontSecondary">{{ 'Top_Areas_in_Dubai_with_Highest_ROI.areas.'+area+'.highlights.2' | translate }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Final Thoughts -->
+        <div class="text-center mb-8">
+          <p class="text-lg mb-4 text-fontSecondary">
+            {{ 'Top_Areas_in_Dubai_with_Highest_ROI.final_thoughts.text' | translate }}
+          </p>
+          <p class="text-xl font-semibold text-fontSecondary">
+            {{ 'Top_Areas_in_Dubai_with_Highest_ROI.final_thoughts.cta' | translate }}
+          </p>
+        </div>
+  
+        <!-- CTA Section -->
+        <div class="rounded-lg p-8 text-center" style="background: linear-gradient(135deg, #AF8255 0%, #111010 100%); color: #FFFFFF;">
+          <p class="text-lg mb-6">
+            {{ 'Top_Areas_in_Dubai_with_Highest_ROI.cta.text' | translate }}
+          </p>
+          <button class="font-bold py-3 px-8 rounded-lg hover:opacity-90 transition duration-300 transform hover:scale-105" 
+                  style="background-color: #FFFFFF; color: #AF8255;">
+            {{ 'Top_Areas_in_Dubai_with_Highest_ROI.cta.button' | translate }}
+          </button>
+        </div>
+    </div>
+</div>

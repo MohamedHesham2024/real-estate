@@ -25,18 +25,18 @@
       class="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-12"
     >
       <!-- Left side - Hero text -->
-      <div class="flex-1 text-center lg:text-left py-6 sm:py-0 sm:pt-3 ">
+      <div class="flex-1 text-center lg:text-start py-6 sm:py-0 sm:pt-3 ">
         <h2
           class="text-1xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight"
         >
-          <span class="block text-primary">Welcome to</span>
-          <span class="block text-primary"> H&B Elite Properties </span>
+          <span class="block text-primary"> {{ 'home.hero.title1' | translate }}</span>
+          <span class="block text-primary">   {{ 'home.hero.title2' | translate }}</span>
         </h2>
         <p
           class="text-xl sm:text-xl lg:text-2xl text-secondary font-light max-w-2xl"
         >
           {{
-            "Your Gateway to Elite Real Estate in Dubai"
+            ( 'home.hero.description' | translate )
               | letterByLetter : 100
               | async
           }}

@@ -13,7 +13,18 @@ import { LanguageSwitcherComponent } from "../language-switcher/language-switche
 export class NavbarComponent {
  isMobileMenuOpen = false;
   isPropertiesMenuOpen = false;
-
+  isDevMobileMenuOpen = false;
+  isDevMenuOpen = false;
+  toggledevMobileMenu(): void {
+    this.isDevMobileMenuOpen = !this.isDevMobileMenuOpen;
+    // Prevent body scroll when menu is open
+    if (this.isDevMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      this.isDevMenuOpen = false;
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+  }
   toggleMobileMenu(): void {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
     // Prevent body scroll when menu is open
@@ -26,6 +37,8 @@ export class NavbarComponent {
   }
 
   closeMobileMenu(): void {
+    this.isDevMobileMenuOpen = false;
+    this.isDevMenuOpen = false;
     this.isMobileMenuOpen = false;
     this.isPropertiesMenuOpen = false;
     document.body.style.overflow = 'auto';
@@ -37,5 +50,8 @@ export class NavbarComponent {
   }
   togglePropertiesMenu() {
     this.isPropertiesMenuOpen = !this.isPropertiesMenuOpen;
+  }
+  toggledevPropertiesMenu() {
+    this.isDevMenuOpen = !this.isDevMenuOpen;
   }
 }

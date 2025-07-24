@@ -110,7 +110,7 @@ onSubmit() {
       this.submitSuccess = false;
       this.submitError = '';
 
-      this.sendDataService.submitContactForm({...this.contactForm.value,developer:"sobha"}).subscribe({
+      this.sendDataService.submitContactForm({...this.contactForm.value,developer:"secondary-listing"}).subscribe({
         next: () => {
           this.isLoading = false;
           this.contactForm.reset();

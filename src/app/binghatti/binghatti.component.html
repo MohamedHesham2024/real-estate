@@ -1,0 +1,944 @@
+<div class="bg-thread dark:bg-dark-background">
+    <section
+      class="relative h-[450px] bg-cover bg-center px-4 flex items-center justify-center text-center"
+      style="background-image: url('/binghatti/image7.jpg')"
+    >
+      <!-- Overlay layer -->
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+      <div class="text-center lg:text-left py-6 sm:py-0 z-10">
+        <h2
+          class="text-1xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight"
+        >
+          <span class="block text-primary">{{
+            "Alliance by" | letterByLetter : 100 | async
+          }}</span>
+          <!-- <span class="block text-primary"> H&B Elite Properties </span> -->
+        </h2>
+        <div class="flex justify-center ">
+  
+          <img
+            src="/Damac/Damac white.png"
+            alt="imageAlt"
+            class="w-36 mb-6 h-auto object-cover transition-transform duration-500 hover:scale-105"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+  
+    <div class="my-12 flex flex-col items-center">
+      <img
+        [src]="logoSrc"
+        alt="imageAlt"
+        class="w-28 mb-6 h-auto object-cover transition-transform duration-500 hover:scale-105"
+        loading="lazy"
+      />
+      
+      <h1 class="text-3xl font-bold text-center mb-6 text-fontPrimary font-exo">
+        {{ 'binghatti.Hero_Section.0' | translate }}
+      </h1>
+      <p class="text-center max-w-6xl text-fontSecondary mx-auto mb-8">
+        {{ 'binghatti.Hero_Section.1' | translate }}
+      </p>
+      <div class="flex justify-center">
+        <app-button label="{{ 'binghatti.Hero_Section.2' | translate }}" targetId="crm-form"></app-button>
+      </div>
+    </div>
+    <section
+      class="bg-black border border-fontPrimary py-16 px-4 sm:px-6 lg:px-8"
+    >
+      <div class="flex flex-col items-center max-w-7xl mx-auto">
+       
+        <h2 class="text-3xl lg:text-4xl font-bold text-fontPrimary mb-6 text-center">
+            {{ 'binghatti.Featured_Projects_by_binghatti.0' | translate }}
+        </h2>
+        <p class="text-lg text-fontSecondary text-center max-w-2xl mb-8">
+            {{ 'binghatti.Featured_Projects_by_binghatti.1' | translate }}
+ 
+        </p>
+      </div>
+    </section>
+    <div class="flex justify-center my-12">
+      <app-button label="{{ 'binghatti.Hero_Section.2' | translate }}" targetId="crm-form"></app-button>
+    </div>
+   
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Side - Image -->
+  
+          <div class="order-2 lg:order-1 space-y-6">
+            <div>
+              <h2
+                class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
+              >
+              Binghatti Onyx
+              </h2>
+  
+              <div class="prose prose-lg text-fontSecondary leading-relaxed">
+                <p class="text-justify">
+                    {{ 'binghatti.Binghatti_Onyx.0' | translate }}
+                </p>
+              </div>
+            </div>
+            <div class="flex mt-20">
+              <app-button label="{{'binghatti.Hero_Section.2'| translate}}" targetId="crm-form"></app-button>
+            </div>
+          </div>
+          <!-- Right Side - Content -->
+          <div class="order-1 lg:order-2">
+            <div class="relative overflow-hidden rounded-lg">
+              <img
+                src="/binghatti/image1.jpg"
+                alt="imageAlt"
+                class="w-full  transition-transform duration-500 hover:scale-105"
+                loading="lazy"
+              />
+              <!-- Optional overlay for better text contrast if needed -->
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Side - Image -->
+          <div class="order-2 lg:order-1">
+            <div class="relative overflow-hidden rounded-lg">
+              <img
+                src="/binghatti/image5.jpg"
+                alt="imageAlt"
+                class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                loading="lazy"
+              />
+              <!-- Optional overlay for better text contrast if needed -->
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+  
+          <!-- Right Side - Content -->
+          <div class="order-1 lg:order-2 space-y-6">
+            <div>
+              <h2
+                class="text-4xl lg:text-5xl font-bold leading-tight mb-6 text-fontPrimary"
+              >
+              Binghatti Canal
+              </h2>
+  
+              <div class="prose prose-lg leading-relaxed text-fontSecondary">
+                <p class="text-justify">
+                  {{ 'binghatti.Binghatti_Canal.0' | translate }}
+                </p>
+              </div>
+            </div>
+            <div class="flex mt-20">
+              <app-button
+                label="{{ 'binghatti.About_binghatti.3' | translate }}"
+                targetId="crm-form"
+              ></app-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Side - Image -->
+    
+            <div class="order-2 lg:order-1 space-y-6">
+              <div>
+                <h2
+                  class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
+                >
+                  About binghatti
+                </h2>
+    
+                <div class="prose prose-lg text-fontSecondary leading-relaxed">
+                  <p class="text-justify">
+                      {{ 'binghatti.About_binghatti.0' | translate }}
+  
+                  </p>
+                </div>
+              </div>
+              <div class="flex mt-20">
+                <app-button label="{{ 'binghatti.About_binghatti.3' | translate }}" targetId="crm-form"></app-button>
+              </div>
+            </div>
+            <!-- Right Side - Content -->
+            <div class="order-1 lg:order-2">
+              <div class="relative overflow-hidden rounded-lg">
+                <img
+                  src="/binghatti/image6.jpg"
+                  alt="imageAlt"
+                  class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                  loading="lazy"
+                />
+                <!-- Optional overlay for better text contrast if needed -->
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Side - Image -->
+            <div class="order-2 lg:order-1">
+              <div class="relative overflow-hidden rounded-lg">
+                <img
+                  src="/binghatti/image2.jpg"
+                  alt="imageAlt"
+                  class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                  loading="lazy"
+                />
+                <!-- Optional overlay for better text contrast if needed -->
+                <div
+                  class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"
+                ></div>
+              </div>
+            </div>
+    
+            <!-- Right Side - Content -->
+            <div class="order-1 lg:order-2 space-y-6">
+              <div>
+                <h2
+                  class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
+                >
+                Burj Binghatti Jacob & Co Residences 
+                </h2>
+    
+                <div class="prose prose-lg text-fontSecondary leading-relaxed">
+                  <p class="text-justify">
+                    {{ 'binghatti.Burj_Binghatti_Jacob_&_Co_Residences.0' | translate }}
+                </p>
+                </div>
+              </div>
+              <div class="flex mt-20">
+                <app-button
+                  label="{{ 'binghatti.Hero_Section.2' | translate }}"
+                  targetId="crm-form"
+                ></app-button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="py-16 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <!-- Left Side - Image -->
+  
+          <div class="order-2 lg:order-1 space-y-6">
+            <div>
+              <h2
+                class="text-4xl lg:text-5xl font-bold text-fontPrimary leading-tight mb-6"
+              >
+              Bugatti Residences
+              </h2>
+  
+              <div class="prose prose-lg text-fontSecondary leading-relaxed">
+                <p class="text-justify">
+                    {{ 'binghatti.Bugatti_Residences.0' | translate }}
+                </p>
+              </div>
+            </div>
+            <div class="flex mt-20">
+              <app-button label="{{ 'binghatti.Hero_Section.2' | translate }}" targetId="crm-form"></app-button>
+            </div>
+          </div>
+          <!-- Right Side - Content -->
+          <div class="order-1 lg:order-2">
+            <div class="relative overflow-hidden rounded-lg">
+              <img
+                src="/binghatti/image8.jpg"
+                alt="imageAlt"
+                class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                loading="lazy"
+              />
+              <!-- Optional overlay for better text contrast if needed -->
+              <div
+                class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="max-w-6xl mx-auto px-4 py-12">
+      <!-- Header -->
+      <h2 class="text-2xl md:text-3xl font-bold text-fontPrimary mb-12">
+        WHY INVEST IN DUBAI?
+      </h2>
+  
+      <!-- Features Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Higher Rental Yields -->
+        <div class="text-center">
+          <div class="mb-4">
+            <div
+              class="w-12 h-12 mx-auto rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-12 h-12 text-fontPrimary"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"
+                />
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-semibold text-fontPrimary mb-2">
+            {{ 'binghatti.Why_Choose_binghatti.0' | translate }}
+          </h3>
+          <p class="text-sm text-fontSecondary leading-relaxed">
+            {{ 'binghatti.Why_Choose_binghatti.1' | translate }}
+          </p>
+        </div>
+  
+        <!-- Prime Real Estate -->
+        <div class="text-center">
+          <div class="mb-4">
+            <div
+              class="w-12 h-12 mx-auto rounded-full flex items-center justify-center"
+            >
+              <svg
+                height="60px"
+                width="60px"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 50 50"
+                xml:space="preserve"
+              >
+                <style type="text/css">
+                  .st0 {
+                    fill: #af8255;
+                  }
+                </style>
+                <g id="background"></g>
+                <g id="Objects">
+                  <image
+                    style="overflow: visible"
+                    width="512"
+                    height="512"
+                    transform="matrix(3.434591e-02 0 0 3.434591e-02 75.2128 -61.8004)"
+                  ></image>
+                  <image
+                    style="overflow: visible"
+                    width="512"
+                    height="512"
+                    transform="matrix(2.575943e-02 0 0 2.575943e-02 75.2128 -61.8004)"
+                  ></image>
+                  <image
+                    style="overflow: visible"
+                    width="512"
+                    height="512"
+                    transform="matrix(3.434591e-02 0 0 3.434591e-02 75.2128 -61.8004)"
+                  ></image>
+                  <path
+                    class="st0"
+                    d="M2.3,21.2c1.7-1.2,3.4-2.5,5-3.7C13,13.3,18.5,9.3,24.1,5.2c0.7-0.5,1-0.5,1.7,0c7.1,5.2,14.2,10.4,21.3,15.6  c0.5,0.3,0.7,1,0.5,1.5c-0.1,0.3-0.7,0.5-1.1,0.3c-0.2-0.1-0.3-0.2-0.4-0.3c-1.3-1-2.7-2-4.1-3c0,0.2,0,0.4,0,0.6  c0,8,0,16.1,0,24.1c0,1-0.3,1.3-1.3,1.3c-10.5,0-20.9,0-31.4,0C8.3,45.3,8,45,8,44c0-8,0-16.1,0-24.1c0-0.2,0-0.3,0-0.5  c-0.1,0.1-0.2,0.1-0.3,0.2c-1.3,0.9-2.5,1.8-3.8,2.8c-0.6,0.5-0.9,0.5-1.6,0.1C2.3,22,2.3,21.6,2.3,21.2z M16.5,43.4  c0-0.2,0-0.4,0-0.5c0-5.7,0-11.3,0-17c0-1,0.3-1.3,1.3-1.3c4.8,0,9.6,0,14.4,0c1,0,1.3,0.3,1.3,1.3c0,5.7,0,11.4,0,17  c0,0.2,0,0.3,0,0.5c2.2,0,4.4,0,6.6,0c0-0.2,0-0.3,0-0.4c0-8.2,0-16.4,0-24.6c0-0.3-0.1-0.5-0.4-0.6c-4.8-3.5-9.6-7-14.4-10.5  c-0.3-0.2-0.4-0.2-0.7,0c-4.8,3.5-9.6,7.1-14.4,10.6c-0.3,0.2-0.3,0.4-0.3,0.7c0,8.2,0,16.3,0,24.5c0,0.2,0,0.3,0,0.5  C12.1,43.4,14.3,43.4,16.5,43.4z M31.5,26.5c-4.4,0-8.8,0-13.2,0c0,5.7,0,11.3,0,16.9c4.4,0,8.8,0,13.2,0  C31.5,37.7,31.5,32.1,31.5,26.5z"
+                  ></path>
+                  <path
+                    class="st0"
+                    d="M29.7,16.1c0,2.6-2.1,4.7-4.7,4.7c-2.6,0-4.7-2.1-4.7-4.7c0-2.6,2.1-4.7,4.7-4.7  C27.5,11.4,29.7,13.5,29.7,16.1z M25,13.3c-1.6,0-2.8,1.2-2.8,2.8c0,1.6,1.3,2.9,2.8,2.9c1.5,0,2.8-1.3,2.8-2.8  C27.8,14.6,26.5,13.3,25,13.3z"
+                  ></path>
+                  <path
+                    class="st0"
+                    d="M27.8,35.9c-0.3,0-0.6,0-0.9,0c-0.6,0-0.9-0.4-0.9-1c0-0.5,0.4-0.9,0.9-0.9c0.6,0,1.3,0,1.9,0  c0.6,0,0.9,0.4,0.9,0.9c0,0.5-0.4,0.9-0.9,1C28.4,35.9,28.1,35.9,27.8,35.9z"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-semibold text-fontPrimary mb-2">{{ 'binghatti.Why_Choose_binghatti.2' | translate }}</h3>
+          <p class="text-sm text-fontSecondary leading-relaxed">
+            {{ 'binghatti.Why_Choose_binghatti.3' | translate }}
+          </p>
+        </div>
+  
+        <!-- No Annual Property Taxes -->
+        <div class="text-center">
+          <div class="mb-4">
+            <div
+              class="w-12 h-12 mx-auto rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-12 h-12 text-fontPrimary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="12" r="10" stroke-width="2" />
+                <path d="M16 8l-8 8M8 8l8 8" stroke-width="2" />
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-semibold text-fontPrimary mb-2">{{ 'binghatti.Why_Choose_binghatti.4' | translate }}</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            {{ 'binghatti.Why_Choose_binghatti.5' | translate }}
+          </p>
+        </div>
+  
+        <!-- High Accessibility -->
+        <div class="text-center">
+          <div class="mb-4">
+            <div
+              class="w-12 h-12 mx-auto rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-12 h-12 text-fontPrimary"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
+                />
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-semibold text-fontPrimary mb-2">
+            {{ 'binghatti.Why_Choose_binghatti.6' | translate }}
+          </h3>
+          <p class="text-sm text-fontSecondary leading-relaxed">
+            {{ 'binghatti.Why_Choose_binghatti.7' | translate }}
+  
+          </p>
+        </div>
+  
+        <!-- Touristic Appeal -->
+        <div class="text-center">
+          <div class="mb-4">
+            <div
+              class="w-12 h-12 mx-auto rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-12 h-12 text-fontPrimary"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-semibold text-fontPrimary mb-2">{{ 'binghatti.Why_Choose_binghatti.8' | translate }}</h3>
+          <p class="text-sm text-fontSecondary leading-relaxed">
+            {{ 'binghatti.Why_Choose_binghatti.9' | translate }}
+          </p>
+        </div>
+  
+        <!-- Conventional Safety -->
+        <div class="text-center">
+          <div class="mb-4">
+            <div
+              class="w-12 h-12 mx-auto rounded-full flex items-center justify-center"
+            >
+              <svg
+                class="w-12 h-12 text-fontPrimary"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <h3 class="font-semibold text-fontPrimary mb-2">{{ 'binghatti.Why_Choose_binghatti.10' | translate }}</h3>
+          <p class="text-sm text-fontSecondary leading-relaxed">
+            {{ 'binghatti.Why_Choose_binghatti.11' | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container mx-auto mt-8 px-4">
+      <div class="relative">
+        <!-- Main Carousel -->
+        <div class="relative overflow-hidden rounded-lg bg-gray-900 w-full">
+          <div
+            class="flex transition-transform duration-500 ease-in-out"
+            [style.transform]="getMainTransform()"
+            (touchstart)="onTouchStart($event)"
+            (touchmove)="onTouchMove($event)"
+            (touchend)="onTouchEnd()"
+          >
+            <div
+              *ngFor="let image of images; let i = index"
+              class="w-full flex-shrink-0"
+            >
+              <img
+                [src]="image.full"
+                [alt]="image.alt"
+                class="w-full h-96 md:h-[700px] cursor-pointer"
+                (click)="onImageClick(image)"
+              />
+            </div>
+          </div>
+  
+          <!-- Main carousel navigation arrows -->
+          <div class="absolute left-0 top-1/2">
+            <button
+              (click)="prevSlide()"
+              class="-translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-2 rounded-full transition-all duration-200 z-10"
+              aria-label="Previous image"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="absolute right-0 top-1/2">
+            <button
+              (click)="nextSlide()"
+              class="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 hover:bg-opacity-50 text-white p-2 rounded-full transition-all duration-200 z-10"
+              aria-label="Next image"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+  
+        <!-- Thumbnail Navigation -->
+        <div
+          [class]="
+            'bg-white bg-opacity-30 absolute bottom-0 left-0 right-0 px-12'
+          "
+          class="py-3 rounded-lg"
+        >
+          <div class="relative overflow-hidden">
+            <div
+              class="flex transition-transform duration-300 ease-in-out "
+              [style.transform]="getThumbTransform()"
+            >
+              <div
+                *ngFor="
+                  let page of [].constructor(totalThumbPages);
+                  let pageIndex = index
+                "
+                class="w-full flex-shrink-0"
+              >
+                <div class="flex gap-2">
+                  <div
+                    *ngFor="
+                      let image of images.slice(
+                        pageIndex * thumbsPerPage,
+                        (pageIndex + 1) * thumbsPerPage
+                      );
+                      let imageIndex = index
+                    "
+                    class="flex-1 cursor-pointer"
+                    (click)="goToSlide(getThumbIndex(pageIndex, imageIndex))"
+                  >
+                    <img
+                      [src]="image.thumb"
+                      [alt]="image.alt"
+                      [class]="
+                        isThumbSelected(getThumbIndex(pageIndex, imageIndex))
+                          ? 'w-full h-16 md:h-20 object-cover rounded border-4 border-white'
+                          : 'w-full h-16 md:h-20 object-cover rounded border-4 border-transparent hover:border-white hover:border-opacity-30'
+                      "
+                      class="transition-all duration-200"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+    id="crm-form"
+    class="min-h-screen mt-10 bg-thread dark:bg-dark-background flex items-center justify-center px-4 py-12"
+    >
+      <div
+        class="max-w-[1200px] w-full flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden"
+      >
+        <!-- Left: Form -->
+        <div  class="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-12">
+          <div class="w-full">
+            <div class="bg-white">
+              <div class="text-center mb-8">
+                <div id="crm-header-form"></div>
+                <h2 class="text-3xl font-bold mb-2 text-fontPrimary">
+                  Get in Touch
+                </h2>
+                <p class="text-fontSecondary">
+                  Fill out the form below and we'll get back to you
+                </p>
+              </div>
+  
+              <form
+                [formGroup]="contactForm"
+                (ngSubmit)="onSubmit()"
+                class="space-y-4 lg:space-y-3"
+              >
+                <!-- Full Name -->
+                 <div class="flex gap-3">
+  
+                   <div>
+                     <label
+                       for="fullName"
+                       class="block text-sm font-medium text-gray-700 mb-2"
+                     >
+                       First Name *
+                     </label>
+                     <input
+                       id="firstName"
+                       type="text"
+                       formControlName="firstName"
+                       class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+                       [class.border-red-500]="
+                         contactForm.get('firstName')?.invalid &&
+                         contactForm.get('firstName')?.touched
+                       "
+                       placeholder="Enter your first name"
+                     />
+                     <div
+                       *ngIf="
+                         contactForm.get('firstName')?.invalid &&
+                         contactForm.get('firstName')?.touched
+                       "
+                       class="mt-1 text-sm text-error"
+                     >
+                       <span
+                         *ngIf="contactForm.get('firstName')?.errors?.['required']"
+                         >First name is required</span
+                       >
+                       <span
+                         *ngIf="contactForm.get('firstName')?.errors?.['minlength']"
+                         >First name must be at least 2 characters</span
+                       >
+                     </div>
+                   </div>
+                   <div>
+                     <label
+                       for="lastName"
+                       class="block text-sm font-medium text-gray-700 mb-2"
+                     >
+                       Last Name *
+                     </label>
+                     <input
+                       id="lastName"
+                       type="text"
+                       formControlName="lastName"
+                       class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+                       [class.border-red-500]="
+                         contactForm.get('lastName')?.invalid &&
+                         contactForm.get('lastName')?.touched
+                       "
+                       placeholder="Enter your last name"
+                     />
+                     <div
+                       *ngIf="
+                         contactForm.get('lastName')?.invalid &&
+                         contactForm.get('lastName')?.touched
+                       "
+                       class="mt-1 text-sm text-error"
+                     >
+                       <span
+                         *ngIf="contactForm.get('lastName')?.errors?.['required']"
+                         >Last name is required</span
+                       >
+                       <span
+                         *ngIf="contactForm.get('lastName')?.errors?.['minlength']"
+                         >Last name must be at least 2 characters</span
+                       >
+                     </div>
+                   </div>
+                 </div>
+  
+                <!-- Phone Number -->
+                <div>
+                  <label
+                    for="phoneNumber"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Phone Number *
+                  </label>
+                  <input
+                    id="phoneNumber"
+                    type="tel"
+                    formControlName="phoneNumber"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+                    [class.border-red-500]="
+                      contactForm.get('phoneNumber')?.invalid &&
+                      contactForm.get('phoneNumber')?.touched
+                    "
+                    placeholder="Enter your phone number"
+                  />
+                  <div
+                    *ngIf="
+                      contactForm.get('phoneNumber')?.invalid &&
+                      contactForm.get('phoneNumber')?.touched
+                    "
+                    class="mt-1 text-sm text-error"
+                  >
+                    <span
+                      *ngIf="contactForm.get('phoneNumber')?.errors?.['required']"
+                      >Phone number is required</span
+                    >
+                    <span
+                      *ngIf="contactForm.get('phoneNumber')?.errors?.['pattern']"
+                      >Please enter a valid phone number</span
+                    >
+                  </div>
+                </div>
+  
+                <!-- Email -->
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Email *
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    formControlName="email"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+                    [class.border-red-500]="
+                      contactForm.get('email')?.invalid &&
+                      contactForm.get('email')?.touched
+                    "
+                    placeholder="Enter your email address"
+                  />
+                  <div
+                    *ngIf="
+                      contactForm.get('email')?.invalid &&
+                      contactForm.get('email')?.touched
+                    "
+                    class="mt-1 text-sm text-error"
+                  >
+                    <span *ngIf="contactForm.get('email')?.errors?.['required']"
+                      >Email is required</span
+                    >
+                    <span *ngIf="contactForm.get('email')?.errors?.['email']"
+                      >Please enter a valid email address</span
+                    >
+                  </div>
+                </div>
+  
+                <!-- Country -->
+                <div>
+                  <label
+                    for="country"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Country 
+                  </label>
+                  <input
+                    id="country"
+                    type="text"
+                    formControlName="country"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+                    [class.border-red-500]="
+                      contactForm.get('country')?.invalid &&
+                      contactForm.get('country')?.touched
+                    "
+                    placeholder="Enter your country"
+                  />
+                  <div
+                    *ngIf="
+                      contactForm.get('country')?.invalid &&
+                      contactForm.get('country')?.touched
+                    "
+                    class="mt-1 text-sm text-error"
+                  >
+                    <span
+                      *ngIf="contactForm.get('country')?.errors?.['required']"
+                      >Country is required</span
+                    >
+                    <span
+                      *ngIf="contactForm.get('country')?.errors?.['minlength']"
+                      >Country must be at least 2 characters</span
+                    >
+                  </div>
+                </div>
+                <div>
+                  <label
+                    for="property"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    What type of property are you looking for? 
+                  </label>
+                  <select
+                    id="property"
+                    formControlName="property"
+                    class="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-primary focus:outline-none transition-colors text-gray-700 placeholder-gray-400"
+                    [class.border-red-500]="
+                      contactForm.get('property')?.invalid &&
+                      contactForm.get('property')?.touched
+                    "
+                  >
+                    <option value="">
+                      What type of property are you looking for?
+                    </option>
+                    <option
+                      *ngFor="let property of mockProperties"
+                      [value]="property.name"
+                    >
+                      {{ property.name }}
+                    </option>
+                  </select>
+                  <div
+                    *ngIf="
+                      contactForm.get('property')?.invalid &&
+                      contactForm.get('property')?.touched
+                    "
+                    class="mt-1 text-sm text-error"
+                  >
+                    <span
+                      *ngIf="contactForm.get('property')?.errors?.['required']"
+                      >Please select a property</span
+                    >
+                  </div>
+                </div>
+  
+                <!-- Submit Button -->
+                <button
+                  type="submit"
+                  [disabled]="contactForm.invalid || isLoading"
+                  class="w-full bg-[#AF8255] text-white px-6 py-2 disabled:text-gray-300 disabled:bg-gray-200 disabled:cursor-not-allowed disabled:border-[#FFFFFF] font-semibold transition-all duration-200 flex items-center justify-center hover:bg-white hover:text-[#AF8255] border border-[#AF8255]"
+                >
+                  <div *ngIf="isLoading" class="flex items-center">
+                    <svg
+                      class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        class="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        stroke-width="4"
+                      ></circle>
+                      <path
+                        class="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+                    Submitting...
+                  </div>
+                  <span *ngIf="!isLoading">Submit Form</span>
+                </button>
+              </form>
+  
+              <!-- Success Message -->
+              <div
+                *ngIf="submitSuccess"
+                class="mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg"
+              >
+                <div class="flex">
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  Form submitted successfully!
+                </div>
+              </div>
+  
+              <!-- Error Message -->
+              <div
+                *ngIf="submitError"
+                class="mt-4 p-4 bg-red-100 border border-red-400 text-error rounded-lg"
+              >
+                <div class="flex">
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                  {{ submitError }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Right: Slider -->
+        <div class="w-full lg:w-1/2 relative overflow-hidden group">
+          <div class="relative h-full">
+            <img
+              [src]="images2[currentImageIndex]"
+              [alt]="'Slide ' + (currentImageIndex + 1)"
+              class="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-105"
+            />
+  
+            <!-- Indicators -->
+            <div class="absolute bottom-4 w-full flex justify-center space-x-2">
+              <button
+                *ngFor="let image of images2; let i = index"
+                (click)="currentImageIndex = i"
+                [class]="
+                  i === currentImageIndex
+                    ? 'w-6 h-2 bg-primary rounded-full transition-all duration-300'
+                    : 'w-2 h-2 bg-gray-300 hover:bg-gray-400 rounded-full transition-all duration-300'
+                "
+              ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -26,6 +26,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ThemeToggleService } from '../theme-toggle.service';
 import { ActivatedRoute } from '@angular/router';
 import { LetterByLetterPipe } from '../Pipes/letter-by-letter.pipe';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-emaar',
@@ -37,6 +38,7 @@ import { LetterByLetterPipe } from '../Pipes/letter-by-letter.pipe';
     HttpClientModule,
     CommonModule,
     LetterByLetterPipe,
+    TranslateModule
   ],
   templateUrl: './emaar.component.html',
   styleUrl: './emaar.component.css',
@@ -227,8 +229,10 @@ export class EmaarComponent {
   }
 
   getMainTransform(): string {
-    return `translateX(-${this.currentSlide * 100}%)`;
+    const rtl = document.documentElement.dir === 'rtl';
+    return rtl?`translateX(${this.currentSlide * 100}%)`:`translateX(-${this.currentSlide * 100}%)`;
   }
+
 
   getThumbTransform(): string {
     return `translateX(-${this.currentThumbPage * 100}%)`;

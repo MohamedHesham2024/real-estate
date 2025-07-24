@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-dreams',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './dreams.component.html',
   styleUrl: './dreams.component.css',
 })

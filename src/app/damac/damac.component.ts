@@ -19,6 +19,7 @@ import { ToastrService } from 'ngx-toastr';
 import { ThemeToggleService } from '../theme-toggle.service';
 import { ActivatedRoute } from '@angular/router';
 import { LetterByLetterPipe } from '../Pipes/letter-by-letter.pipe';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-damac',
@@ -30,6 +31,8 @@ import { LetterByLetterPipe } from '../Pipes/letter-by-letter.pipe';
     NgFor,
     ReactiveFormsModule,
     HttpClientModule,
+        TranslateModule,
+    
   ],
   templateUrl: './damac.component.html',
   styleUrl: './damac.component.css',
@@ -221,8 +224,10 @@ export class DamacComponent {
   }
 
   getMainTransform(): string {
-    return `translateX(-${this.currentSlide * 100}%)`;
+    const rtl = document.documentElement.dir === 'rtl';
+    return rtl?`translateX(${this.currentSlide * 100}%)`:`translateX(-${this.currentSlide * 100}%)`;
   }
+
 
   getThumbTransform(): string {
     return `translateX(-${this.currentThumbPage * 100}%)`;

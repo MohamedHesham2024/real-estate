@@ -34,6 +34,24 @@
           About Us
         </a>
       </li>
+        <li>
+        <a
+          routerLink="/secondary-listing"
+          routerLinkActive="text-primary dark:text-dark-primary"
+          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
+        >
+        Secondary Listing
+        </a>
+      </li>
+       <li>
+        <a
+          routerLink="/our-team"
+          routerLinkActive="text-primary dark:text-dark-primary"
+          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
+        >
+        Our Team
+        </a>
+      </li>
       <!-- Properties Dropdown -->
       <li class="relative group">
         <button
@@ -119,11 +137,11 @@
         >
           <i class="fab fa-facebook"></i>
         </a>
-        <a href="#" class="hover:scale-110 transition-transform duration-200">
-          <i class="fab fa-twitter"></i>
-        </a>
+        <a href="https://www.tiktok.com/@handb_elite?_t=ZS-8xpNFK7HTzp&_r=1" class="hover:scale-110 transition-transform duration-200">
+              <i class="fab fa-tiktok"></i>
+            </a>
         <a
-          href="https://www.instagram.com/hbeliteproperties/"
+          href="https://www.instagram.com/handb_elite/#"
           class="hover:scale-110 transition-transform duration-200"
         >
           <i class="fab fa-instagram"></i>
@@ -131,7 +149,7 @@
       </div>
 
       <!-- Theme Toggle Button -->
-       <!-- <app-language-switcher></app-language-switcher> -->
+       <app-language-switcher></app-language-switcher>
       <app-theme-toggle></app-theme-toggle>
     </div>
   </div>
@@ -203,10 +221,10 @@
             <a href="https://www.facebook.com/profile.php?id=61575019096803" class="hover:scale-110 transition-transform duration-200">
               <i class="fab fa-facebook"></i>
             </a>
-            <a href="#" class="hover:scale-110 transition-transform duration-200">
-              <i class="fab fa-twitter"></i>
+               <a href="https://www.tiktok.com/@handb_elite?_t=ZS-8xpNFK7HTzp&_r=1" class="hover:scale-110 transition-transform duration-200">
+              <i class="fab fa-tiktok"></i>
             </a>
-            <a href="https://www.instagram.com/hbeliteproperties/" class="hover:scale-110 transition-transform duration-200">
+            <a href="https://www.instagram.com/handb_elite/#" class="hover:scale-110 transition-transform duration-200">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
@@ -235,6 +253,26 @@
                 (click)="closeMobileMenu()"
               >
                 About Us
+              </a>
+            </li>
+             <li>
+              <a
+                routerLink="/our-team"
+                routerLinkActive="text-primary dark:text-dark-primary"
+                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+                (click)="closeMobileMenu()"
+              >
+              Our Team
+              </a>
+            </li>
+             <li>
+              <a
+                routerLink="/secondary-listing"
+                routerLinkActive="text-primary dark:text-dark-primary"
+                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+                (click)="closeMobileMenu()"
+              >
+               Secondary Listing
               </a>
             </li>
             <!-- Mobile Properties with Expandable Menu -->

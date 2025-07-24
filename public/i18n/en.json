@@ -1,4 +1,12 @@
 {
   "title": "Welcome",
-  "description": "This is a multilingual website"
+  "description": "This is a multilingual website",
+  "Back to Listings": "Back to Listings",
+  "More Details": "More Details",
+  "contact": "Contact Us",
+  "price": "Price",
+  "Description": "Description",
+  "Secondary Listing": "Secondary Listing",
+  "Details": "Details"
+
 }

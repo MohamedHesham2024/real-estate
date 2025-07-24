@@ -1,4 +1,11 @@
 {
   "title": "Bienvenue",
-  "description": "Ceci est un site multilingue"
+  "description": "Ceci est un site multilingue",
+  "Back to Listings": "Retour aux Annonces",
+  "More Details": "Plus de Détails",
+  "contact": "Contactez-nous",
+  "price": "Prix",
+  "Description": "Description",
+  "Secondary Listing": "Annonce Secondaire",
+  "Details": "Détails"
 }

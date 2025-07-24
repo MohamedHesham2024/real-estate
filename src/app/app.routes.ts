@@ -8,6 +8,10 @@ import { DamacComponent } from './damac/damac.component';
 import { MeraasComponent } from './meraas/meraas.component';
 import { EmaarComponent } from './emaar/emaar.component';
 import { OurTeamComponent } from './our-team/our-team.component';
+
+import { SecondaryListingComponent } from './secondary-listing/secondary-listing.component';
+import { SecondaryListingDetailsComponent } from './secondary-listing-details/secondary-listing-details.component';
+
 import { ReviewPageComponent } from './review-page/review-page.component';
 import { BINGHATTIComponent } from './binghatti/binghatti.component';
 import { EscrowAccountComponent } from './escrow-account/escrow-account.component';
@@ -18,9 +22,11 @@ import { TopAreasComponent } from './top-areas/top-areas.component';
 import { HighestTransactionAreasComponent } from './highest-transaction-areas/highest-transaction-areas.component';
 import { PrimaryVsSecondaryMarketComponent } from './primary-vs-secondary-market/primary-vs-secondary-market.component';
 
+
 export const routes: Routes = [{ path: '', component: HomeComponent},
   { path: 'faq', component: FAQComponent },
   { path: 'about', component: AboutUsComponent },
+   { path: 'secondary-listing', component:SecondaryListingComponent  },
   { path: 'contact', component: ContactUsComponent },
   { path: 'our-team', component: OurTeamComponent },
   { path: 'review', component: ReviewPageComponent },
@@ -29,6 +35,10 @@ export const routes: Routes = [{ path: '', component: HomeComponent},
   { path: 'developer/damac', component: DamacComponent },
   { path: 'developer/merass', component: MeraasComponent },
   { path: 'developer/emaar', component: EmaarComponent },
+
+    { path: 'secondary-listing', component: SecondaryListingComponent },
+  { path: 'details/:id', component: SecondaryListingDetailsComponent },
+
   { path: 'developer/binghatti', component: BINGHATTIComponent },
 
   { path: 'properties/escrow-account', component: EscrowAccountComponent },
@@ -38,6 +48,7 @@ export const routes: Routes = [{ path: '', component: HomeComponent},
   { path: 'properties/top-areas', component: TopAreasComponent },
   { path: 'properties/highest-transaction-areas', component: HighestTransactionAreasComponent },
   { path: 'properties/primary-vs-secondary', component: PrimaryVsSecondaryMarketComponent },
+
 
 
 

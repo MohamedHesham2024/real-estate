@@ -17,11 +17,11 @@ export class LanguageService {
   localStorage.setItem('lang', lang);
   this.translate.use(lang);
 
-  // تغيير الاتجاه في <html> tag
+ 
   document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
   document.documentElement.lang = lang;
 
-  // تغيير الكلاس في <body> tag
+
   document.body.classList.remove('rtl', 'ltr');
   document.body.classList.add(lang === 'ar' ? 'rtl' : 'ltr');
 }

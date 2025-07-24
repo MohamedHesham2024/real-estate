@@ -1,6 +1,15 @@
 {
   "title": "Welcome",
   "description": "This is a multilingual website",
+
+  "Back to Listings": "Back to Listings",
+  "More Details": "More Details",
+  "contact": "Contact Us",
+  "price": "Price",
+  "Description": "Description",
+  "Secondary Listing": "Secondary Listing",
+  "Details": "Details",
+
   "binghatti": {
     "Hero_Section": {
       "0": "Live the Binghatti Lifestyle — Register Your Interest",
@@ -1121,6 +1130,7 @@
       "role": "Business Owner"
     }
   ]
+
 
 
 }

@@ -1,0 +1,166 @@
+ <div class="min-h-screen transition-all duration-500 bg-thread dark:bg-dark-background">
+      <!-- Back Button -->
+     <section
+    class="relative h-[450px] bg-cover bg-center px-4 flex items-center justify-center text-center mb-12"
+    style="background-image: url('/our-team/our-team.jpg')"
+  >
+    <!-- Overlay layer -->
+    <div class="absolute inset-0 bg-black opacity-70"></div>
+    <div
+      class="flex flex-col items-center justify-center lg:text-left py-6 sm:py-0 z-10"
+    >
+      <h2
+        class="text-5xl sm:text-6xl lg:text-7xl xl:text-6xl font-bold font-exo text-white mb-4 leading-tight"
+      >
+        <span class="block text-primary">{{
+          ("Details" |translate ) | letterByLetter : 100 | async
+        }}</span>
+        <!-- <span class="block text-primary"> H&B Elite Properties </span> -->
+      </h2>
+
+      <!-- <p class="text-sm md:text-lg text-white md:w-1/2 text-center">
+        Meet our dedicated real estate professionals who are committed to
+        turning your property dreams into reality with expertise and passion.
+      </p> -->
+    </div>
+  </section>
+  <div class="flex justify-end" [ngClass]="{ 'rtll': languageService.currentLang === 'ar', 'ltr': languageService.currentLang !== 'ar' }">
+<button (click)="goBack()"
+        class="mb-6 inline-flex items-center  px-4 mx-4 py-2 bg-primary text-white rounded-lg hover:bg-primary transition-colors">
+  <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+  </svg>
+  {{"Back to Listings" | translate}}
+</button>
+</div>
+      <!-- Loading State -->
+      <div *ngIf="!item" class="flex justify-center items-center h-64">
+        <div class="text-gray-500">Loading...</div>
+      </div>
+
+      <!-- Item Details -->
+
+  <!-- Item Details -->
+  <div *ngIf="item" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+    <div class="bg-white dark:bg-dark-background rounded-2xl shadow-2xl overflow-hidden">
+
+      <!-- Image Gallery Section -->
+      <div class="p-6 bg-gradient-to-br from-gray-50 to-white dark:bg-dark-background">
+        <!-- All Images Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div *ngFor="let media of images; let i = index" class="relative group">
+            <div class="aspect-square bg-gray-100 dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
+              <img
+                [src]="media"
+                [alt]="'Image ' + (i + 1)"
+                class="w-full h-full object-cover transition-all duration-300 group-hover:scale-110"
+                (error)="onImageError($event, i)"
+              >
+              <!-- Fallback for missing images -->
+              <!-- <div *ngIf="hasValidImage[i]" class="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-600 rounded-xl">
+                <svg class="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </div> -->
+            </div>
+            <!-- Image Number Badge -->
+            <!-- <div class="absolute top-3 left-3 bg-black/70 text-white px-2 py-1 rounded-lg text-sm font-medium backdrop-blur-sm">
+              {{ i + 1 }}
+            </div> -->
+            <!-- Zoom Icon on Hover -->
+            <div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              <div class="bg-white/90 dark:bg-gray-800/90 p-2 rounded-lg backdrop-blur-sm">
+                <svg class="w-4 h-4 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- No Images Fallback -->
+        <div *ngIf="!item.media || item.media.length === 0" class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 rounded-xl flex items-center justify-center">
+          <div class="text-center">
+            <svg class="w-20 h-20 text-gray-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+            </svg>
+            <p class="text-gray-500 dark:text-gray-400">No images available</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content Section -->
+      <div class="p-6 lg:p-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+          <!-- Left Column - Main Content -->
+          <div class="lg:col-span-2 space-y-6">
+            <div>
+              <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-3 leading-tight">
+                {{ item?.header }}
+              </h1>
+              <h2 class="lg:mb-20  text-xl lg:text-2xl text-gray-600 dark:text-gray-300 mb-6 font-medium">
+
+              </h2>
+            </div>
+
+            <!-- Description Card -->
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-xl border border-blue-100 dark:border-blue-800">
+              <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-3 flex items-center" >
+                <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                {{"Description" | translate}}
+              </h3>
+              <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                {{ item?.description }}
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column - Price & Contact -->
+          <div class="space-y-6 lg:mt-28">
+
+            <!-- Price Card -->
+            <!-- <div class="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 rounded-xl border border-green-200 dark:border-green-800 shadow-lg">
+              <div class="flex items-center mb-2" [ngClass]="{ 'rtll': languageService.currentLang === 'ar', 'ltr': languageService.currentLang !== 'ar' }">
+                <svg class="w-5 h-5 text-green-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                </svg>
+                <label class="text-sm font-semibold text-gray-700 dark:text-gray-300">{{"price" | translate}}</label>
+              </div>
+              <div class="text-3xl lg:text-4xl font-bold text-green-600 dark:text-green-400">
+                ${{ item?.price | number }}
+              </div>
+            </div> -->
+
+
+            <!-- Contact Card -->
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-6 rounded-xl border border-purple-200 dark:border-purple-800 shadow-lg">
+              <div class="flex items-center mb-3"[ngClass]="{ 'rtll': languageService.currentLang === 'ar', 'ltr': languageService.currentLang !== 'ar' }"  >
+                <svg class="w-5 h-5 text-purple-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                <label class="text-sm font-semibold text-gray-700 dark:text-gray-300" >{{"contact" |translate}}</label>
+              </div>
+              <div class=" text-lg lg:text-xl font-medium text-gray-800 dark:text-white mb-4">
+              +971 50 579 1507
+              </div>
+
+              <!-- Contact Button -->
+              <button
+
+                class="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                </svg>
+                <span>ENQUIRE NOW</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>

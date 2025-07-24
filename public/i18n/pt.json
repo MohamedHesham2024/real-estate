@@ -1,6 +1,15 @@
 {
   "title": "Bem-vindo",
   "description": "Este é um site multilíngue",
+
+  "Back to Listings": "Voltar para Listagens",
+  "More Details": "Mais Detalhes",
+  "contact": "Contacte-nos",
+  "price": "Preço",
+  "Description": "Descrição",
+  "Secondary Listing": "Listagem Secundária",
+  "Details": "Detalhes",
+
   "binghatti": {
     "Hero_Section": {
       "0": "Viva o estilo de vida Binghatti — Registre seu interesse.",
@@ -1008,6 +1017,7 @@
 
 
   
+
 
 
 }

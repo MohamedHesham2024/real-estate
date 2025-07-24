@@ -1,0 +1,15 @@
+:host {
+  direction: ltr !important;
+}
+.rtl {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+.ltr {
+  direction: ltr !important;
+  text-align: left !important;
+}
+.rtll {
+  text-align: right !important;
+}

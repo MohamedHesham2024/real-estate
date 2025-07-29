@@ -71,35 +71,35 @@
           <div class="py-2">
             <a
               [routerLink]="['/developer/sobha']"
-              fragment="crm-header-form"
+              
               class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-dark-primary transition-colors duration-200"
             >
               Sobha
             </a>
             <a
               routerLink="/developer/emaar"
-              fragment="crm-header-emaar"
+              
               class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-dark-primary transition-colors duration-200"
             >
               Emaar
             </a>
             <a
               routerLink="/developer/damac"
-              fragment="crm-header-form"
+              
               class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-dark-primary transition-colors duration-200"
             >
               Damac
             </a>
             <a
               routerLink="/developer/merass"
-              fragment="crm-header-form"
+              
               class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-dark-primary transition-colors duration-200"
             >
               Merass
             </a>
             <a
               routerLink="/developer/binghatti"
-              fragment="crm-header-form"
+              
               class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-dark-primary transition-colors duration-200"
             >
               Binghatti
@@ -178,6 +178,15 @@
             </a>
           </div>
         </div>
+      </li>
+      <li>
+        <a
+          routerLink="/review"
+          routerLinkActive="text-primary dark:text-dark-primary"
+          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
+        >
+          Reviews
+        </a>
       </li>
       <li>
         <a
@@ -395,7 +404,7 @@
                 >
                   <a
                     routerLink="/developer/sobha"
-                    fragment="crm-header-form"
+                    
                     class="block py-2 px-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                     (click)="closeMobileMenu()"
                   >
@@ -403,7 +412,7 @@
                   </a>
                   <a
                     routerLink="/developer/emaar"
-                    fragment="crm-header-emaar"
+                    
                     class="block py-2 px-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                     (click)="closeMobileMenu()"
                   >
@@ -411,7 +420,7 @@
                   </a>
                   <a
                     routerLink="/developer/damac"
-                    fragment="crm-header-form"
+                    
                     class="block py-2 px-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                     (click)="closeMobileMenu()"
                   >
@@ -419,7 +428,7 @@
                   </a>
                   <a
                     routerLink="/developer/merass"
-                    fragment="crm-header-form"
+                    
                     class="block py-2 px-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                     (click)="closeMobileMenu()"
                   >
@@ -427,7 +436,7 @@
                   </a>
                   <a
                     routerLink="/developer/binghatti"
-                    fragment="crm-header-form"
+                    
                     class="block py-2 px-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                     (click)="closeMobileMenu()"
                   >
@@ -516,6 +525,16 @@
               </div>
             </li>
             <li>
+              <a
+                routerLink="/review"
+                routerLinkActive="text-primary dark:text-dark-primary"
+                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+                (click)="closeMobileMenu()"
+              >
+                Reviews
+              </a>
+            </li>
+             <li>
               <a
                 routerLink="/about"
                 routerLinkActive="text-primary dark:text-dark-primary"

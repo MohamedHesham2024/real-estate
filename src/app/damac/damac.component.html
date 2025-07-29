@@ -936,3 +936,8 @@
     </div>
   </div>
 </div>
+<app-contact-modal
+  *ngIf="isModalOpen"
+  (formSubmitted)="handleFormSubmit($event)"
+  (close)="handleCloseModal()"
+></app-contact-modal>

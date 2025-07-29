@@ -26,24 +26,6 @@
         </a>
       </li>
       
-        <li>
-        <a
-          routerLink="/secondary-listing"
-          routerLinkActive="text-primary dark:text-dark-primary"
-          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
-        >
-        Secondary Listing
-        </a>
-      </li>
-       <li>
-        <a
-          routerLink="/our-team"
-          routerLinkActive="text-primary dark:text-dark-primary"
-          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
-        >
-        Our Team
-        </a>
-      </li>
       <!-- Properties Dropdown -->
       <li class="relative group">
         <button
@@ -181,6 +163,15 @@
       </li>
       <li>
         <a
+          routerLink="/secondary-listing"
+          routerLinkActive="text-primary dark:text-dark-primary"
+          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
+        >
+        Secondary Listing
+        </a>
+      </li>
+      <li>
+        <a
           routerLink="/review"
           routerLinkActive="text-primary dark:text-dark-primary"
           class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
@@ -195,6 +186,15 @@
           class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
         >
           About Us
+        </a>
+      </li>
+       <li>
+        <a
+          routerLink="/our-team"
+          routerLinkActive="text-primary dark:text-dark-primary"
+          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
+        >
+        Our Team
         </a>
       </li>
       <li>
@@ -354,26 +354,6 @@
               </a>
             </li>
             
-             <li>
-              <a
-                routerLink="/our-team"
-                routerLinkActive="text-primary dark:text-dark-primary"
-                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
-                (click)="closeMobileMenu()"
-              >
-              Our Team
-              </a>
-            </li>
-             <li>
-              <a
-                routerLink="/secondary-listing"
-                routerLinkActive="text-primary dark:text-dark-primary"
-                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
-                (click)="closeMobileMenu()"
-              >
-               Secondary Listing
-              </a>
-            </li>
             <!-- Mobile Properties with Expandable Menu -->
             <li>
               <div class="space-y-2">
@@ -526,6 +506,16 @@
             </li>
             <li>
               <a
+                routerLink="/secondary-listing"
+                routerLinkActive="text-primary dark:text-dark-primary"
+                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+                (click)="closeMobileMenu()"
+              >
+               Secondary Listing
+              </a>
+            </li>
+            <li>
+              <a
                 routerLink="/review"
                 routerLinkActive="text-primary dark:text-dark-primary"
                 class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
@@ -542,6 +532,16 @@
                 (click)="closeMobileMenu()"
               >
                 About Us
+              </a>
+            </li>
+             <li>
+              <a
+                routerLink="/our-team"
+                routerLinkActive="text-primary dark:text-dark-primary"
+                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+                (click)="closeMobileMenu()"
+              >
+              Our Team
               </a>
             </li>
             <li>

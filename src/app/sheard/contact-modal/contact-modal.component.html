@@ -1,12 +1,15 @@
-<div class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
-  <div class="bg-white p-6 rounded-xl max-w-3xl w-full relative overflow-y-auto max-h-screen">
-    <!-- زر الإغلاق -->
-    <button
-      (click)="closeModal()"
-      class="absolute  p-2 rounded-full top-2 right-6 text-fontSecondary hover:text-black text-2xl font-bold"
-    >
-      &times;
-    </button>
+<div class="fixed inset-0 bg-black bg-opacity-70  flex items-center justify-center z-[1000]">
+  <div class="bg-white p-6 rounded-xl max-w-md mx-2 w-full relative overflow-y-auto max-h-screen">
+   <div 
+   class="absolute top-2 right-2 bg-primary p-1 rounded-full px-[11px] text-white  hover:bg-red-700 text-lg font-bold cursor-pointer"
+   
+   (click)="closeModal()"
+   >
+
+       <button>
+         &times;
+       </button>
+   </div>
 
     <div class="text-center mb-8">
          <h2 class="text-3xl font-bold mb-2 text-fontPrimary">
@@ -17,14 +20,11 @@
               </p>
     </div>
 
-    <!-- الفورم -->
     <form [formGroup]="contactForm" class="space-y-4 lg:space-y-3">
       <!-- Full Name -->
       <div class="flex gap-3">
         <div class="w-1/2">
-          <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">
-            First Name *
-          </label>
+         
           <input
             id="firstName"
             type="text"
@@ -40,9 +40,7 @@
         </div>
 
         <div class="w-1/2">
-          <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
-            Last Name *
-          </label>
+          
           <input
             id="lastName"
             type="text"
@@ -60,9 +58,7 @@
 
       <!-- Phone Number -->
       <div>
-        <label for="phoneNumber" class="block text-sm font-medium text-gray-700 mb-2">
-          Phone Number *
-        </label>
+       
         <input
           id="phoneNumber"
           type="tel"
@@ -79,9 +75,7 @@
 
       <!-- Email -->
       <div>
-        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
-          Email *
-        </label>
+        
         <input
           id="email"
           type="email"
@@ -98,9 +92,7 @@
 
       <!-- Country -->
       <div>
-        <label for="country" class="block text-sm font-medium text-gray-700 mb-2">
-          Country
-        </label>
+       
         <input
           id="country"
           type="text"
@@ -117,9 +109,7 @@
 
       <!-- Property -->
       <div>
-        <label for="property" class="block text-sm font-medium text-gray-700 mb-2">
-          What type of property are you looking for?
-        </label>
+       
         <select
           id="property"
           formControlName="property"

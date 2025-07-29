@@ -130,8 +130,8 @@ export class BINGHATTIComponent {
   ngOnInit() {
     this.themeService.isDarkMode$.subscribe((isDark) => {
       this.logoSrc = isDark
-        ? '/Damac/Damac white.png'
-        : '/Damac/Damac black.png';
+        ? '/binghatti/durk-Binghatti.png'
+        : '/binghatti/light-Binghatti.png';
     });
 
     this.checkMobile();

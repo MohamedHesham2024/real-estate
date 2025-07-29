@@ -1,9 +1,18 @@
+
+<div>
+
     <app-hero></app-hero>
-    <app-discover></app-discover>
-<app-slider></app-slider>
-<app-luxury></app-luxury>
-<app-analysis></app-analysis>
-<app-dreams></app-dreams>
-<app-clients></app-clients>
-
-
+        <app-discover></app-discover>
+    <app-slider></app-slider>
+    <app-luxury></app-luxury>
+    <app-analysis></app-analysis>
+    <app-dreams></app-dreams>
+    <app-clients></app-clients>
+    
+    
+      <app-contact-modal
+      *ngIf="isModalOpen"
+      (formSubmitted)="handleFormSubmit($event)"
+      (close)="handleCloseModal()"
+    ></app-contact-modal>
+</div>

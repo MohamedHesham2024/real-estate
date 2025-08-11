@@ -27,7 +27,7 @@ export class SobhaComponent {
   slides = [0, 1, 2];
   slideInterval: any;
  currentSlide2: number = 0;
-
+isModalOpen = false;
   constructor(private route: ActivatedRoute,private fb: FormBuilder, private sendDataService: SendDataService,private toastr: ToastrService,private themeService: ThemeToggleService) {
     this.contactForm = this.fb.group({
       firstName: ['', [Validators.required, Validators.minLength(2)]],
@@ -54,7 +54,7 @@ export class SobhaComponent {
       }
     });
   }
-  
+
   // Touch handling
   private touchStartX: number | null = null;
   private touchEndX: number | null = null;
@@ -95,7 +95,7 @@ mockProperties: any[] = [
       thumb: '/sobha/Screenshot 2025-06-26 114539.jpg',
       alt: 'Image 4'
     },
-    
+
   ];
 
   @HostListener('window:resize', ['$event'])
@@ -110,11 +110,13 @@ logoSrc = '';
         ? '/sobha/sobha white.png'
         : '/sobha/sobha black.png';
     });
-     
+
     this.checkMobile();
     this.startSlider();
     this.startAutoAdvance();
-
+  setTimeout(() => {
+      this.isModalOpen = true;
+    }, 3000);
   }
 
   private checkMobile() {
@@ -189,7 +191,7 @@ logoSrc = '';
 
   onTouchEnd() {
     if (!this.touchStartX || !this.touchEndX) return;
-    
+
     const distance = this.touchStartX - this.touchEndX;
     const isLeftSwipe = distance > this.minSwipeDistance;
     const isRightSwipe = distance < -this.minSwipeDistance;
@@ -214,7 +216,7 @@ logoSrc = '';
   getThumbTransform(): string {
     return `translateX(-${this.currentThumbPage * 100}%)`;
   }
-  
+
 
   startSlider() {
     this.slideInterval = setInterval(() => {
@@ -260,7 +262,7 @@ logoSrc = '';
     '/sobha/Screenshot 2025-06-26 114539.jpg',
   ];
 
-  
+
 
   ngOnDestroy() {
     if (this.intervalId) {
@@ -297,8 +299,8 @@ logoSrc = '';
     }
     this.startAutoAdvance();
   }
-  
-isModalOpen = true;
+
+// isModalOpen = true;
 
   openModal() {
     this.isModalOpen = true;

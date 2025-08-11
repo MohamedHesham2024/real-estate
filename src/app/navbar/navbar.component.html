@@ -25,7 +25,7 @@
           Home
         </a>
       </li>
-      
+
       <!-- Properties Dropdown -->
       <li class="relative group">
         <button
@@ -53,35 +53,35 @@
           <div class="py-2">
             <a
               [routerLink]="['/developer/sobha']"
-              
+
               class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-dark-primary transition-colors duration-200"
             >
               Sobha
             </a>
             <a
               routerLink="/developer/emaar"
-              
+
               class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-dark-primary transition-colors duration-200"
             >
               Emaar
             </a>
             <a
               routerLink="/developer/damac"
-              
+
               class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-dark-primary transition-colors duration-200"
             >
               Damac
             </a>
             <a
               routerLink="/developer/merass"
-              
+
               class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-dark-primary transition-colors duration-200"
             >
               Merass
             </a>
             <a
               routerLink="/developer/binghatti"
-              
+
               class="block px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-dark-primary transition-colors duration-200"
             >
               Binghatti
@@ -89,11 +89,40 @@
           </div>
         </div>
       </li>
-      <li class="relative group">
+
+        <li>
+        <a
+          routerLink="/our-team"
+          routerLinkActive="text-primary dark:text-dark-primary"
+          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
+        >
+        Our Team
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="/secondary-listing"
+          routerLinkActive="text-primary dark:text-dark-primary"
+          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
+        >
+        Secondary Listing
+        </a>
+      </li>
+
+      <li>
+        <a
+          routerLink="/review"
+          routerLinkActive="text-primary dark:text-dark-primary"
+          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
+        >
+          Reviews
+        </a>
+      </li>
+        <li class="relative group">
         <button
           class="transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary flex items-center gap-1"
         >
-          Properties
+         Dubai Insights
           <svg
             class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
             fill="none"
@@ -163,24 +192,6 @@
       </li>
       <li>
         <a
-          routerLink="/secondary-listing"
-          routerLinkActive="text-primary dark:text-dark-primary"
-          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
-        >
-        Secondary Listing
-        </a>
-      </li>
-      <li>
-        <a
-          routerLink="/review"
-          routerLinkActive="text-primary dark:text-dark-primary"
-          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
-        >
-          Reviews
-        </a>
-      </li>
-      <li>
-        <a
           routerLink="/about"
           routerLinkActive="text-primary dark:text-dark-primary"
           class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
@@ -188,15 +199,7 @@
           About Us
         </a>
       </li>
-       <li>
-        <a
-          routerLink="/our-team"
-          routerLinkActive="text-primary dark:text-dark-primary"
-          class="inline-block transform transition-all duration-500 hover:scale-125 hover:text-primary dark:hover:text-dark-primary"
-        >
-        Our Team
-        </a>
-      </li>
+
       <li>
         <a
           routerLink="/faq"
@@ -239,7 +242,7 @@
 
       <!-- Theme Toggle Button -->
 
-    
+
 
       <app-language-switcher></app-language-switcher>
 
@@ -353,7 +356,7 @@
                 Home
               </a>
             </li>
-            
+
             <!-- Mobile Properties with Expandable Menu -->
             <li>
               <div class="space-y-2">
@@ -384,7 +387,7 @@
                 >
                   <a
                     routerLink="/developer/sobha"
-                    
+
                     class="block py-2 px-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                     (click)="closeMobileMenu()"
                   >
@@ -392,7 +395,7 @@
                   </a>
                   <a
                     routerLink="/developer/emaar"
-                    
+
                     class="block py-2 px-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                     (click)="closeMobileMenu()"
                   >
@@ -400,7 +403,7 @@
                   </a>
                   <a
                     routerLink="/developer/damac"
-                    
+
                     class="block py-2 px-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                     (click)="closeMobileMenu()"
                   >
@@ -408,7 +411,7 @@
                   </a>
                   <a
                     routerLink="/developer/merass"
-                    
+
                     class="block py-2 px-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                     (click)="closeMobileMenu()"
                   >
@@ -416,7 +419,7 @@
                   </a>
                   <a
                     routerLink="/developer/binghatti"
-                    
+
                     class="block py-2 px-3 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                     (click)="closeMobileMenu()"
                   >
@@ -425,13 +428,44 @@
                 </div>
               </div>
             </li>
+
+               <li>
+              <a
+                routerLink="/our-team"
+                routerLinkActive="text-primary dark:text-dark-primary"
+                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+                (click)="closeMobileMenu()"
+              >
+              Our Team
+              </a>
+            </li>
             <li>
+              <a
+                routerLink="/secondary-listing"
+                routerLinkActive="text-primary dark:text-dark-primary"
+                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+                (click)="closeMobileMenu()"
+              >
+               Secondary Listing
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="/review"
+                routerLinkActive="text-primary dark:text-dark-primary"
+                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+                (click)="closeMobileMenu()"
+              >
+                Reviews
+              </a>
+            </li>
+              <li>
               <div class="space-y-2">
                 <button
                   (click)="toggledevPropertiesMenu()"
                   class="w-full flex items-center justify-between py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                 >
-                  <span>Properties</span>
+                  <span>Dubai Insights</span>
                   <svg
                     class="w-4 h-4 transition-transform duration-200"
                     [class.rotate-180]="isDevMenuOpen"
@@ -450,7 +484,7 @@
                 <div
                   class="ml-4 space-y-1 overflow-hidden transition-all duration-300"
                   [class.max-h-0]="!isDevMenuOpen"
-                  [class.max-h-48]="isDevMenuOpen"
+                  [class.max-h-100]="isDevMenuOpen"
                 >
                   <a
                     routerLink="/properties/escrow-account"
@@ -504,26 +538,6 @@
                 </div>
               </div>
             </li>
-            <li>
-              <a
-                routerLink="/secondary-listing"
-                routerLinkActive="text-primary dark:text-dark-primary"
-                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
-                (click)="closeMobileMenu()"
-              >
-               Secondary Listing
-              </a>
-            </li>
-            <li>
-              <a
-                routerLink="/review"
-                routerLinkActive="text-primary dark:text-dark-primary"
-                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
-                (click)="closeMobileMenu()"
-              >
-                Reviews
-              </a>
-            </li>
              <li>
               <a
                 routerLink="/about"
@@ -534,16 +548,7 @@
                 About Us
               </a>
             </li>
-             <li>
-              <a
-                routerLink="/our-team"
-                routerLinkActive="text-primary dark:text-dark-primary"
-                class="block py-2 px-3 rounded-lg text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
-                (click)="closeMobileMenu()"
-              >
-              Our Team
-              </a>
-            </li>
+
             <li>
               <a
                 routerLink="/faq"

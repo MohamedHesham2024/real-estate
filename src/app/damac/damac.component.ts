@@ -34,7 +34,7 @@ import { ContactModalComponent } from '../sheard/contact-modal/contact-modal.com
     HttpClientModule,
         TranslateModule,
         ContactModalComponent
-    
+
   ],
   templateUrl: './damac.component.html',
   styleUrl: './damac.component.css',
@@ -50,7 +50,7 @@ export class DamacComponent {
   slides = [0, 1, 2];
   slideInterval: any;
   currentSlide2: number = 0;
-
+isModalOpen = false;
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private route: ActivatedRoute,
@@ -132,6 +132,9 @@ export class DamacComponent {
     this.checkMobile();
     this.startSlider();
     this.startAutoAdvance();
+      setTimeout(() => {
+      this.isModalOpen = true;
+    }, 3000);
   }
 
   private checkMobile() {
@@ -339,7 +342,7 @@ export class DamacComponent {
       name: '3 Bedroom Apartment',
     },
   ];
-  isModalOpen = true;
+
 
   openModal() {
     this.isModalOpen = true;

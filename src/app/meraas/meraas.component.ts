@@ -43,7 +43,7 @@ export class MeraasComponent {
   slides = [0, 1, 2];
   slideInterval: any;
   currentSlide2: number = 0;
-
+isModalOpen = false;
   constructor(private route: ActivatedRoute,private fb: FormBuilder, private sendDataService: SendDataService,private toastr: ToastrService,private themeService: ThemeToggleService) {
     this.contactForm = this.fb.group({
       firstName: ['', [Validators.required, Validators.minLength(2)]],
@@ -70,7 +70,7 @@ export class MeraasComponent {
       }
     });
   }
-  
+
   // Touch handling
   private touchStartX: number | null = null;
   private touchEndX: number | null = null;
@@ -128,11 +128,13 @@ logoSrc = '';
         ? '/Meraas/Meraas white.png'
         : '/Meraas/Meraas black.png';
     });
-     
+
     this.checkMobile();
     this.startSlider();
     this.startAutoAdvance();
-
+  setTimeout(() => {
+      this.isModalOpen = true;
+    }, 3000);
   }
   private checkMobile() {
     this.isMobile = window.innerWidth < 576;
@@ -319,7 +321,7 @@ logoSrc = '';
     }
     this.startAutoAdvance();
   }
-isModalOpen = true;
+
 
   openModal() {
     this.isModalOpen = true;

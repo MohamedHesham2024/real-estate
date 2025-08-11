@@ -56,7 +56,7 @@ export class EmaarComponent {
   slides = [0, 1, 2];
   slideInterval: any;
   currentSlide2: number = 0;
-
+isModalOpen = false;
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private route: ActivatedRoute,
@@ -137,6 +137,9 @@ export class EmaarComponent {
     this.checkMobile();
     this.startSlider();
     this.startAutoAdvance();
+      setTimeout(() => {
+      this.isModalOpen = true;
+    }, 3000);
   }
 
   private checkMobile() {
@@ -343,7 +346,7 @@ export class EmaarComponent {
       name: '3 Bedroom Apartment',
     },
   ];
-  isModalOpen = true;
+
 
   openModal() {
     this.isModalOpen = true;

@@ -20,13 +20,17 @@ import { CommonModule } from '@angular/common';
 })
 export class HomeComponent {
   isLoading = false;
-
+isModalOpen = false;
 constructor(
       private toastr: ToastrService,
       private sendDataService: SendDataService,
-  
+
 ){}
-isModalOpen = true;
+ ngOnInit() {
+    setTimeout(() => {
+      this.isModalOpen = true;
+    }, 3000);
+  }
 
   openModal() {
     this.isModalOpen = true;

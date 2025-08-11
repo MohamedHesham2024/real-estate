@@ -49,7 +49,7 @@ export class BINGHATTIComponent {
   slides = [0, 1, 2];
   slideInterval: any;
   currentSlide2: number = 0;
-
+  isModalOpen = false;
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private route: ActivatedRoute,
@@ -67,6 +67,7 @@ export class BINGHATTIComponent {
       property: [''],
     });
   }
+
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.route.fragment.subscribe((fragment) => {
@@ -98,7 +99,7 @@ export class BINGHATTIComponent {
       thumb: '/binghatti/image1.jpg',
       alt: 'Image 1',
     },
-    
+
 
     {
       full: '/binghatti/image5.jpg',
@@ -137,6 +138,9 @@ export class BINGHATTIComponent {
     this.checkMobile();
     this.startSlider();
     this.startAutoAdvance();
+      setTimeout(() => {
+      this.isModalOpen = true;
+    }, 3000);
   }
 
   private checkMobile() {
@@ -344,7 +348,6 @@ export class BINGHATTIComponent {
       name: '3 Bedroom Apartment',
     },
   ];
-  isModalOpen = true;
 
   openModal() {
     this.isModalOpen = true;

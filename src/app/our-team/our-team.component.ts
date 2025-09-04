@@ -52,7 +52,7 @@ teamMembers: TeamMember[] = [
     },
     {
       id: 5,
-      name: "David Rodriguez",
+      name: "Doline Ote",
       role: "Property Consultant",
       bio: "With over six years of hands-on experience in Dubai’s fast-evolving real estate market, I bring in-depth knowledge of property sales, leasing, and client relationship management. Fluent in both English and French, I have successfully assisted a wide range of international clients in finding the right property solutions — whether for investment or end-use. My approach is built on transparency, personalized guidance, and a strong commitment to long-term client satisfaction, helping every buyer or investor navigate the Dubai property landscape with confidence.",
       image: "/our-team/Doline.jpeg",

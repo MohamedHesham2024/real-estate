@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class WhatsAppComponent {
 phoneNumber = '+971505791507';
-  message = 'Hello! How can i help you sir';
+  message = 'Hi, I’m interested, can i get more details?';
   get whatsappUrl(): string {
     const encodedMessage = encodeURIComponent(this.message);
     return `https://wa.me/${this.phoneNumber}?text=${encodedMessage}`;
